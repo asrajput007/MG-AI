@@ -1,0 +1,1277 @@
+{
+  "vital_signs": [
+    {
+      "name": "Heart Rate",
+      "conditions": [
+        {
+          "range": "121-200 bpm",
+          "status": "Elevated Tachycardia (Adult)",
+          "calories": "Increase Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Check for dehydration, electrolyte imbalance; prioritize magnesium- and potassium-rich foods",
+          "food_recommendations": [
+            {
+              "name": "Banana Almond Smoothie",
+              "quantity": "1 medium banana + 6 almonds",
+              "preparation": "Blend 1 banana, 6 soaked almonds, 150 ml coconut water",
+              "how_it_helps": "Bananas are high in potassium and magnesium which balance heart rhythm. Almonds add magnesium and healthy fats which calm the sympathetic nervous system.",
+              "evidence": "American Heart Association notes potassium and magnesium reduce cardiac excitability."
+            },
+            {
+              "name": "Coconut Water with Tulsi Leaves",
+              "quantity": "250 ml + 4 fresh tulsi leaves",
+              "preparation": "Add tulsi leaves to chilled coconut water; let sit for 5 minutes",
+              "how_it_helps": "Coconut water restores electrolytes and hydration, while tulsi lowers cortisol and acts as a natural beta-blocker.",
+              "evidence": "Indian Journal of Pharmacology (2015) shows tulsi reduces heart rate in stress-induced models."
+            },
+            {
+              "name": "Pumpkin Seeds & Yogurt Bowl",
+              "quantity": "1 tbsp seeds + 100 g plain yogurt",
+              "preparation": "Mix together and top with a pinch of cinnamon",
+              "how_it_helps": "Magnesium-rich pumpkin seeds and calcium-rich yogurt help maintain electrical heart rhythm.",
+              "evidence": "Nutrition Reviews (2012): Magnesium supplementation decreases heart rate variability."
+            },
+            {
+              "name": "Chamomile Tea and Banana",
+              "quantity": "1 tspn chamomile flowers",
+              "preparation": "Steep 1 chamomile bag in 200 ml hot water. Take banana with it",
+              "how_it_helps": "Chamomile is mildly sedative and lowers sympathetic overactivity. Banana adds potassium. Together, they help calm racing heartbeat.",
+              "evidence": "Phytomedicine (2006): Chamomile binds GABA receptors, slowing down heart rate in stress-induced tachycardia."
+            },
+            {
+              "name": "Cucumber-Mint Cooler",
+              "quantity": "½ cucumber + 5 mint leaves + 200 ml water",
+              "preparation": "Blend cucumber, mint, and water. Drink chilled.",
+              "how_it_helps": "Hydration from cucumber lowers heart strain, while mint provides menthol which mildly relaxes the heart and vasculature.",
+              "evidence": "Clinical Nutrition (2011): Dehydration linked to increased HR; hydration lowers HR."
+            }
+          ]
+        },
+        {
+          "range": "100-120 bpm",
+          "status": "Mildly High (Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": null,
+          "food_recommendations": [
+            {
+              "name": "Banana Almond Smoothie",
+              "quantity": "1 medium banana + 6 almonds",
+              "preparation": "Blend 1 banana, 6 soaked almonds, 150 ml coconut water",
+              "how_it_helps": "Bananas are high in potassium and magnesium which balance heart rhythm. Almonds add magnesium and healthy fats which calm the sympathetic nervous system.",
+              "evidence": "American Heart Association notes potassium and magnesium reduce cardiac excitability."
+            },
+            {
+              "name": "Coconut Water with Tulsi Leaves",
+              "quantity": "250 ml + 4 fresh tulsi leaves",
+              "preparation": "Add tulsi leaves to chilled coconut water; let sit for 5 minutes",
+              "how_it_helps": "Coconut water restores electrolytes and hydration, while tulsi lowers cortisol and acts as a natural beta-blocker.",
+              "evidence": "Indian Journal of Pharmacology (2015) shows tulsi reduces heart rate in stress-induced models."
+            },
+            {
+              "name": "Pumpkin Seeds & Yogurt Bowl",
+              "quantity": "1 tbsp seeds + 100 g plain yogurt",
+              "preparation": "Mix together and top with a pinch of cinnamon",
+              "how_it_helps": "Magnesium-rich pumpkin seeds and calcium-rich yogurt help maintain electrical heart rhythm.",
+              "evidence": "Nutrition Reviews (2012): Magnesium supplementation decreases heart rate variability."
+            },
+            {
+              "name": "Chamomile Tea and Banana",
+              "quantity": "1 tspn chamomile flowers",
+              "preparation": "Steep 1 chamomile bag in 200 ml hot water. Take banana with it",
+              "how_it_helps": "Chamomile is mildly sedative and lowers sympathetic overactivity. Banana adds potassium. Together, they help calm racing heartbeat.",
+              "evidence": "Phytomedicine (2006): Chamomile binds GABA receptors, slowing down heart rate in stress-induced tachycardia."
+            },
+            {
+              "name": "Cucumber-Mint Cooler",
+              "quantity": "½ cucumber + 5 mint leaves + 200 ml water",
+              "preparation": "Blend cucumber, mint, and water. Drink chilled.",
+              "how_it_helps": "Hydration from cucumber lowers heart strain, while mint provides menthol which mildly relaxes the heart and vasculature.",
+              "evidence": "Clinical Nutrition (2011): Dehydration linked to increased HR; hydration lowers HR."
+            }
+          ]
+        },
+        {
+          "range": "60-99 bpm",
+          "status": "Normal (Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": null,
+          "food_recommendations": []
+        },
+        {
+          "range": "40-59 bpm",
+          "status": "Low Bradycardia (Adult)",
+          "calories": "Increase Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Assess thyroid function; include iodine-rich foods and selenium",
+          "food_recommendations": [
+            {
+              "name": "Black Coffee with Dates",
+              "quantity": "1 small cup (100 ml) + 2 dates",
+              "preparation": "Brew black coffee; serve with 2 soft dates",
+              "how_it_helps": "Caffeine raises heart rate by stimulating the central nervous system. Dates give quick glucose and potassium, supporting energy.",
+              "evidence": "Note: Avoid if anxiety or high BP is present."
+            },
+            {
+              "name": "Spiced Jaggery Water",
+              "quantity": "150 ml water + 1 tsp jaggery + pinch black salt + ginger",
+              "preparation": "Mix and heat till lukewarm. Sip slowly.",
+              "how_it_helps": "Jaggery provides quick sugar, salt, and iron, which help in increasing heart rate by enhancing circulation and warming the body.",
+              "evidence": "Used in Ayurveda for weakness-induced bradycardia."
+            },
+            {
+              "name": "Raisin Nut Trail Mix",
+              "quantity": "1 tbsp raisins + 4 cashews + 2 walnuts",
+              "preparation": "Mix and chew slowly",
+              "how_it_helps": "Quick-digesting sugars and healthy fats give sustained energy and stimulate a slight increase in heart rate.",
+              "evidence": "Combats low HR due to low energy or fasting."
+            },
+            {
+              "name": "Cayenne Lemonade",
+              "quantity": "200 ml water + 1 tbsp lemon + pinch cayenne",
+              "preparation": "Mix and sip",
+              "how_it_helps": "Cayenne improves circulation and stimulates heart contractions, raising HR slightly.",
+              "evidence": "Herbal Medicine (2016): Capsaicin improves cardiovascular output. Caution: Only if no acid reflux or ulcers."
+            },
+            {
+              "name": "Warm Lemon-Honey Water",
+              "quantity": "200 ml warm water + 1 tsp honey + 1 tsp lemon juice",
+              "preparation": "Stir and sip slowly",
+              "how_it_helps": "Gently boosts circulation and energy, especially in bradycardia from low thyroid or fasting.",
+              "evidence": "Integrative Medicine Insights (2020): Lemon and honey improve alertness and cardiac rhythm via glucose and citric acid."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blood Pressure",
+      "conditions": [
+        {
+          "range": "140-200/90-120 mmHg",
+          "status": "High Hypertension (Adult)",
+          "calories": "Decrease Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Limit salt, processed foods; include DASH diet elements",
+          "food_recommendations": [
+            {
+              "name": "Beetroot Juice",
+              "quantity": "250 ml/day",
+              "preparation": "Blend 1 medium raw beet (200 g) with 150 ml water. Strain to get 250 ml juice. Drink before breakfast.",
+              "how_it_helps": "Beetroot contains dietary nitrates, converting to nitric oxide, relaxing blood vessels, improving flow, reducing vascular resistance.",
+              "evidence": "Meta-analyses show systolic BP down 3.5 to 5 mmHg; diastolic 1–2 mmHg within 3 h to weeks (PMC6316347)."
+            },
+            {
+              "name": "Raw Garlic Clove",
+              "quantity": "1 clove/day (2–3 g)",
+              "preparation": "Crush 1 small raw clove (3 g), let rest for 10 min, swallow with water or mix in yogurt.",
+              "how_it_helps": "Garlic's allicin enhances nitric oxide, inhibits angiotensin II, reduces oxidative stress, improves vessel flexibility.",
+              "evidence": "Meta-analysis shows systolic BP down 4.4 mmHg, diastolic 2.7–5.5 mmHg in hypertension (PMC6966103)."
+            },
+            {
+              "name": "Hibiscus Tea",
+              "quantity": "2-3 cups/day",
+              "preparation": "Steep 1 tsp dried hibiscus petals in 250 ml hot water for 10 min. Drink 1–2 cups/day.",
+              "how_it_helps": "Anthocyanins and polyphenols inhibit ACE, reduce oxidative damage, support endothelial function.",
+              "evidence": "RCTs show systolic BP down 7 mmHg over weeks. Acts as natural ACE inhibitor (Journal of Nutrition, 2010)."
+            },
+            {
+              "name": "Pomegranate Juice",
+              "quantity": "½ cup (125 ml)/day",
+              "preparation": "Drink 125 ml unsweetened juice daily.",
+              "how_it_helps": "Punicalagins and anthocyanins improve endothelial function, reduce inflammation, inhibit ACE, enhance arterial elasticity.",
+              "evidence": "Reduces systolic BP and arterial wall thickness after 1 year (Atherosclerosis, 2001)."
+            },
+            {
+              "name": "Soaked Almonds",
+              "quantity": "6–8/day (30 g)",
+              "preparation": "Soak 6–8 raw almonds overnight, peel and eat in the morning.",
+              "how_it_helps": "Magnesium acts as a calcium channel blocker, reducing vascular resistance.",
+              "evidence": "Nut intake lowers BP by 3–5 mmHg (systolic) due to magnesium and healthy fats (Circulation, DASH study)."
+            },
+            {
+              "name": "Oats with Berries",
+              "quantity": "½ cup oats + ¼ cup berries/day",
+              "preparation": "Cook ½ cup oats; top with ¼ cup berries (blueberries or strawberries). Eat warm.",
+              "how_it_helps": "Soluble fiber and antioxidants lower BP and improve vascular health.",
+              "evidence": "Soluble fiber and antioxidants linked to BP reduction."
+            },
+            {
+              "name": "Avocado",
+              "quantity": "½ avocado/day (100 g)",
+              "preparation": "Eat ½ ripe avocado daily (on toast or salad).",
+              "how_it_helps": "Monounsaturated fat and potassium associated with BP reduction.",
+              "evidence": "Rich in potassium, supports BP reduction."
+            },
+            {
+              "name": "Flaxseed Powder",
+              "quantity": "1 tbsp/day (10 g)",
+              "preparation": "Mix 1 tbsp ground flaxseed into yogurt, smoothie, or porridge.",
+              "how_it_helps": "Omega-3 ALA and lignans reduce systolic BP.",
+              "evidence": "Meta-studies link omega-3 ALA to systolic BP reduction by a few mmHg."
+            },
+            {
+              "name": "Spinach Soup",
+              "quantity": "1 cup/day",
+              "preparation": "Blend 1 cup cooked spinach with low-sodium broth; season lightly.",
+              "how_it_helps": "High in dietary nitrates and potassium, comparable to beet juice effects.",
+              "evidence": "Nitrates and potassium linked to BP reduction."
+            },
+            {
+              "name": "Coconut Water",
+              "quantity": "1 cup/day (250 ml)",
+              "preparation": "Drink 250 ml fresh coconut water.",
+              "how_it_helps": "Provides potassium and magnesium, acts as a natural diuretic, reduces fluid and BP.",
+              "evidence": "Modest BP-lowering effect (West Indian Medical Journal, 2005)."
+            }
+          ]
+        },
+        {
+          "range": "120-120/80-80 mmHg",
+          "status": "Normal (Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": "Ensure adequate hydration, include salt in moderation",
+          "food_recommendations": []
+        },
+        {
+          "range": "70-89/40-59 mmHg",
+          "status": "Low Hypotension (Adult)",
+          "calories": "Increase Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": null,
+          "food_recommendations": [
+            {
+              "name": "Beetroot Juice",
+              "quantity": "250 ml/day",
+              "preparation": "Blend 1 medium raw beet (200 g) with 150 ml water. Strain to get 250 ml juice. Drink before breakfast.",
+              "how_it_helps": "Beetroot contains dietary nitrates, converting to nitric oxide, relaxing blood vessels, improving flow, reducing vascular resistance.",
+              "evidence": "Meta-analyses show systolic BP down 3.5 to 5 mmHg; diastolic 1–2 mmHg within 3 h to weeks (PMC6316347)."
+            },
+            {
+              "name": "Raw Garlic Clove",
+              "quantity": "1 clove/day (2–3 g)",
+              "preparation": "Crush 1 small raw clove (3 g), let rest for 10 min, swallow with water or mix in yogurt.",
+              "how_it_helps": "Garlic's allicin enhances nitric oxide, inhibits angiotensin II, reduces oxidative stress, improves vessel flexibility.",
+              "evidence": "Meta-analysis shows systolic BP down 4.4 mmHg, diastolic 2.7–5.5 mmHg in hypertension (PMC6966103)."
+            },
+            {
+              "name": "Hibiscus Tea",
+              "quantity": "2-3 cups/day",
+              "preparation": "Steep 1 tsp dried hibiscus petals in 250 ml hot water for 10 min. Drink 1–2 cups/day.",
+              "how_it_helps": "Anthocyanins and polyphenols inhibit ACE, reduce oxidative damage, support endothelial function.",
+              "evidence": "RCTs show systolic BP down 7 mmHg over weeks. Acts as natural ACE inhibitor (Journal of Nutrition, 2010)."
+            },
+            {
+              "name": "Pomegranate Juice",
+              "quantity": "½ cup (125 ml)/day",
+              "preparation": "Drink 125 ml unsweetened juice daily.",
+              "how_it_helps": "Punicalagins and anthocyanins improve endothelial function, reduce inflammation, inhibit ACE, enhance arterial elasticity.",
+              "evidence": "Reduces systolic BP and arterial wall thickness after 1 year (Atherosclerosis, 2001)."
+            },
+            {
+              "name": "Soaked Almonds",
+              "quantity": "6–8/day (30 g)",
+              "preparation": "Soak 6–8 raw almonds overnight, peel and eat in the morning.",
+              "how_it_helps": "Magnesium acts as a calcium channel blocker, reducing vascular resistance.",
+              "evidence": "Nut intake lowers BP by 3–5 mmHg (systolic) due to magnesium and healthy fats (Circulation, DASH study)."
+            },
+            {
+              "name": "Oats with Berries",
+              "quantity": "½ cup oats + ¼ cup berries/day",
+              "preparation": "Cook ½ cup oats; top with ¼ cup berries (blueberries or strawberries). Eat warm.",
+              "how_it_helps": "Soluble fiber and antioxidants lower BP and improve vascular health.",
+              "evidence": "Soluble fiber and antioxidants linked to BP reduction."
+            },
+            {
+              "name": "Avocado",
+              "quantity": "½ avocado/day (100 g)",
+              "preparation": "Eat ½ ripe avocado daily (on toast or salad).",
+              "how_it_helps": "Monounsaturated fat and potassium associated with BP reduction.",
+              "evidence": "Rich in potassium, supports BP reduction."
+            },
+            {
+              "name": "Flaxseed Powder",
+              "quantity": "1 tbsp/day (10 g)",
+              "preparation": "Mix 1 tbsp ground flaxseed into yogurt, smoothie, or porridge.",
+              "how_it_helps": "Omega-3 ALA and lignans reduce systolic BP.",
+              "evidence": "Meta-studies link omega-3 ALA to systolic BP reduction by a few mmHg."
+            },
+            {
+              "name": "Spinach Soup",
+              "quantity": "1 cup/day",
+              "preparation": "Blend 1 cup cooked spinach with low-sodium broth; season lightly.",
+              "how_it_helps": "High in dietary nitrates and potassium, comparable to beet juice effects.",
+              "evidence": "Nitrates and potassium linked to BP reduction."
+            },
+            {
+              "name": "Coconut Water",
+              "quantity": "1 cup/day (250 ml)",
+              "preparation": "Drink 250 ml fresh coconut water.",
+              "how_it_helps": "Provides potassium and magnesium, acts as a natural diuretic, reduces fluid and BP.",
+              "evidence": "Modest BP-lowering effect (West Indian Medical Journal, 2005)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blood Glucose",
+      "conditions": [
+        {
+          "range": "126-250 mg/dL",
+          "status": "High Hyperglycemia (Adult)",
+          "calories": "Decrease Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Fiber intake is key; control portion sizes and carb distribution",
+          "food_recommendations": [
+            {
+              "name": "Chia-Cinnamon Water",
+              "quantity": "1 glass/day",
+              "preparation": "Soak 1 tbsp chia seeds in 250 ml water for 30 min, stir in ½ tsp cinnamon, drink.",
+              "how_it_helps": "Chia’s soluble fiber slows glucose absorption. Cinnamon improves insulin sensitivity and glucose metabolism.",
+              "evidence": "Journal of Medicinal Food (2011): Cinnamon reduced fasting glucose in type 2 diabetics."
+            },
+            {
+              "name": "Unsweetened Greek Yogurt with Blueberries",
+              "quantity": "1 bowl/day",
+              "preparation": "Mix ¾ cup Greek yogurt with ¼ cup blueberries and eat directly.",
+              "how_it_helps": "Yogurt’s probiotics improve insulin response. Blueberries’ anthocyanins enhance glucose uptake.",
+              "evidence": "American Journal of Clinical Nutrition (2010): Yogurt and berries improve insulin resistance and glycemic control."
+            },
+            {
+              "name": "Apple Cider Vinegar Drink",
+              "quantity": "Once daily",
+              "preparation": "Mix 1 tbsp raw ACV in 1 cup water, drink before meals.",
+              "how_it_helps": "ACV delays gastric emptying and improves insulin action.",
+              "evidence": "Diabetes Care (2004): ACV lowered post-meal glucose in insulin-resistant subjects."
+            },
+            {
+              "name": "Boiled Okra Water",
+              "quantity": "1 glass/day",
+              "preparation": "Slice 2 okras, soak overnight in water, strain, drink in morning.",
+              "how_it_helps": "Okra mucilage slows sugar absorption in intestines.",
+              "evidence": "Journal of Pharmacy & Bioallied Sciences (2011): Okra extract reduced glucose in animal studies."
+            },
+            {
+              "name": "Mixed Vegetable Soup",
+              "quantity": "1 bowl",
+              "preparation": "Boil broccoli, spinach, carrots, tomato, onion with herbs, avoid starches.",
+              "how_it_helps": "Fiber slows glucose rise, non-starchy veggies have low GI.",
+              "evidence": "Diabetes Research and Clinical Practice (2009): Non-starchy vegetables improve post-meal glucose levels."
+            },
+            {
+              "name": "Barley Water",
+              "quantity": "1 cup twice a day",
+              "preparation": "Boil 2 tbsp pearl barley in 2 cups water for 30 minutes, strain, drink.",
+              "how_it_helps": "Barley’s beta-glucan fiber lowers postprandial glucose and increases insulin sensitivity.",
+              "evidence": "European Journal of Clinical Nutrition (2006): Barley beta-glucan reduces glucose and insulin response."
+            }
+          ]
+        },
+        {
+          "range": "100-125 mg/dL",
+          "status": "Borderline (Adult)",
+          "calories": "Decrease Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": null,
+          "food_recommendations": [
+            {
+              "name": "Chia-Cinnamon Water",
+              "quantity": "1 glass/day",
+              "preparation": "Soak 1 tbsp chia seeds in 250 ml water for 30 min, stir in ½ tsp cinnamon, drink.",
+              "how_it_helps": "Chia’s soluble fiber slows glucose absorption. Cinnamon improves insulin sensitivity and glucose metabolism.",
+              "evidence": "Journal of Medicinal Food (2011): Cinnamon reduced fasting glucose in type 2 diabetics."
+            },
+            {
+              "name": "Unsweetened Greek Yogurt with Blueberries",
+              "quantity": "1 bowl/day",
+              "preparation": "Mix ¾ cup Greek yogurt with ¼ cup blueberries and eat directly.",
+              "how_it_helps": "Yogurt’s probiotics improve insulin response. Blueberries’ anthocyanins enhance glucose uptake.",
+              "evidence": "American Journal of Clinical Nutrition (2010): Yogurt and berries improve insulin resistance and glycemic control."
+            },
+            {
+              "name": "Apple Cider Vinegar Drink",
+              "quantity": "Once daily",
+              "preparation": "Mix 1 tbsp raw ACV in 1 cup water, drink before meals.",
+              "how_it_helps": "ACV delays gastric emptying and improves insulin action.",
+              "evidence": "Diabetes Care (2004): ACV lowered post-meal glucose in insulin-resistant subjects."
+            },
+            {
+              "name": "Boiled Okra Water",
+              "quantity": "1 glass/day",
+              "preparation": "Slice 2 okras, soak overnight in water, strain, drink in morning.",
+              "how_it_helps": "Okra mucilage slows sugar absorption in intestines.",
+              "evidence": "Journal of Pharmacy & Bioallied Sciences (2011): Okra extract reduced glucose in animal studies."
+            },
+            {
+              "name": "Mixed Vegetable Soup",
+              "quantity": "1 bowl",
+              "preparation": "Boil broccoli, spinach, carrots, tomato, onion with herbs, avoid starches.",
+              "how_it_helps": "Fiber slows glucose rise, non-starchy veggies have low GI.",
+              "evidence": "Diabetes Research and Clinical Practice (2009): Non-starchy vegetables improve post-meal glucose levels."
+            },
+            {
+              "name": "Barley Water",
+              "quantity": "1 cup twice a day",
+              "preparation": "Boil 2 tbsp pearl barley in 2 cups water for 30 minutes, strain, drink.",
+              "how_it_helps": "Barley’s beta-glucan fiber lowers postprandial glucose and increases insulin sensitivity.",
+              "evidence": "European Journal of Clinical Nutrition (2006): Barley beta-glucan reduces glucose and insulin response."
+            }
+          ]
+        },
+        {
+          "range": "70-99 mg/dL",
+          "status": "Normal (Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": null,
+          "food_recommendations": []
+        },
+        {
+          "range": "60-69 mg/dL",
+          "status": "Low Hypoglycemia (Adult)",
+          "calories": "Increase Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Include fruit and protein in every meal to stabilize levels",
+          "food_recommendations": [
+            {
+              "name": "Orange Juice",
+              "quantity": "Up to ½ glass (125 ml) every 15 mins",
+              "preparation": "Drink immediately if symptoms appear.",
+              "how_it_helps": "Contains 15g glucose for rapid absorption.",
+              "evidence": "ADA guidelines recommend fruit juice as first-line hypoglycemia treatment."
+            },
+            {
+              "name": "Glucose Tablet or Gel",
+              "quantity": "15g glucose (3-4 tablets or 1 tube)",
+              "preparation": "Chew and swallow.",
+              "how_it_helps": "Fastest route to raise blood sugar; direct glucose absorption.",
+              "evidence": "ADA guidelines recommend 15g glucose for quick correction."
+            },
+            {
+              "name": "Banana",
+              "quantity": "1 small banana (90g)",
+              "preparation": "Peel and eat directly.",
+              "how_it_helps": "Contains 20-25g carbs (natural sugar + fiber) for sustained energy.",
+              "evidence": "Journal of Clinical Nutrition: Bananas provide fast and long-acting carbs."
+            },
+            {
+              "name": "Honey",
+              "quantity": "1 tbsp (17g sugar)",
+              "preparation": "Consume directly or mix in warm water.",
+              "how_it_helps": "Immediate sugar spike, helpful for early symptoms.",
+              "evidence": "Endocrine Society recognizes honey for mild hypoglycemia."
+            },
+            {
+              "name": "Raisins",
+              "quantity": "¼ cup (40g)",
+              "preparation": "Eat as-is.",
+              "how_it_helps": "Provide 30g natural sugar; fast-acting for correction.",
+              "evidence": "Journal of the American Dietetic Association: Dried fruits effective for hypoglycemic rescue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blood Oxygen Saturation",
+      "conditions": [
+        {
+          "range": "95-100%",
+          "status": "Normal (Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": null,
+          "food_recommendations": []
+        },
+        {
+          "range": "90-94%",
+          "status": "Mildly Low (Adult)",
+          "calories": "Increase Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Include vitamin C-rich foods to enhance iron absorption",
+          "food_recommendations": [
+            {
+              "name": "Spinach & Beet Smoothie",
+              "quantity": "1 glass (250 ml)",
+              "preparation": "Blend 1 cup raw spinach, ½ small beet, ½ banana, 150 ml water.",
+              "how_it_helps": "Rich in dietary nitrates (beet) and iron (spinach), increases nitric oxide for better vasodilation and oxygen transport.",
+              "evidence": "American Journal of Clinical Nutrition (2009): Nitrate-rich foods enhance oxygen delivery during hypoxia."
+            },
+            {
+              "name": "Pomegranate Juice",
+              "quantity": "½ cup (125 ml) per day",
+              "preparation": "Drink pure juice without sugar.",
+              "how_it_helps": "High antioxidant content reduces oxidative stress and improves vascular oxygen transport.",
+              "evidence": "Nutrition Journal (2014): Pomegranate juice enhances blood flow and arterial oxygen delivery."
+            },
+            {
+              "name": "Turmeric-Ginger Tea",
+              "quantity": "1 cup/day",
+              "preparation": "Boil 1 cup water + ½ tsp turmeric + ½ tsp grated ginger + pinch black pepper.",
+              "how_it_helps": "Curcumin and gingerols reduce inflammation and support respiratory health.",
+              "evidence": "Frontiers in Pharmacology (2020): Curcumin supports oxygenation and immune response."
+            },
+            {
+              "name": "Citrus Fruit Salad",
+              "quantity": "1 bowl (1 orange + ½ cup berries)",
+              "preparation": "Peel and slice orange; mix with blueberries or strawberries.",
+              "how_it_helps": "High in vitamin C and flavonoids, strengthens lung tissue, reduces inflammation.",
+              "evidence": "Thorax (2010): Vitamin C intake improves lung function in smokers and COPD patients."
+            },
+            {
+              "name": "Pumpkin Seeds",
+              "quantity": "1 tablespoon per day",
+              "preparation": "Eat raw or lightly roasted.",
+              "how_it_helps": "High in iron, magnesium, and zinc, key for oxygen-carrying hemoglobin.",
+              "evidence": "Journal of Nutrition (2007): Iron and magnesium deficiencies reduce oxygen transport."
+            },
+            {
+              "name": "Avocado Toast",
+              "quantity": "1 slice whole grain bread + ½ avocado",
+              "preparation": "Mash avocado, spread on toast, top with lemon and herbs.",
+              "how_it_helps": "Anti-inflammatory fats, B-vitamins, and potassium optimize oxygen delivery via blood.",
+              "evidence": "Journal of the American Heart Association (2015): Monounsaturated fats support vascular health."
+            },
+            {
+              "name": "Watermelon-Cucumber Juice",
+              "quantity": "1 glass (200–250 ml)",
+              "preparation": "Blend 1 cup watermelon + ½ cucumber.",
+              "how_it_helps": "Hydration + L-citrulline in watermelon improves circulation and nitric oxide.",
+              "evidence": "Hypertension (2010): L-citrulline supports oxygenation through vasodilation."
+            },
+            {
+              "name": "Almond Milk with Dates",
+              "quantity": "1 cup warm almond milk + 2 dates",
+              "preparation": "Blend or serve soaked dates in warm milk.",
+              "how_it_helps": "Rich in iron and antioxidants; dates boost hemoglobin, almond milk supports calcium and magnesium balance.",
+              "evidence": "Hematology (2003): Dates improve anemia and oxygen-carrying capacity."
+            },
+            {
+              "name": "Broccoli & Garlic Stir Fry",
+              "quantity": "1 bowl (1 cup broccoli + 2 garlic cloves)",
+              "preparation": "Lightly stir-fry broccoli with garlic in olive oil.",
+              "how_it_helps": "Sulforaphane and allicin protect lung tissue and promote oxygen uptake.",
+              "evidence": "Clinical Nutrition (2012): Cruciferous veggies protect lungs from oxidative damage."
+            },
+            {
+              "name": "Coconut Water with Lemon",
+              "quantity": "1 glass (200 ml)",
+              "preparation": "Add 1 tsp lemon juice to fresh coconut water.",
+              "how_it_helps": "Electrolytes improve cellular oxygen use; lemon supports alkalinity and lung detox.",
+              "evidence": "Journal of Basic & Clinical Physiology and Pharmacology: Potassium-rich fluids help cellular respiration."
+            }
+          ]
+        },
+        {
+          "range": "80-89%",
+          "status": "Severe Low (Adult)",
+          "calories": "Decrease Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": null,
+          "food_recommendations": [
+            {
+              "name": "Spinach & Beet Smoothie",
+              "quantity": "1 glass (250 ml)",
+              "preparation": "Blend 1 cup raw spinach, ½ small beet, ½ banana, 150 ml water.",
+              "how_it_helps": "Rich in dietary nitrates (beet) and iron (spinach), increases nitric oxide for better vasodilation and oxygen transport.",
+              "evidence": "American Journal of Clinical Nutrition (2009): Nitrate-rich foods enhance oxygen delivery during hypoxia."
+            },
+            {
+              "name": "Pomegranate Juice",
+              "quantity": "½ cup (125 ml) per day",
+              "preparation": "Drink pure juice without sugar.",
+              "how_it_helps": "High antioxidant content reduces oxidative stress and improves vascular oxygen transport.",
+              "evidence": "Nutrition Journal (2014): Pomegranate juice enhances blood flow and arterial oxygen delivery."
+            },
+            {
+              "name": "Turmeric-Ginger Tea",
+              "quantity": "1 cup/day",
+              "preparation": "Boil 1 cup water + ½ tsp turmeric + ½ tsp grated ginger + pinch black pepper.",
+              "how_it_helps": "Curcumin and gingerols reduce inflammation and support respiratory health.",
+              "evidence": "Frontiers in Pharmacology (2020): Curcumin supports oxygenation and immune response."
+            },
+            {
+              "name": "Citrus Fruit Salad",
+              "quantity": "1 bowl (1 orange + ½ cup berries)",
+              "preparation": "Peel and slice orange; mix with blueberries or strawberries.",
+              "how_it_helps": "High in vitamin C and flavonoids, strengthens lung tissue, reduces inflammation.",
+              "evidence": "Thorax (2010): Vitamin C intake improves lung function in smokers and COPD patients."
+            },
+            {
+              "name": "Pumpkin Seeds",
+              "quantity": "1 tablespoon per day",
+              "preparation": "Eat raw or lightly roasted.",
+              "how_it_helps": "High in iron, magnesium, and zinc, key for oxygen-carrying hemoglobin.",
+              "evidence": "Journal of Nutrition (2007): Iron and magnesium deficiencies reduce oxygen transport."
+            },
+            {
+              "name": "Avocado Toast",
+              "quantity": "1 slice whole grain bread + ½ avocado",
+              "preparation": "Mash avocado, spread on toast, top with lemon and herbs.",
+              "how_it_helps": "Anti-inflammatory fats, B-vitamins, and potassium optimize oxygen delivery via blood.",
+              "evidence": "Journal of the American Heart Association (2015): Monounsaturated fats support vascular health."
+            },
+            {
+              "name": "Watermelon-Cucumber Juice",
+              "quantity": "1 glass (200–250 ml)",
+              "preparation": "Blend 1 cup watermelon + ½ cucumber.",
+              "how_it_helps": "Hydration + L-citrulline in watermelon improves circulation and nitric oxide.",
+              "evidence": "Hypertension (2010): L-citrulline supports oxygenation through vasodilation."
+            },
+            {
+              "name": "Almond Milk with Dates",
+              "quantity": "1 cup warm almond milk + 2 dates",
+              "preparation": "Blend or serve soaked dates in warm milk.",
+              "how_it_helps": "Rich in iron and antioxidants; dates boost hemoglobin, almond milk supports calcium and magnesium balance.",
+              "evidence": "Hematology (2003): Dates improve anemia and oxygen-carrying capacity."
+            },
+            {
+              "name": "Broccoli & Garlic Stir Fry",
+              "quantity": "1 bowl (1 cup broccoli + 2 garlic cloves)",
+              "preparation": "Lightly stir-fry broccoli with garlic in olive oil.",
+              "how_it_helps": "Sulforaphane and allicin protect lung tissue and promote oxygen uptake.",
+              "evidence": "Clinical Nutrition (2012): Cruciferous veggies protect lungs from oxidative damage."
+            },
+            {
+              "name": "Coconut Water with Lemon",
+              "quantity": "1 glass (200 ml)",
+              "preparation": "Add 1 tsp lemon juice to fresh coconut water.",
+              "how_it_helps": "Electrolytes improve cellular oxygen use; lemon supports alkalinity and lung detox.",
+              "evidence": "Journal of Basic & Clinical Physiology and Pharmacology: Potassium-rich fluids help cellular respiration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Respiration Rate",
+      "conditions": [
+        {
+          "range": "25-40 breaths/min",
+          "status": "High COPD (Adult)",
+          "calories": "Increase Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Prioritize antioxidants, vitamin D, and fluid intake",
+          "food_recommendations": [
+            {
+              "name": "Omega-3 Rich Chia Pudding",
+              "quantity": "2 tablespoons chia seeds soaked in 150 ml liquid",
+              "preparation": "Soak 2 tbsp chia seeds in 150 ml almond or coconut milk overnight. Add cinnamon, banana slices, or berries.",
+              "how_it_helps": "Chia’s omega-3 fatty acids (ALA) reduce airway inflammation, prevent bronchoconstriction, enhance lung elasticity.",
+              "evidence": "European Journal of Clinical Investigation (2003): Omega-3 reduces leukotrienes in asthmatic patients."
+            },
+            {
+              "name": "Steamed Leafy Greens with Garlic",
+              "quantity": "1 cup daily",
+              "preparation": "Steam 1 cup leafy greens (spinach, kale, or collards) for 3–5 minutes. Add 1–2 cloves sautéed garlic and lemon.",
+              "how_it_helps": "Chlorophyll, magnesium, and nitrates support oxygenation and respiration. Magnesium relaxes bronchial muscles.",
+              "evidence": "American Journal of Clinical Nutrition (2006): Leafy greens improve lung function."
+            },
+            {
+              "name": "Pumpkin Seed Trail Mix",
+              "quantity": "2 tablespoons (30 g)",
+              "preparation": "Mix pumpkin seeds with dried blueberries and sunflower seeds (10 g each).",
+              "how_it_helps": "Magnesium acts as a bronchodilator, zinc and omega-3s support respiratory immunity.",
+              "evidence": "Respiratory Medicine (2002): Magnesium reduces respiratory muscle fatigue."
+            },
+            {
+              "name": "Anjeer (Dry Figs)",
+              "quantity": "2 dried figs soaked overnight",
+              "preparation": "Soak 2 dried figs in water overnight, eat on empty stomach.",
+              "how_it_helps": "Figs’ mucilage soothes airways, potassium and antioxidants clear phlegm, ease breathing.",
+              "evidence": "Journal of Ayurveda and Integrative Medicine (2015): Figs improve pulmonary function."
+            },
+            {
+              "name": "Carrot & Apple Juice with Mint",
+              "quantity": "200–250 ml, once daily",
+              "preparation": "Blend 1 medium carrot, 1 apple, 4 mint leaves with 100 ml water. Strain and serve.",
+              "how_it_helps": "Beta-carotene supports lung lining, quercetin calms inflammation, mint opens nasal passages.",
+              "evidence": "Chest Journal (2006): Beta-carotene reduces airway oxidative damage."
+            },
+            {
+              "name": "Basil-Tulsi Herbal Water",
+              "quantity": "1 cup (200 ml), twice daily",
+              "preparation": "Boil 5–6 fresh tulsi leaves in 200 ml water, reduce to 150 ml, strain, drink warm.",
+              "how_it_helps": "Tulsi’s eugenol and cineole have antispasmodic, bronchodilator effects, clears mucus.",
+              "evidence": "Journal of Ethnopharmacology (2003): Tulsi effective for respiratory disorders."
+            },
+            {
+              "name": "Ginger-Turmeric Shot",
+              "quantity": "30–40 ml, 1–2 times daily",
+              "preparation": "Blend 1 tsp grated ginger + ½ tsp turmeric + 1 lemon juice + pinch black pepper in 40 ml water. Strain.",
+              "how_it_helps": "Ginger and turmeric inhibit pro-inflammatory cytokines, reduce bronchial swelling, improve airflow.",
+              "evidence": "Molecules (2013): Gingerols and curcumin suppress NF-κB signaling."
+            }
+          ]
+        },
+        {
+          "range": "12-24 breaths/min",
+          "status": "Normal (Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": null,
+          "food_recommendations": []
+        },
+        {
+          "range": "5-10 breaths/min",
+          "status": "Low (Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": "Monitor for fatigue or chronic illness signs",
+          "food_recommendations": [
+            {
+              "name": "Omega-3 Rich Chia Pudding",
+              "quantity": "2 tablespoons chia seeds soaked in 150 ml liquid",
+              "preparation": "Soak 2 tbsp chia seeds in 150 ml almond or coconut milk overnight. Add cinnamon, banana slices, or berries.",
+              "how_it_helps": "Chia’s omega-3 fatty acids (ALA) reduce airway inflammation, prevent bronchoconstriction, enhance lung elasticity.",
+              "evidence": "European Journal of Clinical Investigation (2003): Omega-3 reduces leukotrienes in asthmatic patients."
+            },
+            {
+              "name": "Steamed Leafy Greens with Garlic",
+              "quantity": "1 cup daily",
+              "preparation": "Steam 1 cup leafy greens (spinach, kale, or collards) for 3–5 minutes. Add 1–2 cloves sautéed garlic and lemon.",
+              "how_it_helps": "Chlorophyll, magnesium, and nitrates support oxygenation and respiration. Magnesium relaxes bronchial muscles.",
+              "evidence": "American Journal of Clinical Nutrition (2006): Leafy greens improve lung function."
+            },
+            {
+              "name": "Pumpkin Seed Trail Mix",
+              "quantity": "2 tablespoons (30 g)",
+              "preparation": "Mix pumpkin seeds with dried blueberries and sunflower seeds (10 g each).",
+              "how_it_helps": "Magnesium acts as a bronchodilator, zinc and omega-3s support respiratory immunity.",
+              "evidence": "Respiratory Medicine (2002): Magnesium reduces respiratory muscle fatigue."
+            },
+            {
+              "name": "Anjeer (Dry Figs)",
+              "quantity": "2 dried figs soaked overnight",
+              "preparation": "Soak 2 dried figs in water overnight, eat on empty stomach.",
+              "how_it_helps": "Figs’ mucilage soothes airways, potassium and antioxidants clear phlegm, ease breathing.",
+              "evidence": "Journal of Ayurveda and Integrative Medicine (2015): Figs improve pulmonary function."
+            },
+            {
+              "name": "Carrot & Apple Juice with Mint",
+              "quantity": "200–250 ml, once daily",
+              "preparation": "Blend 1 medium carrot, 1 apple, 4 mint leaves with 100 ml water. Strain and serve.",
+              "how_it_helps": "Beta-carotene supports lung lining, quercetin calms inflammation, mint opens nasal passages.",
+              "evidence": "Chest Journal (2006): Beta-carotene reduces airway oxidative damage."
+            },
+            {
+              "name": "Basil-Tulsi Herbal Water",
+              "quantity": "1 cup (200 ml), twice daily",
+              "preparation": "Boil 5–6 fresh tulsi leaves in 200 ml water, reduce to 150 ml, strain, drink warm.",
+              "how_it_helps": "Tulsi’s eugenol and cineole have antispasmodic, bronchodilator effects, clears mucus.",
+              "evidence": "Journal of Ethnopharmacology (2003): Tulsi effective for respiratory disorders."
+            },
+            {
+              "name": "Ginger-Turmeric Shot",
+              "quantity": "30–40 ml, 1–2 times daily",
+              "preparation": "Blend 1 tsp grated ginger + ½ tsp turmeric + 1 lemon juice + pinch black pepper in 40 ml water. Strain.",
+              "how_it_helps": "Ginger and turmeric inhibit pro-inflammatory cytokines, reduce bronchial swelling, improve airflow.",
+              "evidence": "Molecules (2013): Gingerols and curcumin suppress NF-κB signaling."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Body Temperature",
+      "conditions": [
+        {
+          "range": "100.5-104.0 °F",
+          "status": "High Fever (Adult)",
+          "calories": "Increase Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Include fluids, electrolytes, and immune-supportive herbs (tulsi, turmeric)",
+          "food_recommendations": [
+            {
+              "name": "Coconut Water",
+              "quantity": "250–300 ml, 2 times/day",
+              "preparation": "Drink directly from fresh coconut or unsweetened packaged.",
+              "how_it_helps": "Rich in electrolytes (potassium, magnesium), cools body, rehydrates, replaces minerals lost from sweating.",
+              "evidence": "Journal of Physiological Anthropology (2012): Supports rehydration during heat stress."
+            },
+            {
+              "name": "Cucumber Mint Juice",
+              "quantity": "1 glass/day",
+              "preparation": "Blend 1 medium cucumber with 4–5 mint leaves and 100 ml cold water. Strain and drink.",
+              "how_it_helps": "Cucumber’s 95% water content and mint’s menthol receptors create cooling sensation.",
+              "evidence": "Pharmacognosy Review: Cucumber and mint reduce core temperature via vasodilation."
+            },
+            {
+              "name": "Barley Water",
+              "quantity": "1–2 cups/day",
+              "preparation": "Boil 2 tbsp barley in 2 cups water for 15 mins. Strain and drink.",
+              "how_it_helps": "Alkaline, cooling, flushes toxins, reduces internal heat, supports kidney function.",
+              "evidence": "Journal of Ethnopharmacology: Barley’s anti-inflammatory, detoxifying properties."
+            },
+            {
+              "name": "Watermelon Chunks",
+              "quantity": "1–1.5 cups/day",
+              "preparation": "Eat fresh cut watermelon or blend into juice.",
+              "how_it_helps": "Rich in water, lycopene, citrulline, cools body, reduces oxidative stress.",
+              "evidence": "Nutrition Journal (2013): Links watermelon to vasodilation and temperature reduction."
+            },
+            {
+              "name": "Buttermilk",
+              "quantity": "1 glass/day",
+              "preparation": "Blend 1 cup curd with ½ cup cold water, add cumin and mint.",
+              "how_it_helps": "Hydrates, provides probiotics, regulates digestion disturbed during high temperatures.",
+              "evidence": "Ayurveda and Integrative Medicine: Buttermilk as tridosha balancer and coolant."
+            }
+          ]
+        },
+        {
+          "range": "97.0-100.4 °F",
+          "status": "Normal (Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": null,
+          "food_recommendations": [
+            {
+              "name": "Tulsi-Ginger Herbal Water",
+              "quantity": "1–2 cups/day",
+              "preparation": "Boil 5 Tulsi leaves and ½ tsp grated ginger in 2 cups water. Cool, sip warm or lukewarm.",
+              "how_it_helps": "Maintains thermoregulation by balancing hormones and digestion.",
+              "evidence": "Journal of Ayurveda & Integrative Medicine: Tulsi supports homeostasis."
+            },
+            {
+              "name": "Seasonal Fruit Salad",
+              "quantity": "1 bowl/day",
+              "preparation": "Combine ½ cup papaya, ¼ cup banana, ¼ cup pomegranate. Squeeze lemon juice on top.",
+              "how_it_helps": "Balanced hydration, sugar, antioxidants maintain temperature during changing weather.",
+              "evidence": "Food & Function journal: Tropical fruits support fluid balance, thermoregulation."
+            },
+            {
+              "name": "Sprouted Moong Salad",
+              "quantity": "½–¾ cup/day",
+              "preparation": "Mix ½ cup boiled sprouted moong, onion, lemon, coriander, cumin.",
+              "how_it_helps": "High protein, easy to digest, supports metabolic balance, steady energy release.",
+              "evidence": "Journal of Food Science: Sprouts improve thermal efficiency of the body."
+            }
+          ]
+        },
+        {
+          "range": "80.0-96.9 °F",
+          "status": "Low Cold Intolerance (Adult)",
+          "calories": "Increase Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Focus on warming spices like ginger, cinnamon; support thyroid",
+          "food_recommendations": [
+            {
+              "name": "Hot Ginger Tea",
+              "quantity": "1–2 cups/day",
+              "preparation": "Boil 1 tsp grated ginger in 1 cup water for 5 mins. Add honey if needed.",
+              "how_it_helps": "Ginger promotes thermogenesis, increases blood circulation, warms body.",
+              "evidence": "Metabolism Journal (2012): Ginger increases body temperature and energy expenditure."
+            },
+            {
+              "name": "Oatmeal with Cinnamon",
+              "quantity": "1 bowl/day",
+              "preparation": "Cook ½ cup oats with warm water/milk and ½ tsp cinnamon.",
+              "how_it_helps": "Warm, carb-rich meal provides energy. Cinnamon improves blood flow, aiding warmth.",
+              "evidence": "Critical Reviews in Food Science: Cinnamon enhances peripheral blood flow."
+            },
+            {
+              "name": "Turmeric Milk",
+              "quantity": "1 cup at bedtime",
+              "preparation": "Heat 1 cup milk with ¼ tsp turmeric and pinch of black pepper.",
+              "how_it_helps": "Turmeric enhances metabolism and warmth. Black pepper improves curcumin absorption.",
+              "evidence": "Journal of Traditional and Complementary Medicine: Turmeric’s metabolic warming effects."
+            },
+            {
+              "name": "Sweet Potato Mash",
+              "quantity": "½ cup serving",
+              "preparation": "Boil 1 small sweet potato, mash with ghee and pinch of salt.",
+              "how_it_helps": "High in complex carbs and vitamin A, provides warmth and sustained energy.",
+              "evidence": "Journal of Food Science and Technology: Sweet potato’s thermogenic impact."
+            },
+            {
+              "name": "Dates and Warm Almond Milk",
+              "quantity": "2 dates + 1 cup almond milk/day",
+              "preparation": "Soak 2 dates in warm almond milk and consume both.",
+              "how_it_helps": "Warm milk and dates supply sugars, protein, warmth, increase core temperature.",
+              "evidence": "Clinical Nutrition ESPEN: Date and nut milk support metabolic warmth."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blood Ketones",
+      "conditions": [
+        {
+          "range": "0.0-0.5 mmol/L",
+          "status": "Normal (Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": null,
+          "food_recommendations": [
+            {
+              "name": "Avocado and Boiled Egg Bowl",
+              "quantity": "Half ripe avocado + 1 boiled egg",
+              "preparation": "Slice avocado and egg. Sprinkle with sea salt and eat together.",
+              "how_it_helps": "Avocados’ monounsaturated fats and fiber keep insulin low. Eggs provide protein and fat, supporting mild ketone production.",
+              "evidence": "Studies show such meals promote fat metabolism."
+            },
+            {
+              "name": "Bulletproof Coffee",
+              "quantity": "1 cup black coffee + 1 tsp ghee or MCT oil",
+              "preparation": "Brew coffee, add ghee or MCT oil, blend until creamy.",
+              "how_it_helps": "Medium-chain fats convert quickly to ketones in liver, raising ketone levels.",
+              "evidence": "Supported in ketogenic therapy studies."
+            },
+            {
+              "name": "Chia Seed Coconut Pudding",
+              "quantity": "2 tbsp coconut milk + 1 tbsp chia seeds + pinch cinnamon",
+              "preparation": "Mix all ingredients, soak overnight. Eat cold or room temperature.",
+              "how_it_helps": "Chia’s fiber and coconut milk’s fats support stable blood sugar, fat metabolism, sustained ketone formation.",
+              "evidence": "Promotes gentle ketone production."
+            },
+            {
+              "name": "Stir-Fried Paneer Cubes",
+              "quantity": "100 g paneer + 1 tsp ghee",
+              "preparation": "Cut paneer into cubes, stir-fry in ghee with mild spices for 3-4 minutes.",
+              "how_it_helps": "Paneer’s protein and fat with no carbs support ketosis without stimulating insulin.",
+              "evidence": "Ideal for weight loss through fat metabolism."
+            },
+            {
+              "name": "Nut Butter Snack",
+              "quantity": "1 tbsp almond or peanut butter",
+              "preparation": "Eat directly or spread on low-carb keto cracker.",
+              "how_it_helps": "Healthy fats, low carbs fuel body without disturbing blood sugar, encourage ketone production.",
+              "evidence": "Supports ketosis and satiety."
+            }
+          ]
+        },
+        {
+          "range": "0.6-3.0 mmol/L",
+          "status": "Nutritional Ketosis (Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": "Monitor for fatigue, ensure adequate electrolytes and fiber",
+          "food_recommendations": [
+            {
+              "name": "Avocado and Boiled Egg Bowl",
+              "quantity": "Half ripe avocado + 1 boiled egg",
+              "preparation": "Slice avocado and egg. Sprinkle with sea salt and eat together.",
+              "how_it_helps": "Avocados’ monounsaturated fats and fiber keep insulin low. Eggs provide protein and fat, supporting mild ketone production.",
+              "evidence": "Studies show such meals promote fat metabolism."
+            },
+            {
+              "name": "Bulletproof Coffee",
+              "quantity": "1 cup black coffee + 1 tsp ghee or MCT oil",
+              "preparation": "Brew coffee, add ghee or MCT oil, blend until creamy.",
+              "how_it_helps": "Medium-chain fats convert quickly to ketones in liver, raising ketone levels.",
+              "evidence": "Supported in ketogenic therapy studies."
+            },
+            {
+              "name": "Chia Seed Coconut Pudding",
+              "quantity": "2 tbsp coconut milk + 1 tbsp chia seeds + pinch cinnamon",
+              "preparation": "Mix all ingredients, soak overnight. Eat cold or room temperature.",
+              "how_it_helps": "Chia’s fiber and coconut milk’s fats support stable blood sugar, fat metabolism, sustained ketone formation.",
+              "evidence": "Promotes gentle ketone production."
+            },
+            {
+              "name": "Stir-Fried Paneer Cubes",
+              "quantity": "100 g paneer + 1 tsp ghee",
+              "preparation": "Cut paneer into cubes, stir-fry in ghee with mild spices for 3-4 minutes.",
+              "how_it_helps": "Paneer’s protein and fat with no carbs support ketosis without stimulating insulin.",
+              "evidence": "Ideal for weight loss through fat metabolism."
+            },
+            {
+              "name": "Nut Butter Snack",
+              "quantity": "1 tbsp almond or peanut butter",
+              "preparation": "Eat directly or spread on low-carb keto cracker.",
+              "how_it_helps": "Healthy fats, low carbs fuel body without disturbing blood sugar, encourage ketone production.",
+              "evidence": "Supports ketosis and satiety."
+            }
+          ]
+        },
+        {
+          "range": "5.1-10.0 mmol/L",
+          "status": "Diabetic Ketoacidosis (Adult)",
+          "calories": "Decrease Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Emergency care; IV fluids, insulin, strict monitoring",
+          "food_recommendations": [
+            {
+              "name": "Sweet Rice Water",
+              "quantity": "½ cup cooked white rice + 300 ml water + 1 tsp sugar + pinch salt",
+              "preparation": "Boil rice in water, strain, mix with sugar and salt, sip slowly at room temperature.",
+              "how_it_helps": "Rice provides rapid glucose, increases insulin, stops ketone production. Sugar boosts glucose, salt corrects electrolytes.",
+              "evidence": "Mimics medical rehydration therapy (American Diabetes Association)."
+            },
+            {
+              "name": "Banana and Date Smoothie",
+              "quantity": "1 ripe banana + 2 soft dates + 150 ml water or low-fat milk",
+              "preparation": "Blend all ingredients until smooth. Drink immediately.",
+              "how_it_helps": "Bananas and dates provide rapid carbs to reverse fat-burning state, potassium corrects electrolyte imbalance.",
+              "evidence": "Glucose inhibits ketone formation via insulin."
+            },
+            {
+              "name": "Oral Rehydration Solution with Orange Juice",
+              "quantity": "200 ml orange juice + 200 ml water + 1 tbsp sugar + ½ tsp salt",
+              "preparation": "Mix well, sip over 10-15 minutes.",
+              "how_it_helps": "Orange juice provides glucose, potassium, vitamin C. Sugar and salt rehydrate, stop fat breakdown.",
+              "evidence": "Reduces oxidative stress in ketoacidosis."
+            },
+            {
+              "name": "White Toast with Honey",
+              "quantity": "1 slice white bread + 1 tsp honey",
+              "preparation": "Lightly toast bread, spread honey, eat warm or room temperature.",
+              "how_it_helps": "High glycemic index provides quick glucose, stops ketone production via insulin.",
+              "evidence": "Rapid glucose supply effective in ketoacidosis management."
+            },
+            {
+              "name": "Sweet Lassi",
+              "quantity": "100 ml fresh curd + 200 ml water + 1-2 tsp sugar",
+              "preparation": "Blend curd with water and sugar, serve at room temperature.",
+              "how_it_helps": "Provides hydration, glucose, protein for tissue repair, improves gut function.",
+              "evidence": "Reverses energy deficiency in ketoacidosis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Body Fat %",
+      "conditions": [
+        {
+          "range": "25.1-40.0%",
+          "status": "High Obesity (Men, Adult)",
+          "calories": "Decrease Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Prioritize physical activity, track progress weekly",
+          "food_recommendations": [
+            {
+              "name": "Green Tea with Lemon",
+              "quantity": "1 cup (250 ml), 2 times/day",
+              "preparation": "Steep 1 green tea bag in hot water for 3–4 mins, squeeze half a lemon.",
+              "how_it_helps": "Catechins (EGCG) increase energy expenditure, fat oxidation. Lemon adds polyphenols, enhances digestion.",
+              "evidence": "Obesity Reviews (2011): Green tea improves weight and fat mass loss."
+            },
+            {
+              "name": "Apple and Peanut Butter",
+              "quantity": "1 medium apple + 1 tbsp natural peanut butter",
+              "preparation": "Slice apple and dip in peanut butter.",
+              "how_it_helps": "Apples’ fiber and polyphenols reduce visceral fat, improve satiety. Peanut butter regulates appetite.",
+              "evidence": "Nutrition Journal (2012): High-fiber fruit reduces body fat %."
+            },
+            {
+              "name": "Greek Yogurt with Flaxseed",
+              "quantity": "150 g plain Greek yogurt + 1 tbsp ground flaxseed",
+              "preparation": "Mix and eat chilled.",
+              "how_it_helps": "Yogurt improves satiety, lean muscle. Flaxseed’s omega-3s, lignans promote fat metabolism.",
+              "evidence": "Journal of Nutrition (2017): Flax reduces waist circumference, body fat %."
+            },
+            {
+              "name": "Vegetable Stir-fry with Tofu",
+              "quantity": "1 cup mixed vegetables + 100 g tofu",
+              "preparation": "Stir-fry in 1 tsp olive oil, season with turmeric and pepper.",
+              "how_it_helps": "Non-starchy vegetables’ fiber fills with low calories. Tofu preserves lean mass.",
+              "evidence": "Diabetes Care (2011): Plant-based proteins support healthy body composition."
+            },
+            {
+              "name": "Boiled Egg with Mixed Seeds",
+              "quantity": "1 boiled egg + 1 tbsp mixed pumpkin, chia, sunflower seeds",
+              "preparation": "Sprinkle seeds over halved egg.",
+              "how_it_helps": "Eggs’ protein, choline aid liver fat metabolism. Seeds’ omega-3s, fiber reduce abdominal fat.",
+              "evidence": "International Journal of Obesity: Nutrient-dense snacks reduce fat."
+            },
+            {
+              "name": "Oats with Cinnamon and Walnuts",
+              "quantity": "½ cup rolled oats + 1 tsp cinnamon + 4 walnut halves",
+              "preparation": "Cook oats with water/milk, top with cinnamon and walnuts.",
+              "how_it_helps": "Oats’ beta-glucan reduces appetite, body fat. Cinnamon regulates insulin, walnuts add omega-3s.",
+              "evidence": "Appetite (2015): Oats improve body composition, insulin sensitivity."
+            },
+            {
+              "name": "Cucumber and Hummus Plate",
+              "quantity": "1 whole cucumber + 2 tbsp hummus",
+              "preparation": "Slice cucumber, dip in hummus.",
+              "how_it_helps": "Low-calorie cucumber hydrates, hummus’ fiber, fat reduce cravings, promote fat loss.",
+              "evidence": "Journal of the American College of Nutrition (2009): High-fiber snacks aid fat loss."
+            },
+            {
+              "name": "Avocado Chia Pudding",
+              "quantity": "3 tbsp mashed avocado + 1 tbsp chia + 100 ml almond milk",
+              "preparation": "Mix all, soak overnight.",
+              "how_it_helps": "Avocado’s monounsaturated fats reduce belly fat. Chia improves satiety, stabilizes insulin.",
+              "evidence": "Nutrition Journal (2013): Avocado supports healthy body weight, fat distribution."
+            },
+            {
+              "name": "Spiced Buttermilk",
+              "quantity": "1 glass (250 ml)",
+              "preparation": "Blend 100 ml curd + 150 ml water + roasted cumin + mint + pinch salt.",
+              "how_it_helps": "Protein-rich buttermilk improves digestion, hydration. Cumin boosts metabolism, fermented foods balance gut microbiota.",
+              "evidence": "Nature (2013): Gut microbiota key in fat storage, metabolism."
+            },
+            {
+              "name": "Quinoa Salad with Lemon Dressing",
+              "quantity": "½ cup cooked quinoa + veggies + 1 tsp olive oil + lemon juice",
+              "preparation": "Mix cooked quinoa with chopped vegetables, drizzle oil and lemon.",
+              "how_it_helps": "Quinoa’s protein, fiber lower appetite, increase energy burn. Olive oil, lemon aid fat oxidation.",
+              "evidence": "Journal of Food Science and Technology (2015): Quinoa improves body composition."
+            }
+          ]
+        },
+        {
+          "range": "32.1-45.0%",
+          "status": "High Obesity (Women, Adult)",
+          "calories": "Decrease Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Prioritize physical activity, track progress weekly",
+          "food_recommendations": [
+            {
+              "name": "Green Tea with Lemon",
+              "quantity": "1 cup (250 ml), 2 times/day",
+              "preparation": "Steep 1 green tea bag in hot water for 3–4 mins, squeeze half a lemon.",
+              "how_it_helps": "Catechins (EGCG) increase energy expenditure, fat oxidation. Lemon adds polyphenols, enhances digestion.",
+              "evidence": "Obesity Reviews (2011): Green tea improves weight and fat mass loss."
+            },
+            {
+              "name": "Apple and Peanut Butter",
+              "quantity": "1 medium apple + 1 tbsp natural peanut butter",
+              "preparation": "Slice apple and dip in peanut butter.",
+              "how_it_helps": "Apples’ fiber and polyphenols reduce visceral fat, improve satiety. Peanut butter regulates appetite.",
+              "evidence": "Nutrition Journal (2012): High-fiber fruit reduces body fat %."
+            },
+            {
+              "name": "Greek Yogurt with Flaxseed",
+              "quantity": "150 g plain Greek yogurt + 1 tbsp ground flaxseed",
+              "preparation": "Mix and eat chilled.",
+              "how_it_helps": "Yogurt improves satiety, lean muscle. Flaxseed’s omega-3s, lignans promote fat metabolism.",
+              "evidence": "Journal of Nutrition (2017): Flax reduces waist circumference, body fat %."
+            },
+            {
+              "name": "Vegetable Stir-fry with Tofu",
+              "quantity": "1 cup mixed vegetables + 100 g tofu",
+              "preparation": "Stir-fry in 1 tsp olive oil, season with turmeric and pepper.",
+              "how_it_helps": "Non-starchy vegetables’ fiber fills with low calories. Tofu preserves lean mass.",
+              "evidence": "Diabetes Care (2011): Plant-based proteins support healthy body composition."
+            },
+            {
+              "name": "Boiled Egg with Mixed Seeds",
+              "quantity": "1 boiled egg + 1 tbsp mixed pumpkin, chia, sunflower seeds",
+              "preparation": "Sprinkle seeds over halved egg.",
+              "how_it_helps": "Eggs’ protein, choline aid liver fat metabolism. Seeds’ omega-3s, fiber reduce abdominal fat.",
+              "evidence": "International Journal of Obesity: Nutrient-dense snacks reduce fat."
+            },
+            {
+              "name": "Oats with Cinnamon and Walnuts",
+              "quantity": "½ cup rolled oats + 1 tsp cinnamon + 4 walnut halves",
+              "preparation": "Cook oats with water/milk, top with cinnamon and walnuts.",
+              "how_it_helps": "Oats’ beta-glucan reduces appetite, body fat. Cinnamon regulates insulin, walnuts add omega-3s.",
+              "evidence": "Appetite (2015): Oats improve body composition, insulin sensitivity."
+            },
+            {
+              "name": "Cucumber and Hummus Plate",
+              "quantity": "1 whole cucumber + 2 tbsp hummus",
+              "preparation": "Slice cucumber, dip in hummus.",
+              "how_it_helps": "Low-calorie cucumber hydrates, hummus’ fiber, fat reduce cravings, promote fat loss.",
+              "evidence": "Journal of the American College of Nutrition (2009): High-fiber snacks aid fat loss."
+            },
+            {
+              "name": "Avocado Chia Pudding",
+              "quantity": "3 tbsp mashed avocado + 1 tbsp chia + 100 ml almond milk",
+              "preparation": "Mix all, soak overnight.",
+              "how_it_helps": "Avocado’s monounsaturated fats reduce belly fat. Chia improves satiety, stabilizes insulin.",
+              "evidence": "Nutrition Journal (2013): Avocado supports healthy body weight, fat distribution."
+            },
+            {
+              "name": "Spiced Buttermilk",
+              "quantity": "1 glass (250 ml)",
+              "preparation": "Blend 100 ml curd + 150 ml water + roasted cumin + mint + pinch salt.",
+              "how_it_helps": "Protein-rich buttermilk improves digestion, hydration. Cumin boosts metabolism, fermented foods balance gut microbiota.",
+              "evidence": "Nature (2013): Gut microbiota key in fat storage, metabolism."
+            },
+            {
+              "name": "Quinoa Salad with Lemon Dressing",
+              "quantity": "½ cup cooked quinoa + veggies + 1 tsp olive oil + lemon juice",
+              "preparation": "Mix cooked quinoa with chopped vegetables, drizzle oil and lemon.",
+              "how_it_helps": "Quinoa’s protein, fiber lower appetite, increase energy burn. Olive oil, lemon aid fat oxidation.",
+              "evidence": "Journal of Food Science and Technology (2015): Quinoa improves body composition."
+            }
+          ]
+        },
+        {
+          "range": "10.0-25.0%",
+          "status": "Normal (Men, Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": null,
+          "food_recommendations": []
+        },
+        {
+          "range": "18.0-32.0%",
+          "status": "Normal (Women, Adult)",
+          "calories": "No changes in Total Daily Energy Expenditure (TDEE)",
+          "nutritional_considerations": null,
+          "food_recommendations": []
+        },
+        {
+          "range": "3.0-9.9%",
+          "status": "Low Underweight (Men, Adult)",
+          "calories": "Increase Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Include small frequent meals; consider protein supplements if needed",
+          "food_recommendations": [
+            {
+              "name": "Banana with Peanut Butter Toast",
+              "quantity": "1 slice whole grain toast + 1 medium banana + 1 tbsp peanut butter",
+              "preparation": "Toast bread, spread peanut butter, slice banana on top.",
+              "how_it_helps": "Calorie-dense with complex carbs, healthy fats, potassium. Supports hormone production, brain health.",
+              "evidence": "Nutrients (2018): Healthy fats improve hormonal balance, weight gain in underweight."
+            },
+            {
+              "name": "Full-fat Yogurt with Dates",
+              "quantity": "150–200 g plain full-fat yogurt + 2 chopped dates",
+              "preparation": "Mix and consume chilled.",
+              "how_it_helps": "Full-fat dairy supports calorie intake, vitamin absorption, gut health. Dates add sugar, minerals.",
+              "evidence": "American Journal of Clinical Nutrition (2015): Full-fat dairy linked to better metabolic profiles."
+            },
+            {
+              "name": "Sweet Potato with Olive Oil",
+              "quantity": "1 medium boiled/baked sweet potato + 1 tsp extra virgin olive oil",
+              "preparation": "Drizzle oil over cooked sweet potato, season with salt and pepper.",
+              "how_it_helps": "Complex carbs replenish glycogen, olive oil’s oleic acid supports hormone production, brain health.",
+              "evidence": "PREDIMED Study, The Lancet Diabetes & Endocrinology (2014): Olive oil supports healthy weight."
+            },
+            {
+              "name": "Feta Cheese and Brown Rice Bowl",
+              "quantity": "50 g feta cheese + ½ cup brown rice + veggies",
+              "preparation": "Sauté veggies, mix with cooked rice, add salt and feta cheese on top, stir and enjoy.",
+              "how_it_helps": "High protein, fat in paneer aid muscle maintenance, lean mass. Brown rice adds fiber, steady energy.",
+              "evidence": "Clinical Nutrition: Dairy protein increases lean body mass, body fat in undernourished."
+            },
+            {
+              "name": "Dry Fruits and Coconut",
+              "quantity": "1 ladoo (1 tbsp desiccated coconut + 3–4 chopped almonds + 2 dates)",
+              "preparation": "Blend all ingredients, roll into a ball. No sugar needed.",
+              "how_it_helps": "Rich in healthy fats, iron, sugars. Supports fat increase, energy, hormonal balance.",
+              "evidence": "Asia Pacific Journal of Clinical Nutrition: Energy-dense snacks increase fat mass in low BMI."
+            }
+          ]
+        },
+        {
+          "range": "12.0-17.9%",
+          "status": "Low Underweight (Women, Adult)",
+          "calories": "Increase Total Daily Energy Expenditure (TDEE) by 100 kcal",
+          "nutritional_considerations": "Include small frequent meals; consider protein supplements if needed",
+          "food_recommendations": [
+            {
+              "name": "Banana with Peanut Butter Toast",
+              "quantity": "1 slice whole grain toast + 1 medium banana + 1 tbsp peanut butter",
+              "preparation": "Toast bread, spread peanut butter, slice banana on top.",
+              "how_it_helps": "Calorie-dense with complex carbs, healthy fats, potassium. Supports hormone production, brain health.",
+              "evidence": "Nutrients (2018): Healthy fats improve hormonal balance, weight gain in underweight."
+            },
+            {
+              "name": "Full-fat Yogurt with Dates",
+              "quantity": "150–200 g plain full-fat yogurt + 2 chopped dates",
+              "preparation": "Mix and consume chilled.",
+              "how_it_helps": "Full-fat dairy supports calorie intake, vitamin absorption, gut health. Dates add sugar, minerals.",
+              "evidence": "American Journal of Clinical Nutrition (2015): Full-fat dairy linked to better metabolic profiles."
+            },
+            {
+              "name": "Sweet Potato with Olive Oil",
+              "quantity": "1 medium boiled/baked sweet potato + 1 tsp extra virgin olive oil",
+              "preparation": "Drizzle oil over cooked sweet potato, season with salt and pepper.",
+              "how_it_helps": "Complex carbs replenish glycogen, olive oil’s oleic acid supports hormone production, brain health.",
+              "evidence": "PREDIMED Study, The Lancet Diabetes & Endocrinology (2014): Olive oil supports healthy weight."
+            },
+            {
+              "name": "Feta Cheese and Brown Rice Bowl",
+              "quantity": "50 g feta cheese + ½ cup brown rice + veggies",
+              "preparation": "Sauté veggies, mix with cooked rice, add salt and feta cheese on top, stir and enjoy.",
+              "how_it_helps": "High protein, fat in paneer aid muscle maintenance, lean mass. Brown rice adds fiber, steady energy.",
+              "evidence": "Clinical Nutrition: Dairy protein increases lean body mass, body fat in undernourished."
+            },
+            {
+              "name": "Dry Fruits and Coconut",
+              "quantity": "1 ladoo (1 tbsp desiccated coconut + 3–4 chopped almonds + 2 dates)",
+              "preparation": "Blend all ingredients, roll into a ball. No sugar needed.",
+              "how_it_helps": "Rich in healthy fats, iron, sugars. Supports fat increase, energy, hormonal balance.",
+              "evidence": "Asia Pacific Journal of Clinical Nutrition: Energy-dense snacks increase fat mass in low BMI."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

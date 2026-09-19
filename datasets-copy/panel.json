@@ -1,0 +1,572 @@
+{
+  "lipid_panel": [
+    {
+      "test_name": "Total Cholesterol",
+      "full_form_description": "Measures the total amount of cholesterol in blood (includes HDL, LDL, and VLDL)",
+      "normal_range": "Less than 200 mg/dL",
+      "what_it_indicates": "Indicates the overall cholesterol level; high levels increase heart disease risk",
+      "high_value_indicates": "Atherosclerosis, heart disease, poor diet, genetics, hypothyroidism",
+      "low_value_indicates": "Rarely significant unless very low",
+      "symptoms_risks_of_imbalance": {
+        "high": "Increased risk of heart attack, stroke, clogged arteries",
+        "low": "Hormone issues, depression, fatigue, nutrient malabsorption"
+      }
+    },
+    {
+      "test_name": "LDL",
+      "full_form_description": "Low-Density Lipoprotein; \"bad cholesterol\" that builds up in arteries",
+      "normal_range": "Optimal: Less than 100 mg/dL; Near-optimal: 100–129 mg/dL",
+      "what_it_indicates": "Transports cholesterol to tissues; excess leads to plaque in arteries",
+      "high_value_indicates": "Atherosclerosis, heart disease, stroke",
+      "low_value_indicates": "May be beneficial when low",
+      "symptoms_risks_of_imbalance": {
+        "high": "Plaque buildup, increased heart disease/stroke risk",
+        "low": "May reduce heart disease risk but very low levels may impair hormone synthesis"
+      }
+    },
+    {
+      "test_name": "HDL",
+      "full_form_description": "High-Density Lipoprotein; \"good cholesterol\" that removes excess cholesterol",
+      "normal_range": "Men: 40 mg/dL or higher; Women: 50 mg/dL or higher; Ideal: 60 mg/dL or more",
+      "what_it_indicates": "Cleans blood vessels by carrying cholesterol to liver for removal",
+      "high_value_indicates": "Often beneficial unless extremely high",
+      "low_value_indicates": "Higher risk of heart disease, metabolic syndrome",
+      "symptoms_risks_of_imbalance": {
+        "high": "Usually protective against heart disease",
+        "low": "High cardiovascular risk, insulin resistance, obesity, metabolic issues"
+      }
+    },
+    {
+      "test_name": "Triglycerides",
+      "full_form_description": "Fat molecules in blood; stored energy",
+      "normal_range": "Less than 150 mg/dL",
+      "what_it_indicates": "Reflects fat storage from calories not used; linked to metabolic health",
+      "high_value_indicates": "Obesity, type 2 diabetes, alcohol use, poor diet, thyroid disorders",
+      "low_value_indicates": "Malnutrition, poor fat absorption, hyperthyroidism",
+      "symptoms_risks_of_imbalance": {
+        "high": "Pancreatitis, fatty liver, heart disease risk",
+        "low": "Malabsorption, poor diet, hyperthyroidism, wasting conditions"
+      }
+    },
+    {
+      "test_name": "VLDL",
+      "full_form_description": "Very-Low-Density Lipoprotein; carries triglycerides",
+      "normal_range": "2–30 mg/dL (estimated)",
+      "what_it_indicates": "Transports triglycerides; contributes to cholesterol buildup in arteries",
+      "high_value_indicates": "Liver disease, diabetes, high carb intake",
+      "low_value_indicates": "Malnutrition, chronic illness",
+      "symptoms_risks_of_imbalance": {
+        "high": "Risk of fatty liver, heart disease",
+        "low": "Rarely significant but may reflect poor nutritional state"
+      }
+    },
+    {
+      "test_name": "SGPT (ALT)",
+      "full_form_description": "Serum Glutamic Pyruvic Transaminase / Alanine Aminotransferase Liver enzyme; rises when liver is inflamed or damaged",
+      "normal_range": "for",
+      "what_it_indicates": "Liver injury, fatty liver, hepatitis, alcohol",
+      "high_value_indicates": "Advanced liver disease",
+      "low_value_indicates": "Rarely significant",
+      "symptoms_risks_of_imbalance": {
+        "high": "Fatigue, nausea, pain in right side, jaundice",
+        "low": null
+      }
+    },
+    {
+      "test_name": "SGOT (AST)",
+      "full_form_description": "Serum Glutamic Oxaloacetic Transaminase / Aspartate Aminotransferase",
+      "normal_range": "10–40 U/L",
+      "what_it_indicates": "Liver, heart, and muscle enzyme",
+      "high_value_indicates": "Liver disease, heart attack, muscle damage",
+      "low_value_indicates": "Advanced liver disease",
+      "symptoms_risks_of_imbalance": {
+        "high": "Muscle/joint pain, liver pain, fatigue",
+        "low": "Not usually a concern unless both AST and ALT are low"
+      }
+    },
+    {
+      "test_name": "Fatty Liver Grade (Ultrasound based)",
+      "full_form_description": "Visual grading of fat accumulation in liver tissue",
+      "normal_range": "Grade 0: Normal",
+      "what_it_indicates": "Detects non-alcoholic fatty liver disease (NAFLD) or alcoholic fatty liver",
+      "high_value_indicates": "Obesity, insulin resistance, high triglycerides, poor diet",
+      "low_value_indicates": "Normal liver function",
+      "symptoms_risks_of_imbalance": {
+        "grade_1": "Mild fat, often reversible",
+        "grade_2": "Moderate fat, early liver dysfunction",
+        "grade_3": "Risk of inflammation, scarring, NASH (non-alcoholic steatohepatitis)"
+      }
+    }
+  ],
+  "thyroid_panel": [
+    {
+      "test_name": "TSH",
+      "full_form_description": "Thyroid Stimulating Hormone – secreted by the pituitary to stimulate the thyroid",
+      "normal_range_adults": "0.4 – 4.0 mIU/L (ideal 1.0–2.5)",
+      "what_it_indicates": "Main screening test; controls thyroid hormone production",
+      "high_value_indicates": "Hypothyroidism (underactive thyroid)",
+      "low_value_indicates": "Hyperthyroidism (overactive thyroid)",
+      "symptoms_risks_of_imbalance": {
+        "high": "Weight gain, cold intolerance, hair loss, fatigue, depression",
+        "low": "Anxiety, weight loss, sweating, fast heartbeat"
+      }
+    },
+    {
+      "test_name": "Free T4",
+      "full_form_description": "Free Thyroxine – main inactive thyroid hormone circulating in blood",
+      "normal_range_adults": "0.8 – 1.8 ng/dL",
+      "what_it_indicates": "Reflects hormone produced by thyroid gland",
+      "high_value_indicates": "Hyperthyroidism, thyroiditis",
+      "low_value_indicates": "Hypothyroidism, iodine deficiency",
+      "symptoms_risks_of_imbalance": {
+        "high": "Nervousness, palpitations, insomnia",
+        "low": "Fatigue, dry skin, constipation, depression"
+      }
+    },
+    {
+      "test_name": "Free T3",
+      "full_form_description": "Free Triiodothyronine – active form of thyroid hormone",
+      "normal_range_adults": "2.3 – 4.2 pg/mL",
+      "what_it_indicates": "Active hormone influencing metabolism and mood",
+      "high_value_indicates": "Hyperthyroidism, T3 toxicosis",
+      "low_value_indicates": "Hypothyroidism, poor conversion of T4 to T3",
+      "symptoms_risks_of_imbalance": {
+        "high": "Irritability, weight loss, tremors, anxiety",
+        "low": "Brain fog, low energy, weight gain, depression"
+      }
+    },
+    {
+      "test_name": "Total T4",
+      "full_form_description": "Total Thyroxine – bound + unbound hormone in blood",
+      "normal_range_adults": "4.5 – 12.5 mcg/dL",
+      "what_it_indicates": "Measures overall T4 levels; less specific than free T4",
+      "high_value_indicates": "High T4 production or high binding proteins",
+      "low_value_indicates": "Hypothyroidism, low protein levels",
+      "symptoms_risks_of_imbalance": {
+        "high": "Hyperthyroid symptoms",
+        "low": "Same as low Free T4 symptoms"
+      }
+    },
+    {
+      "test_name": "Total T3",
+      "full_form_description": "Total Triiodothyronine – bound + free form of T3",
+      "normal_range_adults": "80 – 200 ng/dL",
+      "what_it_indicates": "Overall T3 level in the blood",
+      "high_value_indicates": "Hyperthyroidism",
+      "low_value_indicates": "Hypothyroidism or low conversion",
+      "symptoms_risks_of_imbalance": {
+        "high": "Same as Free T3 – used in cross-check with Free T3",
+        "low": null
+      }
+    },
+    {
+      "test_name": "Reverse T3 (rT3)",
+      "full_form_description": "Inactive form of T3; blocks Free T3 action",
+      "normal_range_adults": "8 – 25 ng/dL",
+      "what_it_indicates": "Indicates stress response or thyroid hormone resistance",
+      "high_value_indicates": "Chronic illness, stress, adrenal fatigue",
+      "low_value_indicates": "Rarely tested for low; not usually significant",
+      "symptoms_risks_of_imbalance": {
+        "high": "Fatigue, sluggish metabolism, poor T3 effect",
+        "low": "Not usually clinically important"
+      }
+    },
+    {
+      "test_name": "Anti-TPO Antibodies",
+      "full_form_description": "Anti-thyroid peroxidase antibodies – autoimmune marker",
+      "normal_range_adults": "<35 IU/mL",
+      "what_it_indicates": "Detects autoimmune thyroid disease like Hashimoto’s or Graves’",
+      "high_value_indicates": "Hashimoto's thyroiditis, Graves' disease",
+      "low_value_indicates": "Normal (if absent)",
+      "symptoms_risks_of_imbalance": {
+        "high": "Autoimmune symptoms, thyroid gland attack, mood swings",
+        "low": null
+      }
+    },
+    {
+      "test_name": "Anti-TG Antibodies",
+      "full_form_description": "Anti-thyroglobulin antibodies – autoimmune marker",
+      "normal_range_adults": "<20 IU/mL",
+      "what_it_indicates": "Indicates autoimmune reaction against thyroid proteins",
+      "high_value_indicates": "Hashimoto’s, Graves’",
+      "low_value_indicates": "Normal (if absent)",
+      "symptoms_risks_of_imbalance": {
+        "high": "Indicates thyroid inflammation, infertility risk, hair loss",
+        "low": null
+      }
+    },
+    {
+      "test_name": "TRAb / TSI",
+      "full_form_description": "TSH receptor antibody / Thyroid Stimulating Immunoglobulin",
+      "normal_range_adults": "TRAb: <1.75 IU/L TSI: <140%",
+      "what_it_indicates": "Confirms Graves' disease (overactive thyroid due to antibodies)",
+      "high_value_indicates": "Graves’ disease",
+      "low_value_indicates": "Normal (absent)",
+      "symptoms_risks_of_imbalance": {
+        "high": "Rapid weight loss, bulging eyes, anxiety, heat intolerance",
+        "low": null
+      }
+    }
+  ],
+  "complete_sugar_panel": [
+    {
+      "test_name": "Fasting Blood Sugar (FBS)",
+      "full_form_description": "Glucose after 8–10 hours of fasting",
+      "normal_range_us_std": "70–99 mg/dL; 100–125 = Prediabetes; ≥126 = Diabetes",
+      "what_it_indicates": "Indicates baseline sugar level",
+      "high_value_indicates": "Prediabetes, Diabetes Mellitus",
+      "low_value_indicates": "Hypoglycemia, fasting too long",
+      "symptoms_risks_of_imbalance": {
+        "high": "Frequent urination, thirst, fatigue",
+        "low": "Dizziness, sweating, confusion, fainting"
+      }
+    },
+    {
+      "test_name": "Postprandial Blood Sugar (PPBS)",
+      "full_form_description": "Glucose 2 hours after a meal",
+      "normal_range_us_std": "<140 mg/dL; 140–199 = Prediabetes; ≥200 = Diabetes",
+      "what_it_indicates": "Body’s ability to process sugar after eating",
+      "high_value_indicates": "Impaired glucose tolerance or diabetes",
+      "low_value_indicates": "Hypoglycemia",
+      "symptoms_risks_of_imbalance": {
+        "high": "Tiredness, blurry vision, hunger after eating",
+        "low": "Shakiness, irritability, cold sweat"
+      }
+    },
+    {
+      "test_name": "Random Blood Sugar (RBS)",
+      "full_form_description": "Glucose at any time, no fasting",
+      "normal_range_us_std": "<200 mg/dL",
+      "what_it_indicates": "Quick check for abnormal glucose at any time",
+      "high_value_indicates": "If >200 + symptoms = likely diabetes",
+      "low_value_indicates": "Hypoglycemia",
+      "symptoms_risks_of_imbalance": {
+        "high": "Diabetes symptoms",
+        "low": "Headache, tremors, mental fog"
+      }
+    },
+    {
+      "test_name": "HbA1c (Glycated Hemoglobin)",
+      "full_form_description": "Avg. blood sugar over past 2–3 months",
+      "normal_range_us_std": "<5.7% = Normal; 5.7–6.4% = Prediabetes; ≥6.5% = Diabetes",
+      "what_it_indicates": "Best test to monitor long-term glucose control",
+      "high_value_indicates": "Chronic high sugar (diabetes)",
+      "low_value_indicates": "May occur in anemia or chronic illness",
+      "symptoms_risks_of_imbalance": {
+        "high": "Long-term complications risk (eyes, kidneys, nerves)",
+        "low": "Rare – check for anemia or liver issues"
+      }
+    },
+    {
+      "test_name": "Glucose Tolerance Test (GTT / OGTT)",
+      "full_form_description": "Fasting + 1-hour and 2-hour blood sugar after 75g glucose",
+      "normal_range_us_std": "2-Hour:<140 mg/dL = Normal; 140–199 = Prediabetes; ≥200 = Diabetes",
+      "what_it_indicates": "Used in pregnancy (GDM) or prediabetes",
+      "high_value_indicates": "Impaired glucose processing",
+      "low_value_indicates": "Rarely low unless reactive hypoglycemia",
+      "symptoms_risks_of_imbalance": {
+        "high": "Gestational diabetes, insulin resistance",
+        "low": "Drop after sugar (reactive hypoglycemia)"
+      }
+    },
+    {
+      "test_name": "Fructosamine",
+      "full_form_description": "Avg. blood sugar over 2–3 weeks (shorter than HbA1c)",
+      "normal_range_us_std": "175–280 µmol/L",
+      "what_it_indicates": "Used in anemia, pregnancy, or rapid changes",
+      "high_value_indicates": "Poor recent sugar control",
+      "low_value_indicates": "Rarely used for lows",
+      "symptoms_risks_of_imbalance": {
+        "high": "Poor sugar control in last 2–3 weeks Useful when HbA1c is unreliable",
+        "low": null
+      }
+    },
+    {
+      "test_name": "Insulin (Fasting)",
+      "full_form_description": "Blood insulin level after fasting",
+      "normal_range_us_std": "2–25 µIU/mL",
+      "what_it_indicates": "Insulin production; insulin resistance detection",
+      "high_value_indicates": "Insulin resistance, PCOS, metabolic syndrome",
+      "low_value_indicates": "Type 1 diabetes, insulin deficiency",
+      "symptoms_risks_of_imbalance": {
+        "high": "Fatigue after eating, weight gain",
+        "low": "Sugar rises quickly, risk of ketoacidosis"
+      }
+    },
+    {
+      "test_name": "C-Peptide",
+      "full_form_description": "Byproduct of insulin production – used to measure natural insulin output",
+      "normal_range_us_std": "0.5–2.0 ng/mL",
+      "what_it_indicates": "Helps differentiate Type 1 vs Type 2 diabetes",
+      "high_value_indicates": "Insulin resistance (high insulin production)",
+      "low_value_indicates": "Type 1 diabetes (no insulin made)",
+      "symptoms_risks_of_imbalance": {
+        "high": "PCOS, insulinoma",
+        "low": "Type 1 diabetes, pancreatic damage"
+      }
+    },
+    {
+      "test_name": "HOMA-IR (Calculated)",
+      "full_form_description": "Homeostatic Model Assessment – uses insulin and glucose to estimate insulin resistance",
+      "normal_range_us_std": "<1.0 = Ideal; 1.0–2.9 = Moderate resistance; >3.0 = Significant resistance",
+      "what_it_indicates": "Measures insulin resistance",
+      "high_value_indicates": "High insulin resistance = early diabetes/metabolic syndrome",
+      "low_value_indicates": "Not applicable",
+      "symptoms_risks_of_imbalance": {
+        "high": "PCOS, obesity, risk of diabetes Used in early lifestyle screening",
+        "low": null
+      }
+    }
+  ],
+  "lipid_nutritional_recommendation": [
+    {
+      "food_group": "Fruits",
+      "recommended_foods": "Apples, guava, oranges, berries, pomegranate, kiwi, papaya",
+      "why_it_helps": "High in antioxidants and soluble fiber; reduce LDL and inflammation",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Vegetables",
+      "recommended_foods": "Spinach, methi, broccoli, carrots, beets, lauki, karela, cabbage",
+      "why_it_helps": "Improve digestion, detox liver, reduce triglycerides and LDL",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Whole Grains",
+      "recommended_foods": "Oats, brown rice, whole wheat, millets (bajra, jowar, ragi), quinoa",
+      "why_it_helps": "Stabilize blood sugar, improve HDL, lower triglycerides",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Pulses & Legumes",
+      "recommended_foods": "Moong dal, masoor dal, chickpeas, rajma, soybeans, lobia",
+      "why_it_helps": "Fiber and plant protein lower LDL and support fullness",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Nuts & Seeds",
+      "recommended_foods": "Walnuts, almonds, chia, flaxseeds, pumpkin and sunflower seeds",
+      "why_it_helps": "Omega-3 fats and sterols support HDL, reduce LDL",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Healthy Oils & Fats",
+      "recommended_foods": "Olive oil, mustard oil, sesame oil, avocado, groundnut oil",
+      "why_it_helps": "Contain heart-protective monounsaturated & polyunsaturated fats",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Low-Fat Dairy / Fermented Foods",
+      "recommended_foods": "Toned milk, curd, buttermilk, kefir, probiotic yogurt",
+      "why_it_helps": "Improve gut microbiome, aid cholesterol metabolism",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Spices & Herbs",
+      "recommended_foods": "Garlic, turmeric, ginger, cinnamon, methi seeds, amla",
+      "why_it_helps": "Natural anti-inflammatory, cholesterol-lowering action",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Beverages",
+      "recommended_foods": "Warm water, green tea, tulsi tea, lemon water",
+      "why_it_helps": "Mild metabolism support and detox aid",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Protein-Rich Foods",
+      "recommended_foods": "Tofu, low-fat paneer, egg whites, fish (optional)",
+      "why_it_helps": "Maintain lean mass and support lipid metabolism",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    }
+  ],
+  "lipid_recipes": [
+    {
+      "recipe_name": "Oats & Flaxseed Vegetable Upma",
+      "ingredients": "Oats, chopped carrots, beans, onions, flaxseeds, curry leaves, mustard seeds, olive oil",
+      "quick_method": "Roast oats. In a pan, heat olive oil, add mustard seeds, curry leaves, sauté veggies. Add oats, flaxseeds, water. Cook until soft.",
+      "why_it_is_good": "High in soluble fiber and omega-3; helps reduce LDL and triglycerides"
+    },
+    {
+      "recipe_name": "Moong Dal + Spinach Soup",
+      "ingredients": "Yellow moong dal, spinach, garlic, turmeric, black pepper, olive oil",
+      "quick_method": "Pressure cook dal, spinach, garlic, turmeric. Blend. Temper with olive oil and pepper. Serve warm.",
+      "why_it_is_good": "Protein + antioxidants + fiber; easy to digest; supports HDL, reduces inflammation"
+    }
+  ],
+  "thyroid_nutritional_recommendation": [
+    {
+      "food_group": "Fruits",
+      "recommended_foods": "Berries, apples, papaya, pomegranate, kiwi, banana (ripe), mango (in moderation)",
+      "why_it_helps": "Provide antioxidants and support adrenal-thyroid connection",
+      "foods_to_avoid": "Cabbage, broccoli, cauliflower, kale (if raw)",
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Vegetables (Cooked preferred)",
+      "recommended_foods": "Carrots, spinach, bottle gourd (lauki), sweet potatoes, beets, ridge gourd",
+      "why_it_helps": "Cooked veggies reduce goitrogens and help absorption of minerals",
+      "foods_to_avoid": "Packaged snacks, bakery, instant noodles",
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Whole Grains (Gluten-free preferred for some)",
+      "recommended_foods": "Brown rice, quinoa, millets (ragi, bajra, jowar), oats (gluten-free)",
+      "why_it_helps": "Stabilize blood sugar, reduce inflammation, support metabolism",
+      "foods_to_avoid": "Soy chunks, tofu (large amounts)",
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Pulses & Legumes",
+      "recommended_foods": "Moong dal, masoor dal, chana, lobia, rajma (soaked & cooked well)",
+      "why_it_helps": "Protein helps in hormone synthesis and repair",
+      "foods_to_avoid": "White sugar, maida, sweets, cold drinks",
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Nuts & Seeds",
+      "recommended_foods": "Walnuts, brazil nuts (selenium), pumpkin seeds (zinc), flaxseeds, chia seeds",
+      "why_it_helps": "Provide selenium, zinc, omega-3 – essential for thyroid function",
+      "foods_to_avoid": "Too much tea, coffee",
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Healthy Oils & Fats",
+      "recommended_foods": "Cold-pressed coconut oil, olive oil, ghee (small amount), mustard oil",
+      "why_it_helps": "Support metabolism, hormone transport and anti-inflammatory action",
+      "foods_to_avoid": "Maida, white bread, wheat pasta",
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Low-Fat Dairy / Fermented Foods",
+      "recommended_foods": "Toned milk, curd, buttermilk, probiotic yogurt, paneer",
+      "why_it_helps": "Support gut health and calcium metabolism (unless lactose intolerant)",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Spices & Herbs",
+      "recommended_foods": "Turmeric, ginger, cinnamon, cumin, coriander, tulsi, ashwagandha (under supervision)",
+      "why_it_helps": "Support anti-inflammatory, metabolic and adrenal-thyroid axis",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Beverages",
+      "recommended_foods": "Warm water, jeera water, ajwata water, tulsi tea, herbal teas",
+      "why_it_helps": "Improve digestion, reduce bloating, support thyroid detox",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    },
+    {
+      "food_group": "Protein-Rich Foods",
+      "recommended_foods": "Egg whites, tofu, low-fat paneer, legumes, fish (optional)",
+      "why_it_helps": "Essential for hormone creation, tissue repair and metabolism",
+      "foods_to_avoid": null,
+      "why_it_helps_avoids": null
+    }
+  ],
+  "thyroid_recipes": [
+    {
+      "recipe_name": "Banana Chia Yogurt Bowl",
+      "ingredients": "- 1 ripe banana (sliced)- ½ cup Greek yogurt (plain, low-fat)- 1 tsp chia seeds- 1 tsp flaxseeds (ground)- Cinnamon (a pinch)",
+      "quick_method": "1. Mix yogurt, banana slices, chia and flaxseeds in a bowl 2. Sprinkle with cinnamon 3. Eat immediately or chill for a few minutes",
+      "why_it_is_good": "- Supports energy and gut health- High in selenium, omega-3s, B vitamins- Helps balance hormones naturally"
+    },
+    {
+      "recipe_name": "Avocado Cucumber Salad",
+      "ingredients": "- ½ ripe avocado (diced)- 1 small cucumber (chopped)- A few spinach leaves or arugula- Lemon juice, olive oil, black pepper- Optional: pinch of roasted sunflower or pumpkin seeds",
+      "quick_method": "1. Combine chopped cucumber, avocado, greens in a bowl 2. Drizzle lemon juice, olive oil, add pepper 3. Top with seeds and serve fresh",
+      "why_it_is_good": "- Rich in healthy fats, zinc, and antioxidants- Supports metabolism and hormone transport- Light, hydrating, and anti-inflammatory"
+    }
+  ],
+  "sugar_nutritional_recommendation": [
+    {
+      "food_group": "Vegetables",
+      "recommended_foods": "Spinach, kale (cooked), zucchini, bell peppers, cucumbers, broccoli, green beans, asparagus",
+      "foods_to_avoid": "White potatoes (fried or mashed), canned corn with sugar, sweet peas (large portions)",
+      "why_it_helps_avoids": "Non-starchy, high-fiber veggies stabilize blood sugar; starchy/canned ones may spike sugar",
+      "why_it_helps": null
+    },
+    {
+      "food_group": "Whole Grains",
+      "recommended_foods": "Steel-cut oats, brown rice, quinoa, barley, buckwheat, whole-grain breads (high fiber)",
+      "foods_to_avoid": "White bread, regular pasta, instant oats, white rice",
+      "why_it_helps_avoids": "Whole grains slow glucose release; refined carbs spike blood sugar",
+      "why_it_helps": null
+    },
+    {
+      "food_group": "Pulses & Legumes",
+      "recommended_foods": "Lentils, black beans, kidney beans, chickpeas (no salt added), edamame",
+      "foods_to_avoid": "Baked beans (with sugar), canned beans with salt & preservatives",
+      "why_it_helps_avoids": "Beans are fiber-rich and low-GI; canned/sweetened varieties raise blood sugar",
+      "why_it_helps": null
+    },
+    {
+      "food_group": "Nuts & Seeds",
+      "recommended_foods": "Almonds, walnuts, flaxseeds, chia seeds, pumpkin seeds, unsalted peanuts",
+      "foods_to_avoid": "Honey-roasted nuts, trail mix with candies, sweetened nut butters",
+      "why_it_helps_avoids": "Good fats and protein reduce sugar spikes; sweetened types add hidden sugars",
+      "why_it_helps": null
+    },
+    {
+      "food_group": "Dairy & Alternatives",
+      "recommended_foods": "Unsweetened Greek yogurt, low-fat milk, plain kefir, almond milk (unsweetened), cottage cheese",
+      "foods_to_avoid": "Flavored yogurts, full-fat ice cream, sweetened plant-based milks",
+      "why_it_helps_avoids": "Protein and probiotics support sugar control; flavored dairy = hidden sugars",
+      "why_it_helps": null
+    },
+    {
+      "food_group": "Healthy Fats",
+      "recommended_foods": "Olive oil, avocado, flaxseed oil, nut butters (unsweetened), small amounts of ghee",
+      "foods_to_avoid": "Butter (excess), margarine, shortening, fried foods",
+      "why_it_helps_avoids": "Healthy fats improve insulin sensitivity; trans fats worsen glucose control",
+      "why_it_helps": null
+    },
+    {
+      "food_group": "Spices & Herbs",
+      "recommended_foods": "Cinnamon, turmeric, garlic, ginger, basil, rosemary",
+      "foods_to_avoid": "Excess salt, seasoning packets with MSG, sauces with added sugar",
+      "why_it_helps_avoids": "Natural herbs help lower sugar & inflammation; packaged spices may hide sodium/sugar",
+      "why_it_helps": null
+    },
+    {
+      "food_group": "Protein-Rich Foods",
+      "recommended_foods": "Egg whites, tofu, grilled chicken, turkey, salmon, tuna (in water)",
+      "foods_to_avoid": "Bacon, sausages, deli meats with preservatives, fried meat",
+      "why_it_helps_avoids": "Lean proteins are sugar-neutral; processed meats can worsen insulin resistance",
+      "why_it_helps": null
+    },
+    {
+      "food_group": "Hydrating Drinks",
+      "recommended_foods": "Water, lemon water, herbal teas (chamomile, peppermint), seltzer (unsweetened)",
+      "foods_to_avoid": "Regular soda, sweetened iced tea, energy drinks, fruit juices",
+      "why_it_helps_avoids": "Water supports sugar balance; sugary drinks spike insulin & energy crash",
+      "why_it_helps": null
+    }
+  ],
+  "sugar_recipes": [
+    {
+      "recipe_name": "Greek Yogurt & Spiced Chickpea Bowl",
+      "ingredients": "- ½ cup canned chickpeas (rinsed & drained)- ¼ cup plain unsweetened Greek yogurt- ½ tsp cumin powder- A pinch of black salt or sea salt- Fresh parsley or cilantro (optional)",
+      "quick_method": "1. Mix chickpeas and yogurt in a bowl 2. Add cumin, salt, and herbs 3. Stir and serve chilled or at room temp",
+      "why_it_is_good": "- High in protein & fiber- No added sugar- Chickpeas have a low glycemic index and promote fullness"
+    },
+    {
+      "recipe_name": "Cabbage-Carrot Slaw with Pumpkin Seeds",
+      "ingredients": "- ½ cup shredded green cabbage- ¼ cup grated carrot- 1 tbsp roasted pumpkin seeds (unsalted)- 1 tsp apple cider vinegar or lemon juice- 1 tsp olive oil, pepper, salt",
+      "quick_method": "1. In a bowl, mix cabbage and carrot 2. Add pumpkin seeds 3. Drizzle with olive oil and vinegar or lemon juice 4. Add salt and pepper to taste",
+      "why_it_is_good": "- High fiber, low-carb, antioxidant-rich- Supports gut health and blood sugar control- No fruit, no sugar, no insulin spike"
+    }
+  ]
+}

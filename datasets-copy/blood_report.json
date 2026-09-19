@@ -1,0 +1,3041 @@
+{
+  "CBC_COMPLETE_BODY_COUNT": {
+    "Tests": [
+    {
+      "Test Name": "WBC",
+      "Full Form / Description": "White Blood Cells",
+      "Normal Range": [
+        "4,000–11,000 cells/µL"
+      ],
+      "What It Indicates": [
+        "Body’s immune cells that fight infections"
+      ],
+      "High Value Indicates": [
+        "Infection",
+        "inflammation",
+        "leukemia",
+        "stress",
+        "allergic reactions"
+      ],
+      "Low Value Indicates": [
+        "Viral infections",
+        "autoimmune disease",
+        "bone marrow failure"
+      ],
+      "Symptoms if Abnormal": [
+        "High: Fever, pus, fatigue",
+        "Low: Frequent infections, slow healing"
+      ]
+    },
+    {
+      "Test Name": "RBC",
+      "Full Form / Description": "Red Blood Cells",
+      "Normal Range": [
+        "Men: 4.7–6.1 million/µL",
+        "Women: 4.2–5.4 million/µL"
+      ],
+      "What It Indicates": [
+        "Carry oxygen to body tissues"
+      ],
+      "High Value Indicates": [
+        "Dehydration",
+        "heart/lung disease",
+        "smoking"
+      ],
+      "Low Value Indicates": [
+        "Anemia",
+        "blood loss",
+        "nutritional deficiency (iron, B12)"
+      ],
+      "Symptoms if Abnormal": [
+        "Weakness",
+        "shortness of breath",
+        "pale skin",
+        "dizziness"
+      ]
+    },
+    {
+      "Test Name": "Hemoglobin (Hb)",
+      "Full Form / Description": "Hemoglobin",
+      "Normal Range": [
+        "Men: 13.8–17.2 g/dL",
+        "Women: 12.1–15.1 g/dL"
+      ],
+      "What It Indicates": [
+        "Protein in RBCs that carries oxygen"
+      ],
+      "High Value Indicates": [
+        "Dehydration",
+        "polycythemia vera",
+        "chronic hypoxia"
+      ],
+      "Low Value Indicates": [
+        "Anemia",
+        "bleeding",
+        "iron/B12 deficiency"
+      ],
+      "Symptoms if Abnormal": [
+        "Low: Fatigue, pale lips, weakness",
+        "High: Red skin tone, dizziness"
+      ]
+    },
+    {
+      "Test Name": "Hematocrit (Hct)",
+      "Full Form / Description": "Hematocrit / Packed Cell Volume (PCV)",
+      "Normal Range": [
+        "Men: 40–52%",
+        "Women: 36–48%"
+      ],
+      "What It Indicates": [
+        "% of blood made up of RBCs"
+      ],
+      "High Value Indicates": [
+        "Polycythemia",
+        "dehydration"
+      ],
+      "Low Value Indicates": [
+        "Anemia",
+        "overhydration",
+        "bone marrow problems"
+      ],
+      "Symptoms if Abnormal": [
+        "Tiredness",
+        "cold hands/feet",
+        "rapid heartbeat"
+      ]
+    },
+    {
+      "Test Name": "MCV",
+      "Full Form / Description": "Mean Corpuscular Volume",
+      "Normal Range": [
+        "80–100 fL"
+      ],
+      "What It Indicates": [
+        "Avg. size of RBCs"
+      ],
+      "High Value Indicates": [
+        "Macrocytic anemia (B12, folate deficiency)",
+        "liver disease"
+      ],
+      "Low Value Indicates": [
+        "Microcytic anemia (iron deficiency, thalassemia)"
+      ],
+      "Symptoms if Abnormal": [
+        "High: Numbness, memory issues",
+        "Low: Pale skin, weakness"
+      ]
+    },
+    {
+      "Test Name": "MCH",
+      "Full Form / Description": "Mean Corpuscular Hemoglobin",
+      "Normal Range": [
+        "27–33 pg"
+      ],
+      "What It Indicates": [
+        "Avg. hemoglobin per RBC"
+      ],
+      "High Value Indicates": [
+        "Similar to MCV (B12/folate deficiency)"
+      ],
+      "Low Value Indicates": [
+        "Iron deficiency anemia"
+      ],
+      "Symptoms if Abnormal": [
+        "Same as MCV (fatigue, weakness)"
+      ]
+    },
+    {
+      "Test Name": "MCHC",
+      "Full Form / Description": "Mean Corpuscular Hemoglobin Concentration",
+      "Normal Range": [
+        "32–36 g/dL"
+      ],
+      "What It Indicates": [
+        "Hb concentration in RBCs"
+      ],
+      "High Value Indicates": [
+        "Hereditary spherocytosis",
+        "autoimmune diseases"
+      ],
+      "Low Value Indicates": [
+        "Iron deficiency",
+        "chronic blood loss"
+      ],
+      "Symptoms if Abnormal": [
+        "Yellow skin",
+        "fatigue",
+        "irregular heartbeat"
+      ]
+    },
+    {
+      "Test Name": "RDW",
+      "Full Form / Description": "Red Cell Distribution Width",
+      "Normal Range": [
+        "11.5–14.5%"
+      ],
+      "What It Indicates": [
+        "Variation in size of RBCs"
+      ],
+      "High Value Indicates": [
+        "Mixed deficiencies (iron + B12/folate)",
+        "recent bleeding"
+      ],
+      "Low Value Indicates": [
+        "Usually not critical unless with low RBC"
+      ],
+      "Symptoms if Abnormal": [
+        "Fatigue",
+        "uneven RBC size under microscope"
+      ]
+    },
+    {
+      "Test Name": "Platelet Count",
+      "Full Form / Description": "Thrombocytes",
+      "Normal Range": [
+        "150,000 – 450,000 /µL"
+      ],
+      "What It Indicates": [
+        "Help with blood clotting"
+      ],
+      "High Value Indicates": [
+        "Infections",
+        "inflammation",
+        "cancers",
+        "post-surgery"
+      ],
+      "Low Value Indicates": [
+        "Dengue",
+        "ITP",
+        "leukemia",
+        "bone marrow failure"
+      ],
+      "Symptoms if Abnormal": [
+        "Low: Easy bruising, bleeding gums",
+        "High: Risk of clots, strokes"
+      ]
+    },
+    {
+      "Test Name": "MPV",
+      "Full Form / Description": "Mean Platelet Volume",
+      "Normal Range": [
+        "7.5 – 11.5 fL"
+      ],
+      "What It Indicates": [
+        "Avg. size of platelets"
+      ],
+      "High Value Indicates": [
+        "Active platelet production",
+        "inflammation"
+      ],
+      "Low Value Indicates": [
+        "Bone marrow suppression",
+        "platelet loss"
+      ],
+      "Symptoms if Abnormal": [
+        "High: Risk of clotting",
+        "Low: Risk of bleeding"
+      ]
+    }
+  ]},
+  "BASIC_AND_COMPREHENSIVE_METABOLIC_PANEL": {
+    "Tests": [
+    {
+      "Test Name": "Glucose",
+      "Full Form / Description": "Blood sugar level; primary source of energy for the body",
+      "Normal Range": [
+        "Fasting: 70–99 mg/dL",
+        "Post-meal: <140 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Reflects sugar metabolism and risk of diabetes"
+      ],
+      "High Value Indicates": [
+        "Diabetes"
+      ],
+      "Low Value Indicates": [
+        "Hypoglycemia",
+        "insulin overdose",
+        "adrenal insufficiency"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Frequent urination, excessive thirst, fatigue, blurred vision, slow healing",
+        "Low: Shakiness, sweating, confusion, hunger, dizziness, fainting"
+      ]
+    },
+    {
+      "Test Name": "BUN",
+      "Full Form / Description": "Blood Urea Nitrogen; a waste product from protein breakdown",
+      "Normal Range": [
+        "7–20 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Indicates kidney function and hydration status"
+      ],
+      "High Value Indicates": [
+        "Kidney dysfunction",
+        "dehydration",
+        "high protein diet"
+      ],
+      "Low Value Indicates": [
+        "Liver disease",
+        "malnutrition",
+        "overhydration"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Nausea, poor appetite, confusion, itchy skin",
+        "Low: Fatigue, muscle loss, swelling"
+      ]
+    },
+    {
+      "Test Name": "Sodium",
+      "Full Form / Description": "Electrolyte that regulates water balance and nerve/muscle function",
+      "Normal Range": [
+        "135–145 mEq/L"
+      ],
+      "What It Indicates (Function)": [
+        "Maintains fluid balance",
+        "blood pressure",
+        "nerve and muscle activity"
+      ],
+      "High Value Indicates": [
+        "Dehydration",
+        "kidney disease",
+        "hormonal disorders"
+      ],
+      "Low Value Indicates": [
+        "Vomiting",
+        "diarrhea",
+        "heart failure",
+        "Addison’s disease"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Thirst, confusion, restlessness, muscle twitching",
+        "Low: Headache, nausea, lethargy, seizures"
+      ]
+    },
+    {
+      "Test Name": "Potassium",
+      "Full Form / Description": "Electrolyte important for heart, nerve, and muscle function",
+      "Normal Range": [
+        "3.5–5.0 mEq/L"
+      ],
+      "What It Indicates (Function)": [
+        "Regulates heartbeat",
+        "nerve signals",
+        "muscle contractions"
+      ],
+      "High Value Indicates": [
+        "Kidney failure",
+        "acidosis",
+        "tissue breakdown",
+        "some medications"
+      ],
+      "Low Value Indicates": [
+        "Vomiting",
+        "diarrhea",
+        "diuretics",
+        "insulin overdose"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Irregular heartbeat, numbness, paralysis, fatigue",
+        "Low: Muscle cramps, constipation, weakness, arrhythmia"
+      ]
+    },
+    {
+      "Test Name": "Chloride",
+      "Full Form / Description": "Electrolyte that works with sodium to maintain fluid and acid-base balance",
+      "Normal Range": [
+        "98–107 mEq/L"
+      ],
+      "What It Indicates (Function)": [
+        "Helps regulate pH balance and hydration status"
+      ],
+      "High Value Indicates": [
+        "Dehydration",
+        "metabolic acidosis",
+        "kidney disease"
+      ],
+      "Low Value Indicates": [
+        "Prolonged vomiting",
+        "overhydration",
+        "Addison’s disease"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Fluid retention, high blood pressure, fatigue",
+        "Low: Muscle weakness, shallow breathing, confusion"
+      ]
+    },
+    {
+      "Test Name": "CO₂",
+      "Full Form / Description": "Bicarbonate (HCO₃⁻); buffer that helps maintain acid-base (pH) balance",
+      "Normal Range": [
+        "22–29 mEq/L"
+      ],
+      "What It Indicates (Function)": [
+        "Reflects buffering capacity of blood; pH balance"
+      ],
+      "High Value Indicates": [
+        "Metabolic alkalosis",
+        "chronic lung disease"
+      ],
+      "Low Value Indicates": [
+        "Metabolic acidosis",
+        "kidney disease",
+        "diarrhea"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Confusion, muscle twitching, slow breathing",
+        "Low: Rapid breathing, fatigue, headache"
+      ]
+    },
+    {
+      "Test Name": "Calcium",
+      "Full Form / Description": "Mineral essential for bones, nerve, muscle, and heart function",
+      "Normal Range": [
+        "8.5–10.5 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Involved in bone strength",
+        "muscle contraction",
+        "nerve signals"
+      ],
+      "High Value Indicates": [
+        "Hyperparathyroidism",
+        "cancer",
+        "excess vitamin D"
+      ],
+      "Low Value Indicates": [
+        "Vitamin D deficiency",
+        "hypoparathyroidism",
+        "kidney failure"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Nausea, constipation, confusion, kidney stones",
+        "Low: Tingling, cramps, seizures, irregular heartbeat"
+      ]
+    },
+    {
+      "Test Name": "Creatinine",
+      "Full Form / Description": "Muscle metabolism waste product filtered by kidneys",
+      "Normal Range": [
+        "Men: 0.7–1.3 mg/dL",
+        "Women: 0.6–1.1 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "More accurate measure of kidney function than BUN; affected by muscle mass"
+      ],
+      "High Value Indicates": [
+        "Acute or chronic kidney disease",
+        "urinary tract blockage",
+        "medications"
+      ],
+      "Low Value Indicates": [
+        "Low muscle mass",
+        "liver disease",
+        "malnutrition"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Swelling, low urine output, fatigue",
+        "Low: Often not symptomatic; seen in muscle wasting or chronic illness"
+      ]
+    },
+    {
+      "Test Name": "Total Protein",
+      "Full Form / Description": "Sum of albumin and globulin in blood",
+      "Normal Range": [
+        "6.0–8.3 g/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Assesses nutritional status",
+        "liver function",
+        "and immune health"
+      ],
+      "High Value Indicates": [
+        "Chronic inflammation",
+        "HIV",
+        "multiple myeloma"
+      ],
+      "Low Value Indicates": [
+        "Liver disease",
+        "kidney disease (nephrotic syndrome)",
+        "poor nutrition"
+      ],
+      "Symptoms of Imbalance": [
+        "High: May cause blood thickening, rarely symptomatic",
+        "Low: Swelling, infections, fatigue, poor healing"
+      ]
+    },
+    {
+      "Test Name": "Albumin",
+      "Full Form / Description": "Main blood protein made by the liver",
+      "Normal Range": [
+        "3.4–5.4 g/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Maintains fluid balance and transports hormones",
+        "drugs",
+        "and vitamins"
+      ],
+      "High Value Indicates": [
+        "Dehydration",
+        "high protein intake"
+      ],
+      "Low Value Indicates": [
+        "Liver cirrhosis",
+        "kidney disease",
+        "malnutrition"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Rarely causes symptoms",
+        "Low: Swelling in feet/ankles, weakness, low BP, slow healing"
+      ]
+    },
+    {
+      "Test Name": "Total Bilirubin",
+      "Full Form / Description": "Yellow pigment from breakdown of red blood cells",
+      "Normal Range": [
+        "0.1–1.2 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Evaluates liver's ability to process and excrete waste"
+      ],
+      "High Value Indicates": [
+        "Liver disease (hepatitis, cirrhosis)",
+        "bile duct blockage",
+        "hemolysis"
+      ],
+      "Low Value Indicates": [
+        "Not clinically significant if low"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Yellowing of skin or eyes (jaundice)",
+        "dark urine",
+        "light stools",
+        "fatigue"
+      ]
+    },
+    {
+      "Test Name": "ALP",
+      "Full Form / Description": "Alkaline Phosphatase; enzyme in liver, bones, and bile ducts",
+      "Normal Range": [
+        "44–147 IU/L"
+      ],
+      "What It Indicates (Function)": [
+        "Reflects bone growth or disease and liver/gallbladder health"
+      ],
+      "High Value Indicates": [
+        "Liver disease",
+        "bile obstruction",
+        "bone disorders (Paget’s disease, healing fractures)"
+      ],
+      "Low Value Indicates": [
+        "Malnutrition",
+        "zinc or magnesium deficiency"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Bone pain, jaundice, nausea, fatigue",
+        "Low: Weakness, delayed growth in children"
+      ]
+    },
+    {
+      "Test Name": "ALT",
+      "Full Form / Description": "Alanine Aminotransferase; liver-specific enzyme",
+      "Normal Range": [
+        "7–56 U/L"
+      ],
+      "What It Indicates (Function)": [
+        "Indicates liver cell injury or inflammation"
+      ],
+      "High Value Indicates": [
+        "Hepatitis",
+        "liver cirrhosis",
+        "fatty liver",
+        "certain medications"
+      ],
+      "Low Value Indicates": [
+        "Vitamin B6 deficiency",
+        "advanced liver damage"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Abdominal discomfort, dark urine, yellow eyes, fatigue",
+        "Low: Usually not significant"
+      ]
+    },
+    {
+      "Test Name": "AST",
+      "Full Form / Description": "Aspartate Aminotransferase; enzyme in liver, heart, and muscles",
+      "Normal Range": [
+        "10–40 U/L"
+      ],
+      "What It Indicates (Function)": [
+        "Reflects liver",
+        "muscle",
+        "or heart cell injury"
+      ],
+      "High Value Indicates": [
+        "Liver disease",
+        "heart attack",
+        "muscle trauma"
+      ],
+      "Low Value Indicates": [
+        "Advanced liver disease",
+        "vitamin B6 deficiency"
+      ],
+      "Symptoms of Imbalance": [
+        "High: Fatigue, pain in right upper abdomen, weakness",
+        "Low: Not usually significant unless paired with low ALT"
+      ]
+    }
+  ]},
+  "LIPID_PANEL": {
+    "Tests": [
+    {
+      "Test Name": "Total Cholesterol",
+      "Full Form / Description": "Measures the total amount of cholesterol in blood (includes HDL, LDL, and VLDL)",
+      "Normal Range": [
+        "Less than 200 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Indicates the overall cholesterol level; high levels increase heart disease risk"
+      ],
+      "High Value Indicates": [
+        "Atherosclerosis",
+        "heart disease",
+        "poor diet",
+        "genetics",
+        "hypothyroidism"
+      ],
+      "Low Value Indicates": [
+        "Rarely significant unless very low"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Increased risk of heart attack, stroke, clogged arteries",
+        "Low: Hormone issues, depression, fatigue, nutrient malabsorption"
+      ]
+    },
+    {
+      "Test Name": "LDL",
+      "Full Form / Description": "Low-Density Lipoprotein; \"bad cholesterol\" that builds up in arteries",
+      "Normal Range": [
+        "Optimal: Less than 100 mg/dL",
+        "Near-optimal: 100–129 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Transports cholesterol to tissues; excess leads to plaque in arteries"
+      ],
+      "High Value Indicates": [
+        "Atherosclerosis",
+        "heart disease",
+        "stroke"
+      ],
+      "Low Value Indicates": [
+        "May be beneficial when low"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Plaque buildup, increased heart disease/stroke risk",
+        "Low: May reduce heart disease risk but very low levels may impair hormone synthesis"
+      ]
+    },
+    {
+      "Test Name": "HDL",
+      "Full Form / Description": "High-Density Lipoprotein; \"good cholesterol\" that removes excess cholesterol",
+      "Normal Range": [
+        "Men: 40 mg/dL or higher",
+        "Women: 50 mg/dL or higher",
+        "Ideal: 60 mg/dL or more"
+      ],
+      "What It Indicates (Function)": [
+        "Cleans blood vessels by carrying cholesterol to liver for removal"
+      ],
+      "High Value Indicates": [
+        "Often beneficial unless extremely high"
+      ],
+      "Low Value Indicates": [
+        "Higher risk of heart disease",
+        "metabolic syndrome"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Usually protective against heart disease",
+        "Low: High cardiovascular risk, insulin resistance, obesity, metabolic issues"
+      ]
+    },
+    {
+      "Test Name": "Triglycerides",
+      "Full Form / Description": "Fat molecules in blood; stored energy",
+      "Normal Range": [
+        "Less than 150 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Reflects fat storage from calories not used; linked to metabolic health"
+      ],
+      "High Value Indicates": [
+        "Obesity",
+        "type 2 diabetes",
+        "alcohol use",
+        "poor diet",
+        "thyroid disorders"
+      ],
+      "Low Value Indicates": [
+        "Malnutrition",
+        "poor fat absorption",
+        "hyperthyroidism"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Pancreatitis, fatty liver, heart disease risk",
+        "Low: Malabsorption, poor diet, hyperthyroidism, wasting conditions"
+      ]
+    },
+    {
+      "Test Name": "VLDL",
+      "Full Form / Description": "Very-Low-Density Lipoprotein; carries triglycerides",
+      "Normal Range": [
+        "2–30 mg/dL (estimated)"
+      ],
+      "What It Indicates (Function)": [
+        "Transports triglycerides; contributes to cholesterol buildup in arteries"
+      ],
+      "High Value Indicates": [
+        "Liver disease",
+        "diabetes",
+        "high carb intake"
+      ],
+      "Low Value Indicates": [
+        "Malnutrition",
+        "chronic illness"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Risk of fatty liver, heart disease",
+        "Low: Rarely significant but may reflect poor nutritional state"
+      ]
+    },
+    {
+      "Test Name": "SGPT (ALT)",
+      "Full Form / Description": "Serum Glutamic Pyruvic Transaminase / Alanine Aminotransferase",
+      "Normal Range": [
+        "MALE - 7 to 56 U/L",
+        "FEMALE - 7 to 45 U/L"
+      ],
+      "What It Indicates (Function)": [
+        "Liver enzyme; rises when liver is inflamed or damaged"
+      ],
+      "High Value Indicates": [
+        "Liver injury",
+        "fatty liver",
+        "hepatitis",
+        "alcohol"
+      ],
+      "Low Value Indicates": [
+        "Advanced liver disease"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Fatigue, nausea, pain in right side, jaundice",
+        "Low: Rarely significant"
+      ]
+    },
+    {
+      "Test Name": "SGOT (AST)",
+      "Full Form / Description": "Serum Glutamic Oxaloacetic Transaminase / Aspartate Aminotransferase",
+      "Normal Range": [
+        "10–40 U/L"
+      ],
+      "What It Indicates (Function)": [
+        "Liver",
+        "heart",
+        "and muscle enzyme"
+      ],
+      "High Value Indicates": [
+        "Liver disease",
+        "heart attack",
+        "muscle damage"
+      ],
+      "Low Value Indicates": [
+        "Advanced liver disease"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Muscle/joint pain, liver pain, fatigue",
+        "Low: Not usually a concern unless both AST and ALT are low"
+      ]
+    },
+    {
+      "Test Name": "Fatty Liver Grade (Ultrasound based)",
+      "Full Form / Description": "Visual grading of fat accumulation in liver tissue",
+      "Normal Range": [
+        "Grade 0: Normal",
+        "Grade 1: Mild",
+        "Grade 2: Moderate",
+        "Grade 3: Severe"
+      ],
+      "What It Indicates (Function)": [
+        "Detects non-alcoholic fatty liver disease (NAFLD) or alcoholic fatty liver"
+      ],
+      "High Value Indicates": [
+        "Obesity",
+        "insulin resistance",
+        "high triglycerides",
+        "poor diet"
+      ],
+      "Low Value Indicates": [
+        "Normal liver function"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "Grade 1: Mild fat, often reversible",
+        "Grade 2: Moderate fat, early liver dysfunction",
+        "Grade 3: Risk of inflammation, scarring, NASH (non-alcoholic steatohepatitis)"
+      ]
+    }],
+  "NUTRITIONAL_RECOMMENDATION": [
+    {
+      "Food Group / Topic": "Fruits",
+      "Recommended Foods": [
+        "Apples",
+        "guava",
+        "oranges",
+        "berries",
+        "pomegranate",
+        "kiwi",
+        "papaya"
+      ],
+      "Why It Helps": [
+        "High in antioxidants and soluble fiber; reduce LDL and inflammation"
+      ],
+      "Foods to Avoid": [
+        "Fruit juices with added sugar",
+        "Canned fruits with syrup",
+        "Dried fruits with sugar"
+      ]
+    },
+    {
+      "Food Group / Topic": "Vegetables",
+      "Recommended Foods": [
+        "Spinach",
+        "methi",
+        "broccoli",
+        "carrots",
+        "beets",
+        "lauki",
+        "karela",
+        "cabbage"
+      ],
+      "Why It Helps": [
+        "Improve digestion",
+        "detox liver",
+        "reduce triglycerides and LDL"
+      ],
+      "Foods to Avoid": [
+        "Canned vegetables with added sodium",
+        "Fried vegetables",
+        "Creamy vegetable dishes"
+      ]
+    },
+    {
+      "Food Group / Topic": "Whole Grains",
+      "Recommended Foods": [
+        "Oats",
+        "brown rice",
+        "whole wheat",
+        "millets (bajra, jowar, ragi)",
+        "quinoa"
+      ],
+      "Why It Helps": [
+        "Stabilize blood sugar",
+        "improve HDL",
+        "lower triglycerides"
+      ],
+      "Foods to Avoid": [
+        "Refined grains: white rice",
+        "white bread",
+        "sugary cereals",
+        "Sweetened breakfast cereals",
+        "White pasta"
+      ]
+    },
+    {
+      "Food Group / Topic": "Pulses & Legumes",
+      "Recommended Foods": [
+        "Moong dal",
+        "masoor dal",
+        "chickpeas",
+        "rajma",
+        "soybeans",
+        "lobia"
+      ],
+      "Why It Helps": [
+        "Fiber and plant protein lower LDL and support fullness"
+      ],
+      "Foods to Avoid": []
+    },
+    {
+      "Food Group / Topic": "Nuts & Seeds",
+      "Recommended Foods": [
+        "Walnuts",
+        "almonds",
+        "chia",
+        "flaxseeds",
+        "pumpkin and sunflower seeds"
+      ],
+      "Why It Helps": [
+        "Omega-3 fats and sterols support HDL",
+        "reduce LDL"
+      ],
+      "Foods to Avoid": [
+        "Salted nuts",
+        "Sweetened nuts (honey-roasted)"
+      ]
+    },
+    {
+      "Food Group / Topic": "Healthy Oils & Fats",
+      "Recommended Foods": [
+        "Olive oil",
+        "mustard oil",
+        "sesame oil",
+        "avocado",
+        "groundnut oil"
+      ],
+      "Why It Helps": [
+        "Contain heart-protective monounsaturated & polyunsaturated fats"
+      ],
+      "Foods to Avoid": [
+        "Trans fats (hydrogenated oils, margarine)",
+        "Saturated fats (butter, ghee, lard)",
+        "High-fat processed oils"
+      ]
+    },
+    {
+      "Food Group / Topic": "Low-Fat Dairy / Fermented Foods",
+      "Recommended Foods": [
+        "Toned milk",
+        "curd",
+        "buttermilk",
+        "kefir",
+        "probiotic yogurt"
+      ],
+      "Why It Helps": [
+        "Improve gut microbiome",
+        "aid cholesterol metabolism"
+      ],
+      "Foods to Avoid": [
+        "Full-fat dairy (milk, cheese, butter)",
+        "Flavored or sweetened yogurt",
+        "Processed cheese"
+      ]
+    },
+    {
+      "Food Group / Topic": "Spices & Herbs",
+      "Recommended Foods": [
+        "Garlic",
+        "turmeric",
+        "ginger",
+        "cinnamon",
+        "methi seeds",
+        "amla"
+      ],
+      "Why It Helps": [
+        "Natural anti-inflammatory",
+        "cholesterol-lowering action"
+      ],
+      "Foods to Avoid": []
+    },
+    {
+      "Food Group / Topic": "Beverages",
+      "Recommended Foods": [
+        "Warm water",
+        "green tea",
+        "tulsi tea",
+        "lemon water"
+      ],
+      "Why It Helps": [
+        "Mild metabolism support and detox aid"
+      ],
+      "Foods to Avoid": [
+        "Sugary drinks (sodas, sweetened teas)",
+        "Alcohol",
+        "Full-fat milk drinks",
+        "High-calorie smoothies"
+      ]
+    },
+    {
+      "Food Group / Topic": "Protein-Rich Foods",
+      "Recommended Foods": [
+        "Tofu",
+        "low-fat paneer",
+        "egg whites",
+        "fish (optional)"
+      ],
+      "Why It Helps": [
+        "Maintain lean mass and support lipid metabolism"
+      ],
+      "Foods to Avoid": [
+        "Processed meats (bacon, sausages, hot dogs)",
+        "Red meats (beef, mutton, lamb)",
+        "Fatty fish (salmon, mackerel)",
+        "Egg yolks (in excess)"
+      ]
+    }
+  ],
+  "RECIPES": [
+    {
+      "Recipe Name": "Oats & Flaxseed Vegetable Upma",
+      "Ingredients": [
+        "Oats",
+        "chopped carrots",
+        "beans",
+        "onions",
+        "flaxseeds",
+        "curry leaves",
+        "mustard seeds",
+        "olive oil"
+      ],
+      "Quick Method": [
+        "Roast oats. In a pan, heat olive oil, add mustard seeds, curry leaves, sauté veggies. Add oats, flaxseeds, water. Cook until soft."
+      ],
+      "Why It’s Helpful": [
+        "High in soluble fiber and omega-3; helps reduce LDL and triglycerides"
+      ]
+    },
+    {
+      "Recipe Name": "Moong Dal + Spinach Soup",
+      "Ingredients": [
+        "Yellow moong dal",
+        "spinach",
+        "garlic",
+        "turmeric",
+        "black pepper",
+        "olive oil"
+      ],
+      "Quick Method": [
+        "Pressure cook dal, spinach, garlic, turmeric. Blend. Temper with olive oil and pepper. Serve warm."
+      ],
+      "Why It’s Helpful": [
+        "Protein + antioxidants + fiber; easy to digest; supports HDL, reduces inflammation"
+      ]
+    }
+  ]
+  },
+  "THYROID_PANEL": {
+    "Tests": [
+    {
+      "Test Name": "TSH",
+      "Full Form / Description": "Thyroid Stimulating Hormone – secreted by the pituitary to stimulate the thyroid",
+      "Normal Range": [
+        "0.4 – 4.0 mIU/L (ideal 1.0–2.5)"
+      ],
+      "What It Indicates (Function)": [
+        "Main screening test; controls thyroid hormone production"
+      ],
+      "High Value Indicates": [
+        "Hypothyroidism (underactive thyroid)"
+      ],
+      "Low Value Indicates": [
+        "Hyperthyroidism (overactive thyroid)"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Weight gain, cold intolerance, hair loss, fatigue, depression",
+        "Low: Anxiety, weight loss, sweating, fast heartbeat"
+      ]
+    },
+    {
+      "Test Name": "Free T4",
+      "Full Form / Description": "Free Thyroxine – main inactive thyroid hormone circulating in blood",
+      "Normal Range": [
+        "0.8 – 1.8 ng/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Reflects hormone produced by thyroid gland"
+      ],
+      "High Value Indicates": [
+        "Hyperthyroidism",
+        "thyroiditis"
+      ],
+      "Low Value Indicates": [
+        "Hypothyroidism",
+        "iodine deficiency"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Nervousness, palpitations, insomnia",
+        "Low: Fatigue, dry skin, constipation, depression"
+      ]
+    },
+    {
+      "Test Name": "Free T3",
+      "Full Form / Description": "Free Triiodothyronine – active form of thyroid hormone",
+      "Normal Range": [
+        "2.3 – 4.2 pg/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Active hormone influencing metabolism and mood"
+      ],
+      "High Value Indicates": [
+        "Hyperthyroidism",
+        "T3 toxicosis"
+      ],
+      "Low Value Indicates": [
+        "Hypothyroidism",
+        "poor conversion of T4 to T3"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Irritability, weight loss, tremors, anxiety",
+        "Low: Brain fog, low energy, weight gain, depression"
+      ]
+    },
+    {
+      "Test Name": "Total T4",
+      "Full Form / Description": "Total Thyroxine – bound + unbound hormone in blood",
+      "Normal Range": [
+        "4.5 – 12.5 mcg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Measures overall T4 levels; less specific than free T4"
+      ],
+      "High Value Indicates": [
+        "High T4 production or high binding proteins"
+      ],
+      "Low Value Indicates": [
+        "Hypothyroidism",
+        "low protein levels"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Hyperthyroid symptoms",
+        "Low: Same as low Free T4 symptoms"
+      ]
+    },
+    {
+      "Test Name": "Total T3",
+      "Full Form / Description": "Total Triiodothyronine – bound + free form of T3",
+      "Normal Range": [
+        "80 – 200 ng/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Overall T3 level in the blood"
+      ],
+      "High Value Indicates": [
+        "Hyperthyroidism"
+      ],
+      "Low Value Indicates": [
+        "Hypothyroidism or low conversion"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "Same as Free T3 – used in cross-check with Free T3"
+      ]
+    },
+    {
+      "Test Name": "Reverse T3 (rT3)",
+      "Full Form / Description": "Inactive form of T3; blocks Free T3 action",
+      "Normal Range": [
+        "8 – 25 ng/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Indicates stress response or thyroid hormone resistance"
+      ],
+      "High Value Indicates": [
+        "Chronic illness",
+        "stress",
+        "adrenal fatigue"
+      ],
+      "Low Value Indicates": [
+        "Rarely tested for low; not usually significant"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Fatigue, sluggish metabolism, poor T3 effect",
+        "Low: Not usually clinically important"
+      ]
+    },
+    {
+      "Test Name": "Anti-TPO Antibodies",
+      "Full Form / Description": "Anti-thyroid peroxidase antibodies – autoimmune marker",
+      "Normal Range": [
+        "<35 IU/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Detects autoimmune thyroid disease like Hashimoto’s or Graves’"
+      ],
+      "High Value Indicates": [
+        "Hashimoto's thyroiditis",
+        "Graves' disease"
+      ],
+      "Low Value Indicates": [
+        "Normal (if absent)"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Autoimmune symptoms, thyroid gland attack, mood swings"
+      ]
+    },
+    {
+      "Test Name": "Anti-TG Antibodies",
+      "Full Form / Description": "Anti-thyroglobulin antibodies – autoimmune marker",
+      "Normal Range": [
+        "<20 IU/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Indicates autoimmune reaction against thyroid proteins"
+      ],
+      "High Value Indicates": [
+        "Hashimoto’s",
+        "Graves’"
+      ],
+      "Low Value Indicates": [
+        "Normal (if absent)"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Indicates thyroid inflammation",
+        "infertility risk",
+        "hair loss"
+      ]
+    },
+    {
+      "Test Name": "TRAb / TSI",
+      "Full Form / Description": "TSH receptor antibody / Thyroid Stimulating Immunoglobulin",
+      "Normal Range": [
+        "TRAb: <1.75 IU/L",
+        "TSI: <140%"
+      ],
+      "What It Indicates (Function)": [
+        "Confirms Graves' disease (overactive thyroid due to antibodies)"
+      ],
+      "High Value Indicates": [
+        "Graves’ disease"
+      ],
+      "Low Value Indicates": [
+        "Normal (absent)"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Rapid weight loss, bulging eyes, anxiety, heat intolerance"
+      ]
+    }],
+  "NUTRITIONAL_RECOMMENDATION": [
+    {
+      "Food Group / Topic": "Fruits",
+      "Recommended Foods": [
+        "Berries",
+        "apples",
+        "papaya",
+        "pomegranate",
+        "kiwi",
+        "banana (ripe)",
+        "mango (in moderation)"
+      ],
+      "Why It Helps": [
+        "Provide antioxidants and support adrenal-thyroid connection"
+      ],
+      "Foods to Avoid": [
+        "Cabbage",
+        "broccoli",
+        "cauliflower",
+        "kale",
+        "Soy-based fruit products",
+        "Mangoes",
+        "Grapes",
+        "Lychee",
+        "Pineapple (excess)",
+        "Canned fruits in syrup",
+        "Brussels sprouts",
+        "Turnips",
+        "Mustard greens",
+        "Canned/pickled veggies (high sodium)"
+      ]
+    },
+    {
+      "Food Group / Topic": "Vegetables (Cooked preferred)",
+      "Recommended Foods": [
+        "Carrots",
+        "spinach",
+        "bottle gourd (lauki)",
+        "sweet potatoes",
+        "beets",
+        "ridge gourd"
+      ],
+      "Why It Helps": [
+        "Cooked veggies reduce goitrogens and help absorption of minerals"
+      ],
+      "Foods to Avoid": [
+        "Packaged snacks",
+        "bakery",
+        "instant noodles"
+      ]
+    },
+    {
+      "Food Group / Topic": "Whole Grains (Gluten-free preferred for some)",
+      "Recommended Foods": [
+        "Brown rice",
+        "quinoa",
+        "millets (ragi, bajra, jowar)",
+        "oats (gluten-free)"
+      ],
+      "Why It Helps": [
+        "Stabilize blood sugar",
+        "reduce inflammation",
+        "support metabolism"
+      ],
+      "Foods to Avoid": [
+        "Soy chunks",
+        "tofu"
+      ]
+    },
+    {
+      "Food Group / Topic": "Pulses & Legumes",
+      "Recommended Foods": [
+        "Moong dal",
+        "masoor dal",
+        "chana",
+        "lobia",
+        "rajma (soaked & cooked well)"
+      ],
+      "Why It Helps": [
+        "Protein helps in hormone synthesis and repair"
+      ],
+      "Foods to Avoid": [
+        "White sugar",
+        "maida",
+        "sweets",
+        "cold drinks"
+      ]
+    },
+    {
+      "Food Group / Topic": "Nuts & Seeds",
+      "Recommended Foods": [
+        "Walnuts",
+        "brazil nuts (selenium)",
+        "pumpkin seeds (zinc)",
+        "flaxseeds",
+        "chia seeds"
+      ],
+      "Why It Helps": [
+        "Provide selenium",
+        "zinc",
+        "omega-3 – essential for thyroid function"
+      ],
+      "Foods to Avoid": [
+        "Too much tea",
+        "coffee",
+        "Peanuts (often moldy)",
+        "Pine nuts",
+        "Salted/roasted nuts",
+        "Cashews",
+        "Almonds",
+        "Flax seeds (excessive)"
+      ]
+    },
+    {
+      "Food Group / Topic": "Healthy Oils & Fats",
+      "Recommended Foods": [
+        "Cold-pressed coconut oil",
+        "olive oil",
+        "ghee (small amount)",
+        "mustard oil"
+      ],
+      "Why It Helps": [
+        "Support metabolism",
+        "hormone transport and anti-inflammatory action"
+      ],
+      "Foods to Avoid": [
+        "Maida",
+        "white bread",
+        "wheat pasta",
+        "Wheat",
+        "Rye",
+        "Barley",
+        "White rice",
+        "Packaged cereals (with added iodine or sugar)",
+        "Hydrogenated oils",
+        "Margarine",
+        "Excess ghee or butter",
+        "Palm oil"
+      ]
+    },
+    {
+      "Food Group / Topic": "Low-Fat Dairy / Fermented Foods",
+      "Recommended Foods": [
+        "Toned milk",
+        "curd",
+        "buttermilk",
+        "probiotic yogurt",
+        "paneer"
+      ],
+      "Why It Helps": [
+        "Support gut health and calcium metabolism (unless lactose intolerant)"
+      ],
+      "Foods to Avoid": [
+        "Full-fat milk",
+        "Cheese",
+        "Yogurt (especially if lactose-intolerant)",
+        "Sweetened plant milks (soy, oat)"
+      ]
+    },
+    {
+      "Food Group / Topic": "Spices & Herbs",
+      "Recommended Foods": [
+        "Turmeric",
+        "ginger",
+        "cinnamon",
+        "cumin",
+        "coriander",
+        "tulsi",
+        "ashwagandha (under supervision)"
+      ],
+      "Why It Helps": [
+        "Support anti-inflammatory",
+        "metabolic and adrenal-thyroid axis"
+      ],
+      "Foods to Avoid": []
+    },
+    {
+      "Food Group / Topic": "Beverages",
+      "Recommended Foods": [
+        "Warm water",
+        "jeera water",
+        "ajwain water",
+        "tulsi tea",
+        "herbal teas"
+      ],
+      "Why It Helps": [
+        "Improve digestion",
+        "reduce bloating",
+        "support thyroid detox"
+      ],
+      "Foods to Avoid": [
+        "Coffee",
+        "Black tea",
+        "Energy drinks",
+        "Alcohol",
+        "Soy milk",
+        "Seaweed teas",
+        "Iodized mineral water"
+      ]
+    },
+    {
+      "Food Group / Topic": "Protein-Rich Foods",
+      "Recommended Foods": [
+        "Egg whites",
+        "tofu",
+        "low-fat paneer",
+        "legumes",
+        "fish (optional)"
+      ],
+      "Why It Helps": [
+        "Essential for hormone creation",
+        "tissue repair and metabolism"
+      ],
+      "Foods to Avoid": [
+        "Processed meats (ham, bacon, sausages)",
+        "Organ meats (liver)",
+        "Shellfish",
+        "Seaweed-fed fish (tuna, cod, sardines)",
+        "Raw egg whites",
+        "Scrambled Eggs"
+      ]
+    }
+  ],
+  "RECIPES_1": [
+    {
+      "Recipe Name": "Banana Chia Yogurt Bowl",
+      "Ingredients": [
+        "- 1 ripe banana (sliced)",
+        "- ½ cup Greek yogurt (plain, low-fat)",
+        "- 1 tsp chia seeds",
+        "- 1 tsp flaxseeds (ground)",
+        "- Cinnamon (a pinch)"
+      ],
+      "Quick Method": [
+        "1. Mix yogurt, banana slices, chia and flaxseeds in a bowl",
+        "2. Sprinkle with cinnamon",
+        "3. Eat immediately or chill for a few minutes"
+      ],
+      "Why It’s Helpful": [
+        "- Supports energy and gut health",
+        "- High in selenium, omega-3s, B vitamins",
+        "- Helps balance hormones naturally"
+      ]
+    },
+    {
+      "Recipe Name": "Avocado Cucumber Salad",
+      "Ingredients": [
+        "- ½ ripe avocado (diced)",
+        "- 1 small cucumber (chopped)",
+        "- A few spinach leaves or arugula",
+        "- Lemon juice, olive oil, black pepper",
+        "- Optional: pinch of roasted sunflower or pumpkin seeds"
+      ],
+      "Quick Method": [
+        "1. Combine chopped cucumber, avocado, greens in a bowl",
+        "2. Drizzle lemon juice, olive oil, add pepper",
+        "3. Top with seeds and serve fresh"
+      ],
+      "Why It’s Helpful": [
+        "- Rich in healthy fats, zinc, and antioxidants",
+        "- Supports metabolism and hormone transport",
+        "- Light, hydrating, and anti-inflammatory"
+      ]
+    }
+  ]
+},
+  "CARDIAC_BIOMARKER": {
+    "Tests": [
+    {
+      "Test Name": "Troponin I / T",
+      "Full Form / Description": "Troponin I (cTnI) / Troponin T (cTnT) – proteins released during heart muscle damage",
+      "Normal Range": [
+        "cTnI: <0.04 ng/mL",
+        "cTnT: <0.01 ng/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Most specific and sensitive marker of myocardial infarction (MI)"
+      ],
+      "High Value Indicates": [
+        "Acute heart attack (MI)",
+        "myocarditis",
+        "severe heart strain (e.g., after surgery or trauma)"
+      ],
+      "Low Value Indicates": [
+        "Not clinically significant"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Chest pain, shortness of breath, fatigue, cold sweat, nausea, indicates heart muscle injury"
+      ]
+    },
+    {
+      "Test Name": "CK-MB",
+      "Full Form / Description": "Creatine Kinase-MB – enzyme found in heart muscle",
+      "Normal Range": [
+        "<5 ng/mL or <3–5% of total CK"
+      ],
+      "What It Indicates (Function)": [
+        "Indicates heart muscle damage; used for MI diagnosis"
+      ],
+      "High Value Indicates": [
+        "Heart attack",
+        "myocarditis",
+        "trauma"
+      ],
+      "Low Value Indicates": [
+        "Not usually significant"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Indicates acute MI, muscle damage symptoms like chest pain, pressure"
+      ]
+    },
+    {
+      "Test Name": "Myoglobin",
+      "Full Form / Description": "Oxygen-binding protein in heart and skeletal muscle",
+      "Normal Range": [
+        "25–72 ng/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Rises rapidly in response to muscle injury (including heart)"
+      ],
+      "High Value Indicates": [
+        "Early marker for MI",
+        "trauma",
+        "strenuous exercise"
+      ],
+      "Low Value Indicates": [
+        "Not usually significant"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Early sign of heart attack (non-specific)",
+        "muscle pain",
+        "dark urine (rhabdomyolysis)"
+      ]
+    },
+    {
+      "Test Name": "BNP / NT-proBNP",
+      "Full Form / Description": "B-type Natriuretic Peptide / N-terminal proBNP – hormones released by heart in response to stretch or failure",
+      "Normal Range": [
+        "BNP: <100 pg/mL",
+        "NT-proBNP:<125 pg/mL (age-dependent)"
+      ],
+      "What It Indicates (Function)": [
+        "Indicates heart failure",
+        "fluid overload",
+        "cardiac stress"
+      ],
+      "High Value Indicates": [
+        "Congestive heart failure",
+        "left ventricular dysfunction"
+      ],
+      "Low Value Indicates": [
+        "Normal or very low = unlikely heart failure"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Shortness of breath, edema, fatigue, inability to exercise, risk of sudden heart failure"
+      ]
+    },
+    {
+      "Test Name": "hs-CRP",
+      "Full Form / Description": "High-sensitivity C-Reactive Protein – marker of inflammation in blood vessels",
+      "Normal Range": [
+        "<1 mg/L (low risk)",
+        "1–3 mg/L (average)",
+        ">3 mg/L (high risk)"
+      ],
+      "What It Indicates (Function)": [
+        "Indicates vascular inflammation; predicts risk of heart disease and stroke"
+      ],
+      "High Value Indicates": [
+        "Increased cardiovascular risk",
+        "chronic inflammation"
+      ],
+      "Low Value Indicates": [
+        "Low CRP = Low risk"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Silent heart risk, artery inflammation, often no symptoms; predictive marker for stroke and MI"
+      ]
+    },
+    {
+      "Test Name": "LDH (Lactate Dehydrogenase)",
+      "Full Form / Description": "Enzyme released during tissue breakdown",
+      "Normal Range": [
+        "140–280 U/L"
+      ],
+      "What It Indicates (Function)": [
+        "Used in late-stage heart attack diagnosis; non-specific"
+      ],
+      "High Value Indicates": [
+        "Late MI stage",
+        "tissue damage",
+        "cancer"
+      ],
+      "Low Value Indicates": [
+        "Not usually significant"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Fatigue, chest discomfort (if related to heart); also rises in liver or lung issues"
+      ]
+    },
+    {
+      "Test Name": "Homocysteine",
+      "Full Form / Description": "Amino acid; elevated levels can damage blood vessels",
+      "Normal Range": [
+        "4–15 µmol/L"
+      ],
+      "What It Indicates (Function)": [
+        "Risk marker for atherosclerosis and blood clot formation"
+      ],
+      "High Value Indicates": [
+        "Poor vitamin B12",
+        "B6",
+        "folate status; genetic disorders"
+      ],
+      "Low Value Indicates": [
+        "Good nutritional status"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Increases risk of heart attack, stroke, DVT, silent blood vessel damage"
+      ]
+    },
+    {
+      "Test Name": "Lipoprotein(a)",
+      "Full Form / Description": "Lipoprotein subclass that increases plaque formation",
+      "Normal Range": [
+        "<30 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Genetic marker for atherosclerosis and coronary artery disease"
+      ],
+      "High Value Indicates": [
+        "High inherited risk of cardiovascular events"
+      ],
+      "Low Value Indicates": [
+        "Low = Lower risk"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: No symptoms but increases silent heart attack risk; not affected by diet/exercise"
+      ]
+    },
+    {
+      "Test Name": "Apolipoprotein B (ApoB)",
+      "Full Form / Description": "Protein found in LDL particles",
+      "Normal Range": [
+        "<90 mg/dL (low risk)",
+        "<100 mg/dL (moderate)",
+        ">130 mg/dL (high risk)"
+      ],
+      "What It Indicates (Function)": [
+        "More specific than LDL; directly reflects number of atherogenic particles"
+      ],
+      "High Value Indicates": [
+        "High cardiovascular risk"
+      ],
+      "Low Value Indicates": [
+        "Low = Low risk"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Increases atherosclerosis and heart disease risk, even if LDL is normal"
+      ]
+    }
+  ]},
+  "VITAMIN_PANEL": {
+    "Tests": [
+    {
+      "Test Name": "Vitamin D (25-hydroxy D)",
+      "Full Form / Description": "Measures total Vitamin D in blood (D2 + D3)",
+      "Normal Range": [
+        "30–100 ng/mL(Optimal: 50–70 ng/mL)"
+      ],
+      "What It Indicates (Function)": [
+        "Bone strength",
+        "immunity",
+        "mood",
+        "hormone health"
+      ],
+      "High Value Indicates": [
+        "Vitamin D toxicity (rare, from supplements)"
+      ],
+      "Low Value Indicates": [
+        "Rickets",
+        "osteoporosis",
+        "autoimmune risk"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Nausea, weakness, kidney damage",
+        "Low: Bone pain, fatigue, depression, muscle weakness, frequent infections"
+      ]
+    },
+    {
+      "Test Name": "Vitamin B12",
+      "Full Form / Description": "Measures cobalamin levels; essential for nerves, blood, DNA",
+      "Normal Range": [
+        "200–900 pg/mL(Optimal: >500 pg/mL)"
+      ],
+      "What It Indicates (Function)": [
+        "Nerve function",
+        "energy",
+        "brain health",
+        "RBC formation"
+      ],
+      "High Value Indicates": [
+        "Excess supplementation (usually safe)"
+      ],
+      "Low Value Indicates": [
+        "Anemia",
+        "nerve damage",
+        "memory loss"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Usually asymptomatic unless excessive",
+        "Low: Fatigue, tingling hands/feet, memory issues, pale skin"
+      ]
+    },
+    {
+      "Test Name": "Folate (Vitamin B9)",
+      "Full Form / Description": "Measures folic acid levels; crucial for DNA/RNA and RBCs",
+      "Normal Range": [
+        "5.9–24.8 ng/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Cell division",
+        "pregnancy health",
+        "mood"
+      ],
+      "High Value Indicates": [
+        "Rare",
+        "excess intake (from supplements)"
+      ],
+      "Low Value Indicates": [
+        "Megaloblastic anemia",
+        "neural tube defects"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: May mask B12 deficiency",
+        "Low: Fatigue, irritability, poor growth, birth defects"
+      ]
+    },
+    {
+      "Test Name": "Vitamin B6 (Pyridoxine)",
+      "Full Form / Description": "Involved in protein metabolism, brain and immune health",
+      "Normal Range": [
+        "5–50 mcg/L"
+      ],
+      "What It Indicates (Function)": [
+        "Neurotransmitter formation",
+        "metabolism",
+        "hemoglobin production"
+      ],
+      "High Value Indicates": [
+        "Excess supplement use"
+      ],
+      "Low Value Indicates": [
+        "Peripheral neuropathy",
+        "confusion"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Numbness",
+        "nerve damage (in very high doses)",
+        "Low: Depression, mouth sores, confusion, weak immunity"
+      ]
+    },
+    {
+      "Test Name": "Vitamin A (Retinol)",
+      "Full Form / Description": "Fat-soluble vitamin for vision, skin, immunity",
+      "Normal Range": [
+        "20–60 mcg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Eye health",
+        "skin repair",
+        "immune function"
+      ],
+      "High Value Indicates": [
+        "Toxicity from supplements/liver intake"
+      ],
+      "Low Value Indicates": [
+        "Night blindness",
+        "poor wound healing"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Headache",
+        "nausea",
+        "liver damage",
+        "vision issues",
+        "Low: Dry eyes, vision loss, rough skin, low immunity"
+      ]
+    },
+    {
+      "Test Name": "Vitamin E (Alpha-tocopherol)",
+      "Full Form / Description": "Fat-soluble antioxidant protecting cells from damage",
+      "Normal Range": [
+        "5.5–17 mg/L"
+      ],
+      "What It Indicates (Function)": [
+        "Prevents oxidative stress",
+        "supports immunity and skin"
+      ],
+      "High Value Indicates": [
+        "Supplement overdose"
+      ],
+      "Low Value Indicates": [
+        "Muscle weakness",
+        "anemia"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Bleeding risk",
+        "blurred vision",
+        "fatigue",
+        "Low: Poor nerve function, dry skin, weak muscles"
+      ]
+    },
+    {
+      "Test Name": "Vitamin K",
+      "Full Form / Description": "Blood clotting and bone metabolism",
+      "Normal Range": [
+        "0.2–3.2 ng/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Helps blood clot and prevents bleeding"
+      ],
+      "High Value Indicates": [
+        "Excess rarely toxic; may interfere with blood thinners"
+      ],
+      "Low Value Indicates": [
+        "Bleeding tendency",
+        "poor bone health"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: May interfere with warfarin therapy",
+        "Low: Easy bruising, gum bleeding, weak bones"
+      ]
+    },
+    {
+      "Test Name": "Vitamin C (Ascorbic Acid)",
+      "Full Form / Description": "Water-soluble antioxidant; collagen synthesis",
+      "Normal Range": [
+        "0.4–2 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Immunity",
+        "skin health",
+        "iron absorption"
+      ],
+      "High Value Indicates": [
+        "Supplement overdose"
+      ],
+      "Low Value Indicates": [
+        "Scurvy",
+        "weak immunity"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Stomach upset",
+        "kidney stones (rare)",
+        "Low: Fatigue, bleeding gums, poor healing, anemia"
+      ]
+    }
+  ]},
+  "KIDNEY_PANEL": {
+    "Tests": [
+    {
+      "Test Name": "eGFR",
+      "Full Form / Description": "Estimated Glomerular Filtration Rate – calculated from creatinine",
+      "Normal Range": [
+        ">90 mL/min/1.73m² (normal)",
+        "<60: Kidney disease",
+        "<15: Kidney failure"
+      ],
+      "What It Indicates (Function)": [
+        "Measures kidney filtration function"
+      ],
+      "High Value Indicates": [
+        "Not applicable (inverse relation with kidney function)"
+      ],
+      "Low Value Indicates": [
+        "Lower value = worse kidney function"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "Low: Tiredness",
+        "puffiness",
+        "loss of appetite",
+        "fluid retention",
+        "risk of dialysis in advanced stages"
+      ]
+    },
+    {
+      "Test Name": "Uric Acid",
+      "Full Form / Description": "End product of purine metabolism",
+      "Normal Range": [
+        "Men: 3.5–7.2 mg/dL",
+        "Women: 2.6–6.0 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Kidney’s ability to eliminate uric acid; excess leads to gout or stones"
+      ],
+      "High Value Indicates": [
+        "Gout",
+        "kidney disease",
+        "high protein intake"
+      ],
+      "Low Value Indicates": [
+        "Liver disease",
+        "SIADH",
+        "low purine diet"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High- swelling on joints",
+        "accute pain",
+        "exhausation"
+      ]
+    }
+  ]},
+  "CRP": {
+    "Tests": [
+    {
+      "Test Name": "CRP",
+      "Full Form / Description": "C-Reactive Protein – a substance made by the liver in response to inflammation",
+      "Normal Range": [
+        "10 mg/L (general CRP)",
+        "hs-CRP: <1 mg/L = low risk",
+        "1–3 mg/L = average risk",
+        ">3 mg/L = high risk"
+      ],
+      "What It Indicates (Function)": [
+        "Marker of acute or chronic inflammation",
+        "infection",
+        "or tissue damage. High-sensitivity CRP is used to predict cardiovascular disease risk"
+      ],
+      "High Value Indicates": [
+        "Infections (bacterial, viral)",
+        "autoimmune diseases (RA, lupus)",
+        "trauma",
+        "heart disease",
+        "cancer"
+      ],
+      "Low Value Indicates": [
+        "low inflammation – usually good"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Fever",
+        "fatigue",
+        "pain",
+        "swelling",
+        "silent artery inflammation (heart attack or stroke risk)",
+        "Low: Usually no symptoms; a sign of healthy systemic state"
+      ]
+    }
+  ]},
+  "COMPLETE_SUGAR_PANEL": {
+    "Tests": [
+    {
+      "Test Name": "Fasting Blood Sugar (FBS)",
+      "Full Form / Description": "Glucose after 8–10 hours of fasting",
+      "Normal Range": [
+        "70–99 mg/dL=Normal",
+        "100–125 = Prediabetes",
+        "≥126 = Diabetes"
+      ],
+      "What It Indicates (Function)": [
+        "Indicates baseline sugar level"
+      ],
+      "High Value Indicates": [
+        "Prediabetes",
+        "Diabetes Mellitus"
+      ],
+      "Low Value Indicates": [
+        "Hypoglycemia",
+        "fasting too long"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Frequent urination, thirst, fatigue",
+        "Low: Dizziness, sweating, confusion, fainting"
+      ]
+    },
+    {
+      "Test Name": "Postprandial Blood Sugar (PPBS)",
+      "Full Form / Description": "Glucose 2 hours after a meal",
+      "Normal Range": [
+        "<140 mg/dL = Normal",
+        "140–199 = Prediabetes",
+        "≥200 = Diabetes"
+      ],
+      "What It Indicates (Function)": [
+        "Body’s ability to process sugar after eating"
+      ],
+      "High Value Indicates": [
+        "Impaired glucose tolerance or diabetes"
+      ],
+      "Low Value Indicates": [
+        "Hypoglycemia"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Tiredness",
+        "blurry vision",
+        "hunger after eating",
+        "Low: Shakiness, irritability, cold sweat"
+      ]
+    },
+    {
+      "Test Name": "Random Blood Sugar (RBS)",
+      "Full Form / Description": "Glucose at any time, no fasting",
+      "Normal Range": [
+        "<200 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Quick check for abnormal glucose at any time"
+      ],
+      "High Value Indicates": [
+        "If >200 + symptoms = likely diabetes"
+      ],
+      "Low Value Indicates": [
+        "Hypoglycemia"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Diabetes symptoms",
+        "Low: Headache, tremors, mental fog"
+      ]
+    },
+    {
+      "Test Name": "HbA1c (Glycated Hemoglobin)",
+      "Full Form / Description": "Avg. blood sugar over past 2–3 months",
+      "Normal Range": [
+        "<5.7% = Normal",
+        "5.7–6.4% = Prediabetes",
+        "≥6.5% = Diabetes"
+      ],
+      "What It Indicates (Function)": [
+        "Best test to monitor long-term glucose control"
+      ],
+      "High Value Indicates": [
+        "Chronic high sugar (diabetes)"
+      ],
+      "Low Value Indicates": [
+        "May occur in anemia or chronic illness"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Long-term complications risk (eyes, kidneys, nerves)",
+        "Low: Rare – check for anemia or liver issues"
+      ]
+    },
+    {
+      "Test Name": "Glucose Tolerance Test (GTT / OGTT)",
+      "Full Form / Description": "Fasting + 1-hour and 2-hour blood sugar after 75g glucose",
+      "Normal Range": [
+        "2-Hour:",
+        "<140 mg/dL = Normal",
+        "140–199 = Prediabetes",
+        "≥200 = Diabetes"
+      ],
+      "What It Indicates (Function)": [
+        "Used in pregnancy (GDM) or prediabetes"
+      ],
+      "High Value Indicates": [
+        "Impaired glucose processing"
+      ],
+      "Low Value Indicates": [
+        "Rarely low unless reactive hypoglycemia"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Gestational diabetes",
+        "insulin resistance",
+        "Low: Drop after sugar (reactive hypoglycemia)"
+      ]
+    },
+    {
+      "Test Name": "Fructosamine",
+      "Full Form / Description": "Avg. blood sugar over 2–3 weeks (shorter than HbA1c)",
+      "Normal Range": [
+        "175–280 µmol/L"
+      ],
+      "What It Indicates (Function)": [
+        "Used in anemia",
+        "pregnancy",
+        "or rapid changes"
+      ],
+      "High Value Indicates": [
+        "Poor recent sugar control"
+      ],
+      "Low Value Indicates": [
+        "Rarely used for lows"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Poor sugar control in last 2–3 weeks",
+        "Useful when HbA1c is unreliable"
+      ]
+    },
+    {
+      "Test Name": "Insulin (Fasting)",
+      "Full Form / Description": "Blood insulin level after fasting",
+      "Normal Range": [
+        "2–25 µIU/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Insulin production; insulin resistance detection"
+      ],
+      "High Value Indicates": [
+        "Insulin resistance",
+        "PCOS",
+        "metabolic syndrome"
+      ],
+      "Low Value Indicates": [
+        "Type 1 diabetes",
+        "insulin deficiency"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Fatigue after eating",
+        "weight gain",
+        "Low: Sugar rises quickly, risk of ketoacidosis"
+      ]
+    },
+    {
+      "Test Name": "C-Peptide",
+      "Full Form / Description": "Byproduct of insulin production – used to measure natural insulin output",
+      "Normal Range": [
+        "0.5–2.0 ng/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Helps differentiate Type 1 vs Type 2 diabetes"
+      ],
+      "High Value Indicates": [
+        "Insulin resistance (high insulin production)"
+      ],
+      "Low Value Indicates": [
+        "Type 1 diabetes (no insulin made)"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: PCOS",
+        "insulinoma",
+        "Low: Type 1 diabetes, pancreatic damage"
+      ]
+    },
+    {
+      "Test Name": "HOMA-IR (Calculated)",
+      "Full Form / Description": "Homeostatic Model Assessment – uses insulin and glucose to estimate insulin resistance",
+      "Normal Range": [
+        "<1.0 = Ideal",
+        "1.0–2.9 = Moderate resistance",
+        ">3.0 = Significant resistance"
+      ],
+      "What It Indicates (Function)": [
+        "Measures insulin resistance"
+      ],
+      "High Value Indicates": [
+        "High insulin resistance = early diabetes/metabolic syndrome"
+      ],
+      "Low Value Indicates": [
+        "Not applicable"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: PCOS",
+        "obesity",
+        "risk of diabetes",
+        "Used in early lifestyle screening"
+      ]
+    }],
+  "NUTRITIONAL_RECOMMENDATION":[
+    {
+      "Food Group": "Vegetables",
+      "Recommended Foods": [
+        "Spinach",
+        "kale (cooked)",
+        "zucchini",
+        "bell peppers",
+        "cucumbers",
+        "broccoli",
+        "green beans",
+        "asparagus"
+      ],
+      "Foods to Avoid": [
+        "White potatoes (fried or mashed)",
+        "canned corn with sugar",
+        "sweet peas (large portions)",
+        "Sweet corn",
+        "Peas",
+        "Canned vegetables with sugar",
+        "Mangoes",
+        "Bananas",
+        "Grapes",
+        "Chiko",
+        "Pineapple",
+        "Fruit juices",
+        "Dried fruits like raisins",
+        "dates",
+        "prunes"
+      ],
+      "Why It Helps / Why to Avoid": [
+        "Non-starchy, high-fiber veggies stabilize blood sugar; starchy/canned ones may spike sugar"
+      ]
+    },
+    {
+      "Food Group": "Whole Grains",
+      "Recommended Foods": [
+        "Steel-cut oats",
+        "brown rice",
+        "quinoa",
+        "barley",
+        "buckwheat",
+        "whole-grain breads (high fiber)"
+      ],
+      "Foods to Avoid": [
+        "White bread",
+        "regular pasta",
+        "instant oats",
+        "white rice",
+        "Maida products",
+        "Refined cereals",
+        "High GI grains like puffed rice"
+      ],
+      "Why It Helps / Why to Avoid": [
+        "Whole grains slow glucose release; refined carbs spike blood sugar"
+      ]
+    },
+    {
+      "Food Group": "Pulses & Legumes",
+      "Recommended Foods": [
+        "Lentils",
+        "black beans",
+        "kidney beans",
+        "chickpeas (no salt added)",
+        "edamame"
+      ],
+      "Foods to Avoid": [
+        "Baked beans (with sugar)",
+        "canned beans with salt & preservatives"
+      ],
+      "Why It Helps / Why to Avoid": [
+        "Beans are fiber-rich and low-GI; canned/sweetened varieties raise blood sugar"
+      ]
+    },
+    {
+      "Food Group": "Nuts & Seeds",
+      "Recommended Foods": [
+        "Almonds",
+        "walnuts",
+        "flaxseeds",
+        "chia seeds",
+        "pumpkin seeds",
+        "unsalted peanuts"
+      ],
+      "Foods to Avoid": [
+        "Honey-roasted nuts",
+        "trail mix with candies",
+        "sweetened nut butters",
+        "Salted or sugar-coated nuts",
+        "Peanut butter with sugar and oil"
+      ],
+      "Why It Helps / Why to Avoid": [
+        "Good fats and protein reduce sugar spikes; sweetened types add hidden sugars"
+      ]
+    },
+    {
+      "Food Group": "Dairy & Alternatives",
+      "Recommended Foods": [
+        "Unsweetened Greek yogurt",
+        "low-fat milk",
+        "plain kefir",
+        "almond milk (unsweetened)",
+        "cottage cheese"
+      ],
+      "Foods to Avoid": [
+        "Flavored yogurts",
+        "full-fat ice cream",
+        "sweetened plant-based milks",
+        "Full cream milk",
+        "Condensed milk"
+      ],
+      "Why It Helps / Why to Avoid": [
+        "Protein and probiotics support sugar control; flavored dairy = hidden sugars"
+      ]
+    },
+    {
+      "Food Group": "Healthy Fats",
+      "Recommended Foods": [
+        "Olive oil",
+        "avocado",
+        "flaxseed oil",
+        "nut butters (unsweetened)",
+        "small amounts of ghee"
+      ],
+      "Foods to Avoid": [
+        "Butter (excess)",
+        "margarine",
+        "shortening",
+        "fried foods",
+        "Vanaspati",
+        "Trans fats"
+      ],
+      "Why It Helps / Why to Avoid": [
+        "Healthy fats improve insulin sensitivity; trans fats worsen glucose control"
+      ]
+    },
+    {
+      "Food Group": "Spices & Herbs",
+      "Recommended Foods": [
+        "Cinnamon",
+        "turmeric",
+        "garlic",
+        "ginger",
+        "basil",
+        "rosemary"
+      ],
+      "Foods to Avoid": [
+        "Excess salt",
+        "seasoning packets with MSG",
+        "sauces with added sugar"
+      ],
+      "Why It Helps / Why to Avoid": [
+        "Natural herbs help lower sugar & inflammation; packaged spices may hide sodium/sugar"
+      ]
+    },
+    {
+      "Food Group": "Protein-Rich Foods",
+      "Recommended Foods": [
+        "Egg whites",
+        "tofu",
+        "grilled chicken",
+        "turkey",
+        "salmon",
+        "tuna (in water)"
+      ],
+      "Foods to Avoid": [
+        "Bacon",
+        "sausages",
+        "deli meats with preservatives",
+        "fried meat",
+        "Deep-fried meat/fish",
+        "Red meat in large amounts"
+      ],
+      "Why It Helps / Why to Avoid": [
+        "Lean proteins are sugar-neutral; processed meats can worsen insulin"
+      ]
+    },
+    {
+      "Food Group": "Hydrating Drinks",
+      "Recommended Foods": [
+        "Water",
+        "lemon water",
+        "herbal teas (chamomile, peppermint)",
+        "seltzer (unsweetened)"
+      ],
+      "Foods to Avoid": [
+        "Regular soda",
+        "sweetened iced tea",
+        "energy drinks",
+        "fruit juices",
+        "Sweet lassi",
+        "Alcohol"
+      ],
+      "Why It Helps / Why to Avoid": [
+        "Water supports sugar balance; sugary drinks spike insulin & energy crash"
+      ]
+    }
+  ],
+  "RECIPES_2": [
+    {
+      "Recipe Name": "Greek Yogurt & Spiced Chickpea Bowl",
+      "Ingredients": [
+        "- ½ cup canned chickpeas (rinsed & drained)",
+        "- ¼ cup plain unsweetened Greek yogurt",
+        "- ½ tsp cumin powder",
+        "- A pinch of black salt or sea salt",
+        "- Fresh parsley or cilantro (optional)"
+      ],
+      "Quick Method": [
+        "1. Mix chickpeas and yogurt in a bowl",
+        "2. Add cumin, salt, and herbs",
+        "3. Stir and serve chilled or at room temp"
+      ],
+      "Why It’s Helpful": [
+        "- High in protein & fiber",
+        "- No added sugar",
+        "- Chickpeas have a low glycemic index and promote fullness"
+      ]
+    },
+    {
+      "Recipe Name": "Cabbage-Carrot Slaw with Pumpkin Seeds",
+      "Ingredients": [
+        "- ½ cup shredded green cabbage",
+        "- ¼ cup grated carrot",
+        "- 1 tbsp roasted pumpkin seeds (unsalted)",
+        "- 1 tsp apple cider vinegar or lemon juice",
+        "- 1 tsp olive oil, pepper, salt"
+      ],
+      "Quick Method": [
+        "1. In a bowl, mix cabbage and carrot",
+        "2. Add pumpkin seeds",
+        "3. Drizzle with olive oil and vinegar or lemon juice",
+        "4. Add salt and pepper to taste"
+      ],
+      "Why It’s Helpful": [
+        "- High fiber, low-carb, antioxidant-rich",
+        "- Supports gut health and blood sugar control",
+        "- No fruit, no sugar, no insulin spike"
+      ]
+    }
+  ]
+},
+  "PCOS_PANEL": {
+    "Tests": [
+    {
+      "Test Name": "LH (Luteinizing Hormone)",
+      "Full Form / Description": "Stimulates ovulation and ovarian hormone production",
+      "Normal Range": [
+        "Follicular: 2–12 IU/L"
+      ],
+      "What It Indicates (Function)": [
+        "LH:FSH ratio >2:1 is common in PCOS"
+      ],
+      "High Value Indicates": [
+        "PCOS",
+        "anovulation"
+      ],
+      "Low Value Indicates": [
+        "Pituitary dysfunction"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Irregular cycles",
+        "infertility",
+        "acne"
+      ]
+    },
+    {
+      "Test Name": "FSH (Follicle Stimulating Hormone)",
+      "Full Form / Description": "Stimulates growth of ovarian follicles",
+      "Normal Range": [
+        "Follicular: 3–10 IU/L"
+      ],
+      "What It Indicates (Function)": [
+        "Ovarian reserve and follicle development"
+      ],
+      "High Value Indicates": [
+        "Menopause",
+        "ovarian failure"
+      ],
+      "Low Value Indicates": [
+        "PCOS (if LH:FSH > 2:1)",
+        "poor fertility"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Hot flashes",
+        "no periods",
+        "Low: Poor egg growth"
+      ]
+    },
+    {
+      "Test Name": "LH:FSH Ratio",
+      "Full Form / Description": "Diagnostic marker (normal = 1:1)",
+      "Normal Range": [
+        "Ideal: ~1:1"
+      ],
+      "What It Indicates (Function)": [
+        ">2:1 often seen in PCOS"
+      ],
+      "High Value Indicates": [
+        "PCOS",
+        "anovulation"
+      ],
+      "Low Value Indicates": [
+        "Normal in other conditions"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Irregular periods",
+        "infertility"
+      ]
+    },
+    {
+      "Test Name": "Total Testosterone",
+      "Full Form / Description": "Male hormone made by ovaries/adrenals",
+      "Normal Range": [
+        "15–70 ng/dL (women)"
+      ],
+      "What It Indicates (Function)": [
+        "Measures androgen excess"
+      ],
+      "High Value Indicates": [
+        "PCOS",
+        "tumors",
+        "adrenal hyperplasia"
+      ],
+      "Low Value Indicates": [
+        "Fatigue",
+        "low libido"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Facial/body hair",
+        "acne",
+        "scalp hair loss",
+        "Low: Low energy, low sex drive"
+      ]
+    },
+    {
+      "Test Name": "Free Testosterone",
+      "Full Form / Description": "Unbound active testosterone",
+      "Normal Range": [
+        "0.3–1.9 ng/dL"
+      ],
+      "What It Indicates (Function)": [
+        "More accurate in detecting hyperandrogenism"
+      ],
+      "High Value Indicates": [
+        "PCOS",
+        "hirsutism",
+        "insulin resistance"
+      ],
+      "Low Value Indicates": [
+        "Fatigue",
+        "reduced libido"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Hair growth on chin",
+        "acne",
+        "infertility"
+      ]
+    },
+    {
+      "Test Name": "DHEA-S",
+      "Full Form / Description": "Dehydroepiandrosterone sulfate – adrenal androgen",
+      "Normal Range": [
+        "65–380 mcg/dL (female)"
+      ],
+      "What It Indicates (Function)": [
+        "Detects adrenal origin of androgen excess"
+      ],
+      "High Value Indicates": [
+        "PCOS",
+        "adrenal tumors",
+        "stress"
+      ],
+      "Low Value Indicates": [
+        "Addison's disease",
+        "pituitary issue"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Oily skin",
+        "hair growth",
+        "aggression",
+        "Low: Fatigue, weakness"
+      ]
+    },
+    {
+      "Test Name": "Androstenedione",
+      "Full Form / Description": "Precursor to testosterone and estrogen",
+      "Normal Range": [
+        "50–220 ng/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Supports diagnosis of PCOS with high androgens"
+      ],
+      "High Value Indicates": [
+        "PCOS",
+        "adrenal hyperplasia"
+      ],
+      "Low Value Indicates": [
+        "Ovarian failure"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Hair growth",
+        "irregular periods",
+        "Low: Low libido, amenorrhea"
+      ]
+    },
+    {
+      "Test Name": "Prolactin",
+      "Full Form / Description": "Stimulates milk; should be ruled out before PCOS diagnosis",
+      "Normal Range": [
+        "2–25 ng/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Rule out prolactinoma as cause of irregular periods"
+      ],
+      "High Value Indicates": [
+        "Prolactinoma",
+        "hypothyroidism"
+      ],
+      "Low Value Indicates": [
+        "Pituitary insufficiency"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Breast discharge",
+        "no periods",
+        "infertility"
+      ]
+    },
+    {
+      "Test Name": "TSH",
+      "Full Form / Description": "Thyroid Stimulating Hormone – regulates metabolism",
+      "Normal Range": [
+        "0.4–4.0 mIU/L"
+      ],
+      "What It Indicates (Function)": [
+        "Rule out thyroid disorders (often mimic PCOS)"
+      ],
+      "High Value Indicates": [
+        "Hypothyroidism"
+      ],
+      "Low Value Indicates": [
+        "Hyperthyroidism"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Weight gain",
+        "irregular periods",
+        "Low: Weight loss, anxiety"
+      ]
+    },
+    {
+      "Test Name": "Free T3 / T4",
+      "Full Form / Description": "Active thyroid hormones",
+      "Normal Range": [
+        "T3: 2.3–4.2 pg/mL",
+        "T4: 0.8–1.8 ng/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Confirm thyroid function"
+      ],
+      "High Value Indicates": [
+        "Hypo or hyperthyroidism"
+      ],
+      "Low Value Indicates": [
+        "Thyroid dysfunction"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Anxiety",
+        "palpitations",
+        "Low: Depression, fatigue"
+      ]
+    },
+    {
+      "Test Name": "Insulin (Fasting)",
+      "Full Form / Description": "Reflects insulin resistance",
+      "Normal Range": [
+        "2–25 µIU/mL"
+      ],
+      "What It Indicates (Function)": [
+        "PCOS often causes insulin resistance"
+      ],
+      "High Value Indicates": [
+        "Metabolic syndrome",
+        "PCOS",
+        "prediabetes"
+      ],
+      "Low Value Indicates": [
+        "Type 1 diabetes"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Weight gain",
+        "fatigue after eating",
+        "Low: Poor sugar control"
+      ]
+    },
+    {
+      "Test Name": "Glucose (Fasting)",
+      "Full Form / Description": "Blood sugar",
+      "Normal Range": [
+        "70–99 mg/dL"
+      ],
+      "What It Indicates (Function)": [
+        "Assesses prediabetes or diabetes risk"
+      ],
+      "High Value Indicates": [
+        "Insulin resistance",
+        "PCOS"
+      ],
+      "Low Value Indicates": [
+        "Hypoglycemia"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Sugar cravings",
+        "PCOS risk",
+        "Low: Weakness, sweating"
+      ]
+    },
+    {
+      "Test Name": "HbA1c",
+      "Full Form / Description": "Avg. sugar over 3 months",
+      "Normal Range": [
+        "<5.7% = normal"
+      ],
+      "What It Indicates (Function)": [
+        "PCOS increases risk of type 2 diabetes"
+      ],
+      "High Value Indicates": [
+        "Diabetes"
+      ],
+      "Low Value Indicates": [
+        "Rarely low"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Tiredness",
+        "thirst",
+        "sugar damage to organs"
+      ]
+    },
+    {
+      "Test Name": "SHBG",
+      "Full Form / Description": "Sex Hormone Binding Globulin – binds to testosterone",
+      "Normal Range": [
+        "18–114 nmol/L"
+      ],
+      "What It Indicates (Function)": [
+        "Low in PCOS → more free testosterone"
+      ],
+      "High Value Indicates": [
+        "PCOS",
+        "insulin resistance"
+      ],
+      "Low Value Indicates": [
+        "Good sign – low androgens"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "Low: Hair growth",
+        "acne",
+        "androgen symptoms"
+      ]
+    },
+    {
+      "Test Name": "AMH",
+      "Full Form / Description": "Anti-Müllerian Hormone – ovarian reserve marker",
+      "Normal Range": [
+        "1.0–4.0 ng/mL"
+      ],
+      "What It Indicates (Function)": [
+        "Elevated in PCOS due to more follicles"
+      ],
+      "High Value Indicates": [
+        "PCOS (>4 ng/mL)"
+      ],
+      "Low Value Indicates": [
+        "Poor ovarian reserve"
+      ],
+      "Symptoms / Risks of Imbalance": [
+        "High: Anovulation",
+        "cystic ovaries",
+        "Low: Menopause, poor egg supply"
+      ]
+    }
+  ]},
+  "SEXUALLY_TRANSMITTED_DISEASES": {
+    "Tests": [
+    {
+      "Test Name": "HIV Test",
+      "Confirmatory TEST": "Human Immunodeficiency V",
+      "Sample Type": [
+        "Blood or oral fluid"
+      ],
+      "What It Detects": [
+        "HIV infection (early and chronic stages)"
+      ],
+      "When to Get Tested": [
+        "At least 2–4 weeks after possible exposure"
+      ],
+      "Positive Result Means": [
+        "Active or past HIV infection"
+      ],
+      "If Untreated – Risks / Symptoms": [
+        "Weak immunity",
+        "weight loss",
+        "frequent infections",
+        "AIDS",
+        "death if untreated"
+      ]
+    },
+    {
+      "Test Name": "Syphilis Test",
+      "Confirmatory TEST": "VDRL, RPR, and confirmatory FTA-ABS / TPHA",
+      "Sample Type": [
+        "Blood"
+      ],
+      "What It Detects": [
+        "Bacterial infection by Treponema pallidum"
+      ],
+      "When to Get Tested": [
+        "3–12 weeks after exposure"
+      ],
+      "Positive Result Means": [
+        "Presence of active or past syphilis"
+      ],
+      "If Untreated – Risks / Symptoms": [
+        "Painless ulcers",
+        "rashes",
+        "nerve damage",
+        "heart complications",
+        "birth defects"
+      ]
+    },
+    {
+      "Test Name": "Hepatitis B",
+      "Confirmatory TEST": "HBsAg, Anti-HBs, Anti-HBc",
+      "Sample Type": [
+        "Blood"
+      ],
+      "What It Detects": [
+        "Hepatitis B virus (active or immune status)"
+      ],
+      "When to Get Tested": [
+        "1–9 weeks after exposure"
+      ],
+      "Positive Result Means": [
+        "HBsAg positive = active infection"
+      ],
+      "If Untreated – Risks / Symptoms": [
+        "Liver damage",
+        "cirrhosis",
+        "liver cancer",
+        "fatigue",
+        "jaundice"
+      ]
+    },
+    {
+      "Test Name": "Hepatitis C",
+      "Confirmatory TEST": "Anti-HCV, HCV RNA (PCR)",
+      "Sample Type": [
+        "Blood"
+      ],
+      "What It Detects": [
+        "Hepatitis C virus"
+      ],
+      "When to Get Tested": [
+        "2–6 weeks after exposure"
+      ],
+      "Positive Result Means": [
+        "HCV antibody = past or current infection",
+        "HCV RNA = active infection"
+      ],
+      "If Untreated – Risks / Symptoms": [
+        "Chronic liver disease",
+        "cirrhosis",
+        "liver failure"
+      ]
+    },
+    {
+      "Test Name": "Chlamydia Test",
+      "Confirmatory TEST": "Chlamydia trachomatis DNA by NAAT (Nucleic Acid Amplification Test)",
+      "Sample Type": [
+        "Urine (men)",
+        "vaginal swab (women)"
+      ],
+      "What It Detects": [
+        "Bacterial STI – often silent"
+      ],
+      "When to Get Tested": [
+        "1–3 weeks after exposure"
+      ],
+      "Positive Result Means": [
+        "Active infection",
+        "often asymptomatic"
+      ],
+      "If Untreated – Risks / Symptoms": [
+        "Pelvic pain",
+        "infertility",
+        "ectopic pregnancy",
+        "urethritis"
+      ]
+    },
+    {
+      "Test Name": "Gonorrhea Test",
+      "Confirmatory TEST": "Neisseria gonorrhoeae DNA by NAAT",
+      "Sample Type": [
+        "Urine",
+        "vaginal/urethral swab"
+      ],
+      "What It Detects": [
+        "Bacterial STI – often coexists with chlamydia"
+      ],
+      "When to Get Tested": [
+        "2–7 days after exposure"
+      ],
+      "Positive Result Means": [
+        "Active infection"
+      ],
+      "If Untreated – Risks / Symptoms": [
+        "Painful urination",
+        "discharge",
+        "PID",
+        "infertility",
+        "joint infections"
+      ]
+    },
+    {
+      "Test Name": "Herpes Test",
+      "Confirmatory TEST": "HSV-1 & HSV-2 Antibodies (IgG/IgM) or PCR from lesions",
+      "Sample Type": [
+        "Blood or lesion swab"
+      ],
+      "What It Detects": [
+        "Herpes Simplex Virus (type 1 or 2)"
+      ],
+      "When to Get Tested": [
+        "IgM: recent",
+        "IgG: past infection"
+      ],
+      "Positive Result Means": [
+        "Presence of herpes antibodies or viral DNA"
+      ],
+      "If Untreated – Risks / Symptoms": [
+        "Painful blisters",
+        "itching",
+        "genital sores",
+        "recurrent outbreaks"
+      ]
+    },
+    {
+      "Test Name": "HPV Test",
+      "Confirmatory TEST": "Human Papillomavirus (high-risk DNA types)",
+      "Sample Type": [
+        "Cervical swab (Pap + HPV DNA test)"
+      ],
+      "What It Detects": [
+        "Detects cancer-causing HPV strains"
+      ],
+      "When to Get Tested": [
+        "Women: Every 3–5 years after age 25–30"
+      ],
+      "Positive Result Means": [
+        "High-risk HPV types detected"
+      ],
+      "If Untreated – Risks / Symptoms": [
+        "Cervical cancer",
+        "genital warts",
+        "oral/throat cancer"
+      ]
+    },
+    {
+      "Test Name": "Trichomoniasis",
+      "Confirmatory TEST": "Trichomonas vaginalis antigen or NAAT",
+      "Sample Type": [
+        "Vaginal swab or urine"
+      ],
+      "What It Detects": [
+        "Parasitic STI (common in women)"
+      ],
+      "When to Get Tested": [
+        "1–4 weeks after exposure"
+      ],
+      "Positive Result Means": [
+        "Active infection"
+      ],
+      "If Untreated – Risks / Symptoms": [
+        "Vaginal/penile discharge",
+        "irritation",
+        "preterm birth risk"
+      ]
+    },
+    {
+      "Test Name": "Mycoplasma / Ureaplasma",
+      "Confirmatory TEST": "DNA PCR for Mycoplasma genitalium / Ureaplasma urealyticum",
+      "Sample Type": [
+        "Swab or urine"
+      ],
+      "What It Detects": [
+        "Atypical bacterial STIs"
+      ],
+      "When to Get Tested": [
+        "If symptoms persist despite treatment"
+      ],
+      "Positive Result Means": [
+        "May cause infertility",
+        "PID",
+        "urethritis"
+      ],
+      "If Untreated – Risks / Symptoms": [
+        "Often asymptomatic",
+        "burning",
+        "abnormal discharge"
+      ]
+    }
+  ]},
+  "SOME_SIMPLE_RECIPES_FOR_PCOS_AND_THYROID_BALANCE_FEMALE_HORMONAL_BALANCE": {
+    "Tests": [
+    {
+      "Recipe Name": "Chia-Seed Coconut Milk Bowl",
+      "Main Ingredients": [
+        "- 1 tbsp chia seeds",
+        "- ¼ cup unsweetened coconut milk"
+      ],
+      "Quick Method": [
+        "Mix chia and coconut milk. Let it soak for 5 mins. Eat as is or chilled."
+      ],
+      "Why It’s Helpful": [
+        "Balances blood sugar",
+        "rich in omega-3s and healthy fats. Supports hormone production."
+      ]
+    },
+    {
+      "Recipe Name": "Cucumber Pumpkin Seed Salad",
+      "Main Ingredients": [
+        "- 1 chopped cucumber",
+        "- 1 tbsp roasted pumpkin seeds"
+      ],
+      "Quick Method": [
+        "Mix both in a bowl. Add lemon juice, salt, and pepper to taste."
+      ],
+      "Why It’s Helpful": [
+        "Hydrating + zinc-rich. Supports ovary function and reduces inflammation."
+      ]
+    },
+    {
+      "Recipe Name": "Yogurt + Ground Flaxseed Bowl",
+      "Main Ingredients": [
+        "- ½ cup plain Greek yogurt (or plant-based)",
+        "- 1 tsp ground flaxseeds"
+      ],
+      "Quick Method": [
+        "Mix and eat. Add pinch of cinnamon if desired."
+      ],
+      "Why It’s Helpful": [
+        "Probiotics + lignans for estrogen balance and gut health."
+      ]
+    },
+    {
+      "Recipe Name": "Steamed Spinach with Olive Oil",
+      "Main Ingredients": [
+        "- 1 cup steamed spinach",
+        "- 1 tsp olive oil"
+      ],
+      "Quick Method": [
+        "Drizzle olive oil on warm spinach. Add lemon or salt as desired."
+      ],
+      "Why It’s Helpful": [
+        "Provides iron",
+        "folate",
+        "and anti-inflammatory fats — all crucial for PCOS."
+      ]
+    },
+    {
+      "Recipe Name": "Roasted Sweet Potato Cubes",
+      "Main Ingredients": [
+        "- 1 small sweet potato (cubed)",
+        "- ½ tsp olive or coconut oil"
+      ],
+      "Quick Method": [
+        "Steam or microwave until soft. Drizzle oil, add cumin or cinnamon."
+      ],
+      "Why It’s Helpful": [
+        "Complex carb that reduces cravings and supports energy without insulin spikes."
+      ]
+    }
+  ]}
+}

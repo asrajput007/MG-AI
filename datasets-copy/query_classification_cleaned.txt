@@ -1,0 +1,563 @@
+__label__profile_updater add a milk allergy to my profile
+__label__profile_retriever which type of food do i usually eat
+__label__profile_updater i suffer from hypertension
+__label__panel_query explain the function of triglycerides in the body.
+__label__special_meal_plan_generator how to follow dash diet
+__label__vital_advisor my blood sugar was high this morning what does it mean
+__label__profile_updater i am diabetic patient
+__label__fitness_plan_generator create workout plan
+__label__profile_retriever list my allergies
+__label__nutrition_analyzer protein in one fried egg
+__label__water_step_advisor how many steps did i walk
+__label__goal_updater i want to lose 10kg by next month
+__label__general_query how to calculate my maintenance calories
+__label__nutrition_analyzer user: do i need vitamins if i eat fairly well
+__label__grocery_list make a weekly grocery list
+__label__meal_plan_generator yes
+__label__vital_advisor oxygen saturation is 95 percent
+__label__meal_plan_generator generate a personalized diet based on my profile
+__label__meal_ingredients list the spices used
+__label__meal_plan_generator yes save the plan
+__label__profile_updater i eat non veg now
+__label__weekly_meal_plan_generator make a meal plan for the week avoiding cheese
+__label__meal_check_in i had a sandwich for lunch
+__label__meal_check_in save my morning snack
+__label__workout_plan_adjuster i have knee pain change the leg day
+__label__profile_retriever summary of my medical history
+__label__meal_ingredients how do i make scrambled eggs
+__label__meal_check_in tracking my lunch: rice and dal
+__label__nutrition_analyzer what vitamins are in vegetables like carrots
+__label__nutrition_analyzer is salmon healthy
+__label__craving_assistant i want chocolate give me a swap
+__label__meal_ingredients what are the ingredients in the sambar
+__label__nutrition_analyzer is avocado high in fat?
+__label__grocery_list what should i buy for today’s meals
+__label__panel_query what are triglycerides and why are they high
+__label__nutrition_analyzer analyze the nutritional content of a medium avocado toast with one fried egg
+__label__meal_check_in save my morning snack
+__label__disease_advisor i have stomach issues what foods are easier to eat
+__label__profile_updater yes
+__label__grocery_list what groceries do i need today
+__label__meal_plan_generator i want a meal plan that uses rice since i already have it at home
+__label__meal_plan_adjuster swap my dinner for something vegetarian
+__label__disease_advisor i have hypertension. what are the best foods to lower my blood pressure?
+__label__profile_updater actually change it to 75kg
+__label__profile_updater mark my profile as dairyfree
+__label__nutrition_analyzer give me the nutritional values on scrambled eggs
+__label__profile_updater waist size 34 inches
+__label__craving_assistant i am craving chips but want to stay healthy
+__label__nutrition_analyzer nutritional breakdown of a chicken salad
+__label__craving_assistant i feel like munching on something
+__label__meal_plan_generator give me a meal plan
+__label__special_meal_plan_generator mind diet
+__label__meal_check_in i had an apple for my snack
+__label__session_booking i need to talk to a doctor about this
+__label__grocery_list create a grocery list for the week ahead
+__label__vital_advisor my bp reading today 160/100
+__label__disease_advisor what should i eat to lower my blood pressure
+__label__water_step_advisor how much water should i drink now
+__label__disease_advisor best snacks for diabetics
+__label__special_meal_plan_generator create an anti inflammatory meal plan
+__label__history_retriever what did i eat yesterday
+__label__meal_check_in logging my dinner now
+__label__vital_advisor my blood sugar is 160 after lunch
+__label__session_booking book an emergency consultation
+__label__profile_retriever what foods are limited for me
+__label__workout_plan_adjuster replace cardio
+__label__special_meal_plan_generator make a diabetic friendly food chart
+__label__water_step_advisor remind me of my water goal
+__label__craving_assistant i want a healthy snack for my cravings
+__label__greeting hello there
+__label__vital_advisor log my blood pressure 130 80
+__label__meal_plan_generator suggest breakfast lunch and dinner for me
+__label__disease_advisor i have a cold what should i drink?
+__label__workout_plan_adjuster make the workout shorter
+__label__meal_plan_adjuster replace tofu with paneer in my meal plan
+__label__meal_check_in track my morning snack
+__label__meal_plan_generator give me another option for today
+__label__meal_plan_generator recommend a food plan based on my summary
+__label__history_retriever what was my plan yesterday
+__label__profile_retriever what foods am i marked as allergic to
+__label__weekly_meal_plan_generator plan meals for whole week
+__label__meal_ingredients how to make an avacodo sandwich
+__label__weekly_meal_plan_generator provide a 7-day meal plan for a 2,000-calorie diet
+__label__session_booking book a session
+__label__greeting hello how are you
+__label__meal_plan_generator based on my bp make a meal plan
+__label__vital_advisor pressure reading 150/95
+__label__disease_advisor what should i eat to lower my blood pressure
+__label__meal_plan_adjuster i dont like broccoli swap it out
+__label__meal_plan_generator create a meal plan for me based on my profile but it should be different from the following meal plannnhere is your meal plan based on your preferences and health needsnnbreakfastn banana 1 medium portion weight 29 oz protein 1g carbs 19g fat 0g fiber 2g sodium 1mg iodine 0mcg sugar 10g cholesterol 0mg calories 73kcal include a variety of fruits and vegetables in your diet to increase fiber intake which can help alleviate symptoms of ibs and promote regular bowel movementsnnnn save this new plan to your profile
+__label__craving_assistant i need a quick bite thats not too heavy
+__label__blood_report_query what is my vitamin d level
+__label__calorie_calculator how many calories in that snack
+__label__goal_updater update my goal to muscle gain
+__label__meal_plan_adjuster add chicken to lunch
+__label__water_step_advisor remind me of my water goal
+__label__grocery_list give me the grocery list for this week
+__label__fitness_plan_generator plan my workout routine
+__label__special_meal_plan_generator create a dash meal plan
+__label__workout_plan_adjuster make my workout easier
+__label__profile_updater my height is 175 cm
+__label__meal_plan_adjuster i dont like eggs remove them
+__label__craving_assistant i want something sweet instead
+__label__vital_advisor what does it mean if my heart feels fast sometimes
+__label__meal_check_in log one bowl of dal and rice
+__label__calorie_calculator total calories for this meal
+__label__meal_ingredients what else goes into this meal
+__label__general_query thanks buddy
+__label__fitness_plan_generator any fitness tips for me
+__label__profile_updater i am vegetarian
+__label__nutrition_analyzer how much protein in 100g paneer
+__label__nutrition_analyzer how many carbs in brown rice
+__label__blood_report_query my iron levels from last test
+__label__disease_advisor what foods lower cholesterol
+__label__meal_check_in yes record it
+__label__meal_ingredients what else goes into this meal
+__label__blood_report_analyzer analyze the full report again
+__label__workout_plan_adjuster yeah
+__label__meal_check_in i am skipping my snack today
+__label__meal_plan_adjuster increase the protein content of my breakfast by 15 grams.
+__label__vital_advisor spo2 88
+__label__workout_plan_adjuster swap cardio for strength
+__label__profile_updater i am allergic to dairy now
+__label__disease_advisor what to eat for high blood pressure
+__label__fitness_plan_generator generate 4 day split
+__label__vital_advisor log my blood pressure as 120 80
+__label__meal_check_in i just finished my breakfast
+__label__disease_advisor what to eat when bp is high
+__label__workout_plan_adjuster change leg day
+__label__weekly_meal_plan_generator 7 day meal plan
+__label__profile_retriever what allergies do i have listed
+__label__nutrition_analyzer provide me the nutri info
+__label__workout_plan_adjuster remove the running exercises
+__label__calorie_calculator calculate the total calories for this dish
+__label__blood_report_query what do normal lab results usually mean
+__label__weekly_meal_plan_generator weekly shopping and meal list
+__label__disease_advisor diet tips for thyroid patients
+__label__general_query is it better to walk before or after eating
+__label__grocery_list make a weekly grocery list
+__label__craving_assistant i really want something sweet give me a swap
+__label__panel_query explain the lipid panel results
+__label__session_booking i want to talk to an expert
+__label__greeting thanks for the help
+__label__session_booking schedule consultation
+__label__meal_plan_generator build a nutrition plan for me
+__label__profile_retriever what diet do i have set
+__label__session_booking i want to talk to an expert
+__label__profile_retriever tell my medical conditions
+__label__weekly_meal_plan_generator make a weekly meal plan with chicken included
+__label__meal_plan_generator i want a daily meal plan that helps keep my blood sugar steady
+__label__fitness_plan_generator what exercises are safe for me
+__label__meal_check_in yes
+__label__water_step_advisor how much water is left today
+__label__meal_plan_generator create a fresh plan for me
+__label__weekly_meal_plan_generator make a mediterranean weekly meal plan
+__label__profile_updater okay
+__label__profile_updater avoid dairy
+__label__fitness_plan_generator plan my workout routine
+__label__vital_advisor recorded 135/85 bp this morning
+__label__general_query okay
+__label__meal_check_in yes i had it
+__label__goal_updater i want to lose 10kg by next month
+__label__meal_check_in log my dinner
+__label__goal_updater set my goal to muscle gain
+__label__goal_updater update my goal to muscle gain
+__label__workout_plan_adjuster replace squats with lunges
+__label__meal_plan_adjuster no i meant vegetarian
+__label__meal_plan_adjuster change my dinner
+__label__disease_advisor yes suggest some
+__label__fitness_plan_generator create a gym workout plan for me
+__label__meal_plan_adjuster replace poha with upma
+__label__blood_report_query what is my cholesterol from report
+__label__profile_retriever what do you know about me
+__label__blood_report_analyzer analyze this blood report for me
+__label__profile_retriever what are my details
+__label__meal_plan_adjuster add more fiber to my lunch
+__label__fitness_plan_generator can you help me stay active
+__label__vital_advisor cholesterol reading 240
+__label__greeting that is all for now bye
+__label__special_meal_plan_generator show me a mind diet plan
+__label__vital_advisor triglycerides 300
+__label__meal_plan_generator what should i eat today
+__label__blood_report_query what is my hdl cholesterol
+__label__weekly_meal_plan_generator can you plan my meals for the week i try to stay away from bread and pasta
+__label__meal_plan_adjuster replace cheese with a dairy free option
+__label__profile_updater add lactose intolerance to my restrictions
+__label__craving_assistant i really want something sweet give me a swap
+__label__profile_retriever display my saved allergies
+__label__blood_report_query tell me my hemoglobin level from my last test
+__label__panel_query explain my thyroid panel
+__label__weekly_meal_plan_generator 7 day food chart
+__label__general_query benefits of broccoli
+__label__panel_query what is hba1c and why is it important
+__label__meal_plan_adjuster i dont like broccoli swap it out
+__label__blood_report_analyzer can you re analyze the whole report
+__label__greeting hello
+__label__grocery_list what should i buy for meals this week
+__label__nutrition_analyzer how much protein is required for this routine
+__label__vital_advisor my bp is 140 90
+__label__greeting okay thanks
+__label__meal_check_in record my morning snack
+__label__water_step_advisor what is my step goal
+__label__grocery_list show me the shopping list for this
+__label__meal_check_in log my lunch
+__label__profile_updater diagnosed with pcos
+__label__meal_check_in yes i had it
+__label__blood_report_analyzer analyze my latest lab report
+__label__nutrition_analyzer how much protein is in the lunch
+__label__meal_plan_generator create a meal plan
+__label__workout_plan_adjuster make my workout easier
+__label__meal_plan_generator plan my meals for today
+__label__blood_report_query tell about lipid panel
+__label__profile_updater update my weight to 72kg
+__label__water_step_advisor how much water should i drink now
+__label__general_query how many calories should i eat to lose weight?
+__label__meal_ingredients how do i make mashed potatoes
+__label__meal_plan_generator make a meal plan for pcos
+__label__session_booking can i book a call with a doctor?
+__label__blood_report_analyzer analyze my lab report
+__label__general_query thanks for the help
+__label__greeting hey how's it going
+__label__meal_plan_generator what should i be eating today?
+__label__special_meal_plan_generator dash diet
+__label__greeting hello there
+__label__meal_check_in i just ate a chicken sandwich
+__label__general_query okay
+__label__grocery_list what do i need to buy for this special diet
+__label__special_meal_plan_generator give me a dash diet plan
+__label__meal_ingredients what is inside this chicken curry
+__label__water_step_advisor how many steps have i walked today?
+__label__session_booking yes schedule it
+__label__history_retriever what did i eat yesterday
+__label__profile_retriever tell me everything you know about my health
+__label__meal_plan_generator create a new diet plan
+__label__craving_assistant i need a healthy snack idea
+__label__general_query what are the benefits of strength training
+__label__water_step_advisor how many steps have i walked today
+__label__panel_query my vitamin d level is low what should i do
+__label__craving_assistant i want a small treat without feeling guilty
+__label__session_booking yes
+__label__greeting thank you
+__label__special_meal_plan_generator mediterranean food list
+__label__meal_ingredients what is inside this chicken curry
+__label__meal_plan_adjuster add more protein to dinner
+__label__nutrition_analyzer how much protein is in the lunch
+__label__meal_plan_adjuster change my morning snack
+__label__meal_plan_adjuster add paneer and change dinner
+__label__profile_updater change cuisine to south indian
+__label__meal_plan_generator generate a meal plan
+__label__vital_advisor my bp is 150 what should i eat
+__label__fitness_plan_generator can you give me some simple fitness tips
+__label__meal_plan_generator make a meal plan for pcos
+__label__profile_updater i am allergic to peanuts
+__label__workout_plan_adjuster make the workout shorter
+__label__workout_plan_adjuster remove the running exercises
+__label__panel_query what is a normal hba1c range
+__label__blood_report_query what does low iron show in blood work
+__label__meal_plan_adjuster add more protein to my dinner
+__label__disease_advisor what to eat for high acid reflux
+__label__session_booking schedule a nutritionist call
+__label__greeting what's up
+__label__profile_retriever show me my logged allergies
+__label__panel_query what does a high ldl cholesterol score indicate about my health?
+__label__craving_assistant i’m hungry between meals what should i eat
+__label__goal_updater i want to lose 10kg by next month
+__label__workout_plan_adjuster i have knee pain change the leg day
+__label__blood_report_query what does high creatinine mean in my test?
+__label__special_meal_plan_generator generate a meal plan following the mediterranean diet.
+__label__meal_check_in i ate two bananas
+__label__weekly_meal_plan_generator can you make a non-vegetarian weekly meal plan
+__label__general_query is it better to walk before or after eating
+__label__blood_report_query explain my hemoglobin levels from the report
+__label__history_retriever pull up my previous meal plan
+__label__goal_updater exactly
+__label__disease_advisor what to eat when i have a headache?
+__label__meal_plan_generator create a meal plan for me based on my profile
+__label__meal_plan_generator create a new meal plan for me
+__label__meal_plan_generator create a new meal plan
+__label__meal_plan_generator generate a new meal plan for me
+__label__meal_plan_generator make a new meal plan
+__label__meal_plan_generator i want a new meal plan
+__label__meal_plan_generator can you create a new meal plan
+__label__meal_plan_generator please generate a new plan
+__label__meal_plan_generator make me a new plan
+__label__meal_plan_generator create fresh meal plan
+__label__meal_plan_generator give me a fresh meal plan
+__label__vital_advisor oxygen level is 92
+__label__weekly_meal_plan_generator create a glutenfree meal plan for the week
+__label__blood_report_analyzer analyze my blood report
+__label__blood_report_query what is my hdl cholesterol
+__label__meal_plan_adjuster take out the dairy products
+__label__weekly_meal_plan_generator give me weekly meal plan
+__label__meal_plan_adjuster i don't want to eat oats
+__label__craving_assistant i’m craving something crunchy but not chips
+__label__craving_assistant im hungry between meals what should i eat
+__label__profile_retriever tell me my current fitness goals
+__label__vital_advisor my blood pressure is 140/90
+__label__blood_report_query what is my vitamin d level
+__label__grocery_list what do i need from the store today
+__label__disease_advisor what to eat for pcos weight loss
+__label__session_booking book a doctor session
+__label__meal_plan_generator no generate a different meal plan
+__label__vital_advisor is a low heart rate something to worry about
+__label__meal_check_in record my morning snack
+__label__profile_retriever what eating style do i have saved
+__label__history_retriever what did i eat last monday
+__label__profile_updater i am allergic to peanuts now
+__label__meal_check_in do it
+__label__vital_advisor log my blood pressure as 120 80
+__label__blood_report_query why would my blood sugar show high in labs
+__label__history_retriever show me what i ate last tuesday
+__label__greeting fine
+__label__weekly_meal_plan_generator actually make it for the whole week
+__label__nutrition_analyzer how many calories in an avocado
+__label__profile_updater no its actually 78
+__label__goal_updater exactly
+__label__meal_plan_generator now create a meal plan
+__label__calorie_calculator how many calories did i just eat
+__label__grocery_list export the grocery list
+__label__weekly_meal_plan_generator make me a weekly meal plan thats completely dairy free
+__label__profile_updater i turned vegan
+__label__goal_updater i want to lose 5kg this month
+__label__fitness_plan_generator create a gym workout plan for me
+__label__meal_plan_adjuster change my morning snack to nuts
+__label__general_query thanks
+__label__general_query is coffee good for weight loss
+__label__profile_updater allergic to shellfish
+__label__greeting hi can you help me?
+__label__meal_plan_adjuster remove the nuts from the plan
+__label__meal_plan_generator i need a healthy eating schedule
+__label__disease_advisor what is the best diet for thyroid
+__label__meal_plan_adjuster reduce carbs in my dinner
+__label__meal_check_in skipped lunch
+__label__greeting cool
+__label__weekly_meal_plan_generator make a nonvegetarian weekly meal plan
+__label__meal_check_in i had some oats and milk
+__label__blood_report_analyzer analyze my latest lab report
+__label__nutrition_analyzer carb content in brown rice
+__label__greeting good morning
+__label__fitness_plan_generator okay
+__label__grocery_list what should i buy for todays meals
+__label__grocery_list give me a daily shopping list
+__label__calorie_calculator how many calories in that snack
+__label__grocery_list give me grocery list
+__label__craving_assistant i crave something salty
+__label__general_query yes please
+__label__vital_advisor bp is 130 over 80
+__label__craving_assistant i want chocolate, but i'm trying to cut back on added sugar. give me a healthy alternative.
+__label__blood_report_analyzer analyze my lab report
+__label__profile_retriever do you have my food preference saved
+__label__session_booking book an emergency consultation
+__label__greeting bye
+__label__profile_updater i am vegan now update my preferences
+__label__profile_retriever show me my current health summary
+__label__workout_plan_adjuster make my workout easier
+__label__general_query is intermittent fasting good for weight loss?
+__label__grocery_list show me the shopping list for this
+__label__calorie_calculator total calories for this meal
+__label__meal_ingredients what are the ingredients in the sambar
+__label__nutrition_analyzer how much protein in an egg
+__label__vital_advisor heart rate is 110 while resting
+__label__session_booking i want to talk to a nutritionist
+__label__history_retriever what did i eat last monday
+__label__vital_advisor random glucose 210
+__label__profile_retriever what dietary restrictions do i have saved?
+__label__grocery_list show me the shopping list for this
+__label__meal_plan_adjuster remove eggs and regenerate
+__label__panel_query explain hba1c
+__label__profile_updater remove gluten from my diet
+__label__history_retriever show my food logs from last week
+__label__meal_plan_generator create a meal plan for me based on my profile
+__label__nutrition_analyzer calories in apple
+__label__meal_plan_adjuster remove the nuts from the plan
+__label__craving_assistant i want a healthy snack for my cravings
+__label__grocery_list add this to my grocery list
+__label__fitness_plan_generator what can i do to stay fit as i get older
+__label__vital_advisor my sugar is 180 is that bad
+__label__fitness_plan_generator whats a light workout i can do every day
+__label__meal_check_in i had dosa for breakfast
+__label__craving_assistant im craving something but not sure what
+__label__nutrition_analyzer give me the nutrition information image 1 sandwich 1 sandwich bread 2 slices egg product 1 serving ham 2 slices lettuce 1 leaf tomato 2 slices mustard 1 spread potato chips small handful
+__label__meal_plan_generator diet plan for pcos patients
+__label__grocery_list export the grocery list
+__label__profile_updater correct
+__label__profile_retriever what is my current weight
+__label__general_query what does a high tdee mean?
+__label__vital_advisor what should i do if my sugar numbers go up
+__label__craving_assistant i need a quick bite that’s not too heavy
+__label__craving_assistant im feeling a little hungry and not sure what to snack on
+__label__profile_retriever show me my profile summary
+__label__blood_report_query what is my wbc
+__label__grocery_list give me the grocery list for this week
+__label__vital_advisor heart rate 150
+__label__nutrition_analyzer how much fiber in oats?
+__label__special_meal_plan_generator anti inflammatory diet options
+__label__special_meal_plan_generator mediterranean diet
+__label__nutrition_analyzer how much protein is required for this routine
+__label__session_booking sure
+__label__meal_plan_generator create a meal plan for me based on my profile
+__label__nutrition_analyzer sugar in mango vs orange
+__label__disease_advisor what to eat for fever
+__label__profile_retriever am i marked as vegetarian or nonvegetarian
+__label__meal_check_in i had some oats and milk
+__label__special_meal_plan_generator create an anti inflammatory meal plan
+__label__panel_query explain the difference between hdl and ldl cholesterol
+__label__greeting i just got back from the gym. talk to me
+__label__special_meal_plan_generator anti inflammatory diet
+__label__general_query what is tdee
+__label__craving_assistant late night sweet craving
+__label__general_query no thanks
+__label__meal_ingredients list the spices used
+__label__disease_advisor what diet helps with arthritis pain
+__label__general_query it was delicious
+__label__general_query benefit of drinking green tea
+__label__grocery_list what should i buy for meals this week
+__label__profile_updater change my diet to vegetarian
+__label__history_retriever what is my meal plan for today?
+__label__vital_advisor bp 140 90
+__label__weekly_meal_plan_generator create a vegetarian meal plan for the week
+__label__blood_report_analyzer can you re analyze the whole report
+__label__meal_plan_generator make a diet plan for thyroid
+__label__meal_check_in i ate fish and chips for dinner
+__label__nutrition_analyzer macros in peanut butter
+__label__vital_advisor my glucose reading is 145
+__label__special_meal_plan_generator suggest a mind diet plan
+__label__grocery_list what to buy for this plan
+__label__grocery_list give me the shopping list
+__label__water_step_advisor how many steps did i walk
+__label__water_step_advisor did i reach my water goal?
+__label__profile_updater i have diabetes
+__label__vital_advisor my sugar is 200
+__label__meal_plan_generator can you make a food chart for me?
+__label__panel_query what is tsh
+__label__blood_report_query tell me my hemoglobin level from my last test
+__label__panel_query explain the lipid panel results
+__label__meal_plan_generator make a food plan
+__label__grocery_list what do i need from the store today
+__label__vital_advisor pulse is 120
+__label__fitness_plan_generator what kind of exercise should i be doing
+__label__panel_query my cholesterol came back high what does that mean
+__label__general_query benefits of drinking lemon water
+__label__blood_report_query my iron levels from last test
+__label__meal_plan_generator generate a new diet plan based on my details
+__label__session_booking confirm
+__label__nutrition_analyzer provide the nutri info image 1 sandwich 1 sandwich bread 2 slices egg product 1 layer ham 1 layer lettuce 1 leaf tomato 2 slices mayonnaise 1 spread potato chips small handful
+__label__meal_plan_generator suggests some meals for my current goals
+__label__fitness_plan_generator whats a good daily activity
+__label__profile_retriever can you show what im supposed to avoid
+__label__goal_updater i want to lose 5kg this month
+__label__general_query okay thanks
+__label__weekly_meal_plan_generator create a full week schedule for meals
+__label__nutrition_analyzer nutritional value of greek yogurt
+__label__history_retriever show me my logs from yesterday
+__label__blood_report_analyzer analyze this blood report for me
+__label__profile_retriever what food restrictions do i have
+__label__meal_plan_adjuster replace fried foods with baked options
+__label__weekly_meal_plan_generator make it a weekly plan
+__label__vital_advisor cholesterol is 260
+__label__weekly_meal_plan_generator actually make it for the whole week
+__label__profile_updater i am now vegetarian
+__label__profile_updater i have high blood pressure
+__label__profile_updater i want my diet set to plantbased
+__label__disease_advisor foods to avoid for heart patients
+__label__meal_check_in yes
+__label__vital_advisor my pulse rate is 95
+__label__vital_advisor fasting sugar 110
+__label__fitness_plan_generator generate a workout plan for weight loss
+__label__meal_check_in yes record it
+__label__disease_advisor what foods to avoid during acidity?
+__label__calorie_calculator how many calories did i just eat
+__label__vital_advisor sugar level is 190
+__label__nutrition_analyzer which is better rice or quinoa
+__label__meal_check_in log oatmeal for breakfast
+__label__fitness_plan_generator generate a 4 day workout
+__label__history_retriever what was my diet for last week?
+__label__nutrition_analyzer compare apple and banana nutrition
+__label__meal_ingredients how to make nutella sandwich
+__label__profile_retriever whats in my profile right now
+__label__profile_retriever show my profile
+__label__session_booking i want to talk to an expert
+__label__history_retriever show my meal plan
+__label__blood_report_query food for high cholesterol from report
+__label__vital_advisor hba1c is 8.2
+__label__fitness_plan_generator generate a 4 day workout
+__label__grocery_list make a daily grocery list for me
+__label__calorie_calculator calculate the total calories for this dish
+__label__fitness_plan_generator generate a workout plan for weight loss
+__label__meal_plan_adjuster swap breakfast
+__label__meal_check_in yes i ate that
+__label__profile_retriever show me my profile summary
+__label__disease_advisor i am feeling weak
+__label__craving_assistant i feel like munching on something
+__label__weekly_meal_plan_generator plan my meals for the week chicken and fish are okay
+__label__greeting how are you doing today?
+__label__meal_plan_adjuster i want south indian food
+__label__profile_updater i am vegan now update my preferences
+__label__weekly_meal_plan_generator plan my meals for the week just skip things with soy or tofu
+__label__vital_advisor my sugar is 180 is that bad
+__label__nutrition_analyzer what nutrients do eggs have
+__label__history_retriever show my food logs from last week
+__label__session_booking sure
+__label__nutrition_analyzer how much protein in chicken
+__label__profile_updater i am allergic to peanuts now
+__label__blood_report_query what about my vitamin d report
+__label__disease_advisor foods that help with inflammation
+__label__special_meal_plan_generator design a dash diet
+__label__vital_advisor my sugar is 220
+__label__profile_updater my height is 510 please update it
+__label__profile_retriever which foods should i avoid because of allergies
+__label__meal_ingredients what else goes into this meal
+__label__grocery_list make a daily grocery list for me
+__label__craving_assistant healthy swap for chocolate cravings
+__label__grocery_list what groceries do i need for the week
+__label__disease_advisor diet for diabetes
+__label__meal_plan_generator i want a daily meal plan maybe not american food this time
+__label__calorie_calculator calculate the total calories for this dish
+__label__disease_advisor diet for high blood pressure and hypertension
+__label__meal_plan_generator make me a new one instead
+__label__special_meal_plan_generator make a diabetic friendly food chart
+__label__special_meal_plan_generator design a dash diet for me
+__label__disease_advisor i feel dizzy
+__label__profile_retriever what cuisine do i prefer
+__label__goal_updater set my goal to muscle gain
+__label__water_step_advisor how much water today
+__label__general_query what is the benefit of fiber
+__label__water_step_advisor how many steps have i walked today
+__label__meal_check_in i had rice and dal for lunch
+__label__profile_retriever can i see my details
+__label__water_step_advisor how much water is left today
+__label__nutrition_analyzer tell me the macros in avocado and eggs
+__label__meal_plan_adjuster replace the poha with oats
+__label__meal_plan_generator give me a diet plan according to my details
+__label__water_step_advisor how many steps did i walk
+__label__blood_report_analyzer check my blood test
+__label__session_booking i want to talk to a doctor
+__label__meal_check_in i had a bowl of oatmeal with blueberries and a coffee for breakfast.
+__label__meal_plan_generator generate a diet for me
+__label__greeting thanks buddy
+__label__general_query yes please
+__label__workout_plan_adjuster swap cardio for strength
+__label__grocery_list what groceries do i need today
+__label__profile_retriever what is my recorded height?
+__label__meal_plan_adjuster i want to swap my lunch for a salad
+__label__goal_updater update my goal to muscle gain
+__label__grocery_list i need a shopping list for the week
+__label__meal_plan_adjuster replace eggs with tofu in my plan
+__label__history_retriever show me my logs from yesterday
+__label__general_query no please
+__label__general_query no thanks
+__label__general_query no that is all
+__label__general_query no please
+__label__history_retriever what is my current meal plan
+__label__history_retriever view my meal plan
+__label__history_retriever display my current meal plan
+__label__history_retriever let me see my meal plan
+__label__history_retriever what is my plan for today
+__label__history_retriever show me my current plan
+__label__history_retriever can i see my meal plan
+__label__history_retriever tell me my meal plan
+__label__history_retriever what meals do i have today
+__label__history_retriever show current meal plan
+__label__history_retriever get my meal plan
+__label__history_retriever my meal plan

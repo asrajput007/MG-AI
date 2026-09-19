@@ -1,0 +1,1694 @@
+{
+  "marching_in_place": {
+    "name": "Marching in Place",
+    "met_low": 2.5,
+    "met_mod": 3.8,
+    "met_high": 5.5
+  },
+  "seated_marching": {
+    "name": "Seated Marching",
+    "met_low": 2.0,
+    "met_mod": 3.0,
+    "met_high": 4.5
+  },
+  "marching_with_twist": {
+    "name": "Marching with Twist",
+    "met_low": 2.8,
+    "met_mod": 4.2,
+    "met_high": 6.0
+  },
+  "high_knees": {
+    "name": "High Knees",
+    "met_low": 4.0,
+    "met_mod": 6.0,
+    "met_high": 8.5
+  },
+  "butt_kicks": {
+    "name": "Butt Kicks",
+    "met_low": 3.5,
+    "met_mod": 5.5,
+    "met_high": 8.0
+  },
+  "jumping_jacks": {
+    "name": "Jumping Jacks",
+    "met_low": 4.5,
+    "met_mod": 7.0,
+    "met_high": 9.5
+  },
+  "side_step_jacks": {
+    "name": "Side Step Jacks",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.5
+  },
+  "jump_squat": {
+    "name": "Jump Squat",
+    "met_low": 5.0,
+    "met_mod": 8.0,
+    "met_high": 10.5
+  },
+  "squat": {
+    "name": "Squat",
+    "met_low": 3.0,
+    "met_mod": 5.0,
+    "met_high": 7.5
+  },
+  "squat_hold": {
+    "name": "Squat Hold",
+    "met_low": 2.5,
+    "met_mod": 4.0,
+    "met_high": 5.5
+  },
+  "squat_pulse": {
+    "name": "Squat Pulse",
+    "met_low": 3.5,
+    "met_mod": 5.5,
+    "met_high": 7.5
+  },
+  "chair_squat": {
+    "name": "Chair Squat",
+    "met_low": 2.5,
+    "met_mod": 4.0,
+    "met_high": 5.5
+  },
+  "wall_squat": {
+    "name": "Wall Squat",
+    "met_low": 2.5,
+    "met_mod": 4.0,
+    "met_high": 5.8
+  },
+  "forward_lunge": {
+    "name": "Forward Lunge",
+    "met_low": 3.0,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "reverse_lunge": {
+    "name": "Reverse Lunge",
+    "met_low": 3.0,
+    "met_mod": 4.8,
+    "met_high": 6.8
+  },
+  "lateral_lunge": {
+    "name": "Lateral Lunge",
+    "met_low": 3.0,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "curtsy_lunge": {
+    "name": "Curtsy Lunge",
+    "met_low": 3.2,
+    "met_mod": 5.2,
+    "met_high": 7.2
+  },
+  "walking_lunge": {
+    "name": "Walking Lunge",
+    "met_low": 3.5,
+    "met_mod": 5.5,
+    "met_high": 7.5
+  },
+  "jumping_lunge": {
+    "name": "Jumping Lunge",
+    "met_low": 5.0,
+    "met_mod": 8.0,
+    "met_high": 10.5
+  },
+  "step_up": {
+    "name": "Step Up",
+    "met_low": 3.0,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "step_up_knee_drive": {
+    "name": "Step Up with Knee Drive",
+    "met_low": 3.5,
+    "met_mod": 5.5,
+    "met_high": 7.5
+  },
+  "side_step": {
+    "name": "Side Step",
+    "met_low": 2.5,
+    "met_mod": 4.0,
+    "met_high": 5.5
+  },
+  "box_step_up": {
+    "name": "Box Step Up",
+    "met_low": 3.5,
+    "met_mod": 5.8,
+    "met_high": 8.0
+  },
+  "standing_knee_raise": {
+    "name": "Standing Knee Raise",
+    "met_low": 2.8,
+    "met_mod": 4.5,
+    "met_high": 6.5
+  },
+  "hip_openers": {
+    "name": "Hip Openers",
+    "met_low": 2.5,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "glute_bridge": {
+    "name": "Glute Bridge",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "glute_bridge_hold": {
+    "name": "Glute Bridge Hold",
+    "met_low": 2.5,
+    "met_mod": 4.0,
+    "met_high": 5.2
+  },
+  "glute_bridge_march": {
+    "name": "Glute Bridge March",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.2
+  },
+  "donkey_kick": {
+    "name": "Donkey Kick",
+    "met_low": 3.0,
+    "met_mod": 4.8,
+    "met_high": 6.8
+  },
+  "fire_hydrant": {
+    "name": "Fire Hydrant",
+    "met_low": 3.2,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "bird_dog": {
+    "name": "Bird Dog",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 5.0
+  },
+  "dead_bug": {
+    "name": "Dead Bug",
+    "met_low": 2.5,
+    "met_mod": 3.2,
+    "met_high": 4.5
+  },
+  "plank": {
+    "name": "Plank",
+    "met_low": 2.5,
+    "met_mod": 3.0,
+    "met_high": 4.0
+  },
+  "side_plank": {
+    "name": "Side Plank",
+    "met_low": 2.3,
+    "met_mod": 2.8,
+    "met_high": 3.8
+  },
+  "plank_shoulder_taps": {
+    "name": "Plank Shoulder Taps",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.5
+  },
+  "plank_knee_taps": {
+    "name": "Plank Knee Taps",
+    "met_low": 2.8,
+    "met_mod": 4.0,
+    "met_high": 5.8
+  },
+  "reverse_plank": {
+    "name": "Reverse Plank",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 4.8
+  },
+  "hollow_hold": {
+    "name": "Hollow Hold",
+    "met_low": 2.5,
+    "met_mod": 3.2,
+    "met_high": 4.5
+  },
+  "superman": {
+    "name": "Superman",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 5.0
+  },
+  "leg_raise": {
+    "name": "Leg Raise",
+    "met_low": 3.0,
+    "met_mod": 4.2,
+    "met_high": 6.0
+  },
+  "flutter_kicks": {
+    "name": "Flutter Kicks",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.5
+  },
+  "v_sit": {
+    "name": "V-Sit",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "reverse_crunch": {
+    "name": "Reverse Crunch",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "crunch": {
+    "name": "Crunch",
+    "met_low": 2.8,
+    "met_mod": 4.0,
+    "met_high": 5.5
+  },
+  "bicycle_crunch": {
+    "name": "Bicycle Crunch",
+    "met_low": 3.5,
+    "met_mod": 5.5,
+    "met_high": 7.5
+  },
+  "mountain_climber": {
+    "name": "Mountain Climber",
+    "met_low": 4.5,
+    "met_mod": 7.0,
+    "met_high": 9.5
+  },
+  "slow_mountain_climber": {
+    "name": "Slow Mountain Climber",
+    "met_low": 3.5,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "burpee": {
+    "name": "Burpee",
+    "met_low": 6.0,
+    "met_mod": 8.5,
+    "met_high": 12.0
+  },
+  "half_burpee": {
+    "name": "Half Burpee",
+    "met_low": 4.0,
+    "met_mod": 6.5,
+    "met_high": 9.0
+  },
+  "inchworm": {
+    "name": "Inchworm",
+    "met_low": 3.0,
+    "met_mod": 4.8,
+    "met_high": 6.5
+  },
+  "bear_crawl": {
+    "name": "Bear Crawl",
+    "met_low": 4.0,
+    "met_mod": 6.5,
+    "met_high": 9.0
+  },
+  "crab_walk": {
+    "name": "Crab Walk",
+    "met_low": 3.5,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "arm_circles": {
+    "name": "Arm Circles",
+    "met_low": 2.0,
+    "met_mod": 3.0,
+    "met_high": 4.5
+  },
+  "wall_push_up": {
+    "name": "Wall Push-up",
+    "met_low": 2.2,
+    "met_mod": 3.5,
+    "met_high": 5.0
+  },
+  "incline_push_up": {
+    "name": "Incline Push-up",
+    "met_low": 2.5,
+    "met_mod": 4.5,
+    "met_high": 6.5
+  },
+  "push_up": {
+    "name": "Push-up",
+    "met_low": 3.5,
+    "met_mod": 5.5,
+    "met_high": 8.0
+  },
+  "wide_push_up": {
+    "name": "Wide Push-up",
+    "met_low": 3.5,
+    "met_mod": 5.8,
+    "met_high": 8.2
+  },
+  "diamond_push_up": {
+    "name": "Diamond Push-up",
+    "met_low": 4.0,
+    "met_mod": 6.0,
+    "met_high": 8.5
+  },
+  "decline_push_up": {
+    "name": "Decline Push-up",
+    "met_low": 4.0,
+    "met_mod": 6.5,
+    "met_high": 9.0
+  },
+  "tricep_dip": {
+    "name": "Tricep Dip",
+    "met_low": 3.0,
+    "met_mod": 4.8,
+    "met_high": 6.5
+  },
+  "dumbbell_bench_press": {
+    "name": "Dumbbell Bench Press",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "barbell_bench_press": {
+    "name": "Barbell Bench Press",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.2
+  },
+  "incline_dumbbell_press": {
+    "name": "Incline Dumbbell Press",
+    "met_low": 3.2,
+    "met_mod": 5.0,
+    "met_high": 6.8
+  },
+  "decline_barbell_press": {
+    "name": "Decline Barbell Press",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.5
+  },
+  "dumbbell_fly": {
+    "name": "Dumbbell Fly",
+    "met_low": 3.0,
+    "met_mod": 4.0,
+    "met_high": 5.5
+  },
+  "chest_supported_row": {
+    "name": "Chest Supported Row",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.2
+  },
+  "barbell_row": {
+    "name": "Barbell Row",
+    "met_low": 3.8,
+    "met_mod": 5.8,
+    "met_high": 7.5
+  },
+  "single_arm_row": {
+    "name": "Single Arm Dumbbell Row",
+    "met_low": 3.5,
+    "met_mod": 5.0,
+    "met_high": 6.8
+  },
+  "bent_over_row": {
+    "name": "Bent Over Row",
+    "met_low": 3.8,
+    "met_mod": 5.5,
+    "met_high": 7.5
+  },
+  "lat_pull_down_freeweight": {
+    "name": "Lat Pull-down with Free Weight",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "romanian_deadlift": {
+    "name": "Romanian Deadlift",
+    "met_low": 4.0,
+    "met_mod": 6.0,
+    "met_high": 8.0
+  },
+  "barbell_deadlift": {
+    "name": "Barbell Deadlift",
+    "met_low": 4.5,
+    "met_mod": 6.5,
+    "met_high": 9.0
+  },
+  "sumo_deadlift": {
+    "name": "Sumo Deadlift",
+    "met_low": 4.8,
+    "met_mod": 6.8,
+    "met_high": 9.2
+  },
+  "trap_bar_deadlift": {
+    "name": "Trap Bar Deadlift",
+    "met_low": 4.5,
+    "met_mod": 6.8,
+    "met_high": 9.0
+  },
+  "barbell_back_squat": {
+    "name": "Barbell Back Squat",
+    "met_low": 4.0,
+    "met_mod": 6.2,
+    "met_high": 8.5
+  },
+  "barbell_front_squat": {
+    "name": "Barbell Front Squat",
+    "met_low": 4.5,
+    "met_mod": 6.5,
+    "met_high": 8.8
+  },
+  "zercher_squat": {
+    "name": "Zercher Squat",
+    "met_low": 4.8,
+    "met_mod": 6.8,
+    "met_high": 9.0
+  },
+  "goblet_squat": {
+    "name": "Goblet Squat",
+    "met_low": 3.8,
+    "met_mod": 5.8,
+    "met_high": 7.8
+  },
+  "overhead_press": {
+    "name": "Overhead Press (Barbell)",
+    "met_low": 3.5,
+    "met_mod": 5.2,
+    "met_high": 6.8
+  },
+  "dumbbell_shoulder_press": {
+    "name": "Dumbbell Shoulder Press",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.2
+  },
+  "arnold_press": {
+    "name": "Arnold Press",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.5
+  },
+  "lateral_raise": {
+    "name": "Lateral Raise",
+    "met_low": 2.5,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "front_raise": {
+    "name": "Front Raise",
+    "met_low": 2.5,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "rear_delt_fly": {
+    "name": "Rear Delt Fly",
+    "met_low": 2.8,
+    "met_mod": 4.2,
+    "met_high": 5.8
+  },
+  "barbell_shrug": {
+    "name": "Barbell Shrug",
+    "met_low": 3.0,
+    "met_mod": 4.2,
+    "met_high": 5.5
+  },
+  "dumbbell_shrug": {
+    "name": "Dumbbell Shrug",
+    "met_low": 2.8,
+    "met_mod": 4.0,
+    "met_high": 5.2
+  },
+  "bicep_curl_dumbbell": {
+    "name": "Dumbbell Bicep Curl",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "alternating_bicep_curl": {
+    "name": "Alternating Bicep Curl",
+    "met_low": 2.8,
+    "met_mod": 3.5,
+    "met_high": 4.8
+  },
+  "hammer_curl": {
+    "name": "Hammer Curl",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "barbell_curl": {
+    "name": "Barbell Curl",
+    "met_low": 3.0,
+    "met_mod": 4.0,
+    "met_high": 5.2
+  },
+  "preacher_curl": {
+    "name": "Preacher Curl",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "incline_curl": {
+    "name": "Incline Curl",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "concentration_curl": {
+    "name": "Concentration Curl",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 4.5
+  },
+  "tricep_kickback": {
+    "name": "Tricep Kickback",
+    "met_low": 2.5,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "dumbbell_tricep_extension": {
+    "name": "Dumbbell Tricep Extension",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.2
+  },
+  "overhead_tricep_extension": {
+    "name": "Overhead Tricep Extension",
+    "met_low": 2.8,
+    "met_mod": 4.0,
+    "met_high": 5.5
+  },
+  "skull_crusher": {
+    "name": "Skull Crusher",
+    "met_low": 3.0,
+    "met_mod": 4.2,
+    "met_high": 5.8
+  },
+  "split_squat_db": {
+    "name": "Dumbbell Split Squat",
+    "met_low": 3.8,
+    "met_mod": 5.8,
+    "met_high": 7.5
+  },
+  "bulgarian_split_squat": {
+    "name": "Bulgarian Split Squat",
+    "met_low": 4.0,
+    "met_mod": 6.2,
+    "met_high": 8.5
+  },
+  "lunges_weighted": {
+    "name": "Weighted Lunges",
+    "met_low": 4.0,
+    "met_mod": 6.0,
+    "met_high": 8.0
+  },
+  "walking_lunge_weighted": {
+    "name": "Weighted Walking Lunge",
+    "met_low": 4.5,
+    "met_mod": 6.5,
+    "met_high": 8.8
+  },
+  "step_up_weighted": {
+    "name": "Weighted Step Up",
+    "met_low": 4.0,
+    "met_mod": 6.2,
+    "met_high": 8.5
+  },
+  "hip_thrust_weighted": {
+    "name": "Weighted Hip Thrust",
+    "met_low": 3.8,
+    "met_mod": 5.8,
+    "met_high": 7.8
+  },
+  "hip_abduction_band": {
+    "name": "Hip Abduction with Band",
+    "met_low": 2.5,
+    "met_mod": 3.8,
+    "met_high": 5.2
+  },
+  "hip_adduction_band": {
+    "name": "Hip Adduction with Band",
+    "met_low": 2.5,
+    "met_mod": 3.8,
+    "met_high": 5.2
+  },
+  "kettlebell_swing": {
+    "name": "Kettlebell Swing",
+    "met_low": 5.0,
+    "met_mod": 8.0,
+    "met_high": 10.5
+  },
+  "kettlebell_clean": {
+    "name": "Kettlebell Clean",
+    "met_low": 4.5,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "kettlebell_snatch": {
+    "name": "Kettlebell Snatch",
+    "met_low": 5.0,
+    "met_mod": 8.5,
+    "met_high": 11.0
+  },
+  "kettlebell_deadlift": {
+    "name": "Kettlebell Deadlift",
+    "met_low": 3.8,
+    "met_mod": 5.8,
+    "met_high": 7.8
+  },
+  "kettlebell_goblet_clean": {
+    "name": "Kettlebell Goblet Clean",
+    "met_low": 3.8,
+    "met_mod": 5.8,
+    "met_high": 8.0
+  },
+  "farmer_carry": {
+    "name": "Farmer Carry",
+    "met_low": 4.0,
+    "met_mod": 6.5,
+    "met_high": 8.5
+  },
+  "suitcase_carry": {
+    "name": "Suitcase Carry",
+    "met_low": 3.8,
+    "met_mod": 5.8,
+    "met_high": 8.0
+  },
+  "overhead_carry": {
+    "name": "Overhead Carry",
+    "met_low": 4.2,
+    "met_mod": 6.5,
+    "met_high": 8.8
+  },
+  "weighted_pull_up": {
+    "name": "Weighted Pull-up",
+    "met_low": 5.0,
+    "met_mod": 7.5,
+    "met_high": 10.0
+  },
+  "weighted_chin_up": {
+    "name": "Weighted Chin-up",
+    "met_low": 5.0,
+    "met_mod": 7.5,
+    "met_high": 10.0
+  },
+  "leg_press": {
+    "name": "Leg Press",
+    "met_low": 3.2,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "seated_leg_extension": {
+    "name": "Seated Leg Extension",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "seated_leg_curl": {
+    "name": "Seated Leg Curl",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "smith_machine_squat": {
+    "name": "Smith Machine Squat",
+    "met_low": 3.8,
+    "met_mod": 5.8,
+    "met_high": 7.8
+  },
+  "hack_squat": {
+    "name": "Hack Squat",
+    "met_low": 3.8,
+    "met_mod": 5.8,
+    "met_high": 7.8
+  },
+  "calf_raise_seated": {
+    "name": "Seated Calf Raise",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 4.8
+  },
+  "calf_raise_standing": {
+    "name": "Standing Calf Raise",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.2
+  },
+  "leg_abductor_machine": {
+    "name": "Hip Abductor Machine",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 4.8
+  },
+  "leg_adductor_machine": {
+    "name": "Hip Adductor Machine",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 4.8
+  },
+  "pec_deck": {
+    "name": "Pec Deck",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "chest_press_machine": {
+    "name": "Chest Press Machine",
+    "met_low": 3.0,
+    "met_mod": 4.2,
+    "met_high": 5.5
+  },
+  "assisted_pullup_machine": {
+    "name": "Assisted Pull-up Machine",
+    "met_low": 3.2,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "seated_row_machine": {
+    "name": "Seated Row Machine",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.2
+  },
+  "lat_pull_down": {
+    "name": "Lat Pull-down",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "cable_row": {
+    "name": "Cable Row",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.2
+  },
+  "cable_chest_fly": {
+    "name": "Cable Chest Fly",
+    "met_low": 2.8,
+    "met_mod": 4.0,
+    "met_high": 5.5
+  },
+  "cable_triceps_pushdown": {
+    "name": "Cable Triceps Pushdown",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "cable_bicep_curl": {
+    "name": "Cable Bicep Curl",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "cable_face_pull": {
+    "name": "Cable Face Pull",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "cable_lateral_raise": {
+    "name": "Cable Lateral Raise",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 4.8
+  },
+  "smith_machine_bench": {
+    "name": "Smith Machine Bench Press",
+    "met_low": 3.0,
+    "met_mod": 4.2,
+    "met_high": 5.5
+  },
+  "rower_machine": {
+    "name": "Rowing Machine (Moderate)",
+    "met_low": 6.0,
+    "met_mod": 7.5,
+    "met_high": 10.0
+  },
+  "rowing_machine_vigorous": {
+    "name": "Rowing Machine (Vigorous)",
+    "met_low": 8.0,
+    "met_mod": 10.0,
+    "met_high": 12.0
+  },
+  "elliptical_machine": {
+    "name": "Elliptical Machine",
+    "met_low": 4.0,
+    "met_mod": 6.0,
+    "met_high": 8.5
+  },
+  "treadmill_walk": {
+    "name": "Treadmill Walking",
+    "met_low": 3.0,
+    "met_mod": 4.0,
+    "met_high": 5.5
+  },
+  "treadmill_jog": {
+    "name": "Treadmill Jogging",
+    "met_low": 6.0,
+    "met_mod": 7.5,
+    "met_high": 9.0
+  },
+  "stairmill": {
+    "name": "Stairmill",
+    "met_low": 6.0,
+    "met_mod": 8.0,
+    "met_high": 10.0
+  },
+  "leg_press_single_leg": {
+    "name": "Single-Leg Leg Press",
+    "met_low": 3.5,
+    "met_mod": 5.2,
+    "met_high": 7.2
+  },
+  "smith_front_squat": {
+    "name": "Smith Front Squat",
+    "met_low": 4.0,
+    "met_mod": 6.0,
+    "met_high": 8.5
+  },
+  "cable_woodchop": {
+    "name": "Cable Woodchop",
+    "met_low": 3.5,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "cable_anti_rotation_press": {
+    "name": "Cable Anti-Rotation Press",
+    "met_low": 3.0,
+    "met_mod": 4.2,
+    "met_high": 6.0
+  },
+  "smith_lunge": {
+    "name": "Smith Machine Lunge",
+    "met_low": 3.5,
+    "met_mod": 5.2,
+    "met_high": 7.2
+  },
+  "leg_extension_single_leg": {
+    "name": "Single-Leg Leg Extension",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "hip_thrust_machine": {
+    "name": "Hip Thrust Machine",
+    "met_low": 3.8,
+    "met_mod": 5.5,
+    "met_high": 7.5
+  },
+  "smith_glute_bridge": {
+    "name": "Smith Machine Glute Bridge",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.5
+  },
+  "leg_press_hip_shift": {
+    "name": "Leg Press Hip Shift",
+    "met_low": 3.5,
+    "met_mod": 5.2,
+    "met_high": 7.0
+  },
+  "assisted_dip_machine": {
+    "name": "Assisted Dip Machine",
+    "met_low": 3.0,
+    "met_mod": 4.2,
+    "met_high": 5.8
+  },
+  "pec_fly_machine": {
+    "name": "Pec Fly Machine",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "iso_lateral_press": {
+    "name": "Iso Lateral Press",
+    "met_low": 3.0,
+    "met_mod": 4.2,
+    "met_high": 5.8
+  },
+  "cable_single_arm_row": {
+    "name": "Cable Single Arm Row",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.2
+  },
+  "cable_single_arm_chest_press": {
+    "name": "Cable Single Arm Chest Press",
+    "met_low": 3.0,
+    "met_mod": 4.2,
+    "met_high": 5.8
+  },
+  "resistance_band_pull_apart": {
+    "name": "Resistance Band Pull Apart",
+    "met_low": 2.0,
+    "met_mod": 3.0,
+    "met_high": 4.2
+  },
+  "resistance_band_row": {
+    "name": "Resistance Band Row",
+    "met_low": 2.5,
+    "met_mod": 4.0,
+    "met_high": 5.5
+  },
+  "resistance_band_deadlift": {
+    "name": "Resistance Band Deadlift",
+    "met_low": 3.5,
+    "met_mod": 5.2,
+    "met_high": 7.0
+  },
+  "resistance_band_lunges": {
+    "name": "Resistance Band Lunges",
+    "met_low": 3.2,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "resistance_band_hip_thrust": {
+    "name": "Resistance Band Hip Thrust",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.2
+  },
+  "resistance_band_leg_raise": {
+    "name": "Resistance Band Leg Raise",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "resistance_band_bicep_curl": {
+    "name": "Resistance Band Bicep Curl",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 4.8
+  },
+  "lat_row_machine_high_handle": {
+    "name": "Lat Row (High Handle)",
+    "met_low": 3.2,
+    "met_mod": 4.8,
+    "met_high": 6.2
+  },
+  "cable_trunk_rotation": {
+    "name": "Cable Trunk Rotation",
+    "met_low": 3.0,
+    "met_mod": 4.2,
+    "met_high": 5.8
+  },
+  "ab_crunch_machine": {
+    "name": "Ab Crunch Machine",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "back_extension_machine": {
+    "name": "Back Extension Machine",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.2
+  },
+  "walking_slow": {
+    "name": "Walking (Slow)",
+    "met_low": 2.0,
+    "met_mod": 3.0,
+    "met_high": 3.8
+  },
+  "walking_brisk": {
+    "name": "Walking (Brisk)",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 4.8
+  },
+  "walking_uphill": {
+    "name": "Walking Uphill",
+    "met_low": 4.0,
+    "met_mod": 5.5,
+    "met_high": 7.0
+  },
+  "jogging": {
+    "name": "Jogging",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "running_moderate": {
+    "name": "Running (Moderate Pace)",
+    "met_low": 7.0,
+    "met_mod": 9.0,
+    "met_high": 11.0
+  },
+  "running_fast": {
+    "name": "Running (Fast)",
+    "met_low": 9.0,
+    "met_mod": 11.0,
+    "met_high": 14.0
+  },
+  "sprinting": {
+    "name": "Sprinting",
+    "met_low": 10.0,
+    "met_mod": 12.0,
+    "met_high": 15.0
+  },
+  "jump_rope_slow": {
+    "name": "Jump Rope (Slow)",
+    "met_low": 5.5,
+    "met_mod": 8.0,
+    "met_high": 10.5
+  },
+  "jump_rope_fast": {
+    "name": "Jump Rope (Fast)",
+    "met_low": 8.0,
+    "met_mod": 10.0,
+    "met_high": 12.0
+  },
+  "jump_rope_double_under": {
+    "name": "Jump Rope (Double Unders)",
+    "met_low": 9.0,
+    "met_mod": 12.0,
+    "met_high": 14.0
+  },
+  "cycling_easy": {
+    "name": "Cycling (Easy)",
+    "met_low": 3.5,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "cycling_moderate": {
+    "name": "Cycling (Moderate)",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "cycling_fast": {
+    "name": "Cycling (Fast)",
+    "met_low": 7.0,
+    "met_mod": 10.0,
+    "met_high": 12.5
+  },
+  "cycling_uphill": {
+    "name": "Cycling Uphill",
+    "met_low": 8.0,
+    "met_mod": 11.0,
+    "met_high": 14.0
+  },
+  "stationary_bike_easy": {
+    "name": "Stationary Bike (Easy)",
+    "met_low": 3.5,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "stationary_bike_moderate": {
+    "name": "Stationary Bike (Moderate)",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "stationary_bike_hard": {
+    "name": "Stationary Bike (Hard)",
+    "met_low": 7.0,
+    "met_mod": 9.0,
+    "met_high": 12.0
+  },
+  "elliptical_easy": {
+    "name": "Elliptical (Easy)",
+    "met_low": 4.0,
+    "met_mod": 5.5,
+    "met_high": 7.5
+  },
+  "elliptical_hard": {
+    "name": "Elliptical (Hard)",
+    "met_low": 6.0,
+    "met_mod": 8.0,
+    "met_high": 10.0
+  },
+  "rowing_machine_easy": {
+    "name": "Rowing Machine (Easy)",
+    "met_low": 4.5,
+    "met_mod": 6.0,
+    "met_high": 8.0
+  },
+  "rowing_machine_moderate": {
+    "name": "Rowing Machine (Moderate)",
+    "met_low": 6.0,
+    "met_mod": 8.0,
+    "met_high": 10.0
+  },
+  "rowing_machine_hard": {
+    "name": "Rowing Machine (Hard)",
+    "met_low": 7.5,
+    "met_mod": 10.0,
+    "met_high": 12.0
+  },
+  "ski_erg": {
+    "name": "Ski Erg",
+    "met_low": 5.5,
+    "met_mod": 7.5,
+    "met_high": 10.0
+  },
+  "assault_bike_easy": {
+    "name": "Assault Bike (Easy)",
+    "met_low": 4.5,
+    "met_mod": 6.5,
+    "met_high": 9.0
+  },
+  "assault_bike_hard": {
+    "name": "Assault Bike (Hard)",
+    "met_low": 7.5,
+    "met_mod": 10.0,
+    "met_high": 13.0
+  },
+  "stair_climb": {
+    "name": "Stair Climb",
+    "met_low": 5.0,
+    "met_mod": 8.0,
+    "met_high": 10.0
+  },
+  "hiking_light": {
+    "name": "Hiking (Light)",
+    "met_low": 4.0,
+    "met_mod": 6.0,
+    "met_high": 7.5
+  },
+  "hiking_moderate": {
+    "name": "Hiking (Moderate)",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "hiking_steep": {
+    "name": "Hiking (Steep Incline)",
+    "met_low": 6.0,
+    "met_mod": 8.0,
+    "met_high": 10.0
+  },
+  "ruck_walk": {
+    "name": "Ruck Walk (Weighted Backpack)",
+    "met_low": 5.0,
+    "met_mod": 7.5,
+    "met_high": 10.0
+  },
+  "swimming_easy": {
+    "name": "Swimming (Easy)",
+    "met_low": 4.5,
+    "met_mod": 6.5,
+    "met_high": 8.0
+  },
+  "swimming_moderate": {
+    "name": "Swimming (Moderate)",
+    "met_low": 6.0,
+    "met_mod": 8.0,
+    "met_high": 10.0
+  },
+  "swimming_fast": {
+    "name": "Swimming (Fast)",
+    "met_low": 8.0,
+    "met_mod": 10.0,
+    "met_high": 12.0
+  },
+  "water_aerobics": {
+    "name": "Water Aerobics",
+    "met_low": 3.5,
+    "met_mod": 5.5,
+    "met_high": 7.0
+  },
+  "shadow_boxing": {
+    "name": "Shadow Boxing",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "boxing_combos": {
+    "name": "Boxing Combos",
+    "met_low": 6.0,
+    "met_mod": 8.0,
+    "met_high": 10.5
+  },
+  "kickboxing": {
+    "name": "Kickboxing",
+    "met_low": 7.0,
+    "met_mod": 9.0,
+    "met_high": 11.5
+  },
+  "mma_drills": {
+    "name": "MMA Drills",
+    "met_low": 7.0,
+    "met_mod": 9.0,
+    "met_high": 12.0
+  },
+  "medicine_ball_slam": {
+    "name": "Medicine Ball Slam",
+    "met_low": 4.5,
+    "met_mod": 6.5,
+    "met_high": 9.0
+  },
+  "medicine_ball_chest_throw": {
+    "name": "Medicine Ball Chest Throw",
+    "met_low": 3.5,
+    "met_mod": 5.0,
+    "met_high": 7.0
+  },
+  "medicine_ball_twist": {
+    "name": "Medicine Ball Russian Twist",
+    "met_low": 4.0,
+    "met_mod": 5.8,
+    "met_high": 8.0
+  },
+  "sandbag_carry": {
+    "name": "Sandbag Carry",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "sandbag_clean": {
+    "name": "Sandbag Clean",
+    "met_low": 4.5,
+    "met_mod": 7.0,
+    "met_high": 9.5
+  },
+  "sled_push": {
+    "name": "Sled Push",
+    "met_low": 6.0,
+    "met_mod": 8.5,
+    "met_high": 11.0
+  },
+  "sled_pull": {
+    "name": "Sled Pull",
+    "met_low": 5.5,
+    "met_mod": 8.0,
+    "met_high": 10.5
+  },
+  "battle_ropes": {
+    "name": "Battle Ropes",
+    "met_low": 5.5,
+    "met_mod": 8.0,
+    "met_high": 11.0
+  },
+  "agility_ladder_drills": {
+    "name": "Agility Ladder Drills",
+    "met_low": 4.0,
+    "met_mod": 6.0,
+    "met_high": 8.0
+  },
+  "cone_drills": {
+    "name": "Cone Drills",
+    "met_low": 4.0,
+    "met_mod": 6.0,
+    "met_high": 8.0
+  },
+  "soccer_drills": {
+    "name": "Soccer Drills",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "basketball_drills": {
+    "name": "Basketball Drills",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.5
+  },
+  "tennis_drills": {
+    "name": "Tennis Drills",
+    "met_low": 4.5,
+    "met_mod": 6.0,
+    "met_high": 8.0
+  },
+  "badminton_drills": {
+    "name": "Badminton Drills",
+    "met_low": 4.5,
+    "met_mod": 5.8,
+    "met_high": 7.5
+  },
+  "cricket_running_drills": {
+    "name": "Cricket Running Drills",
+    "met_low": 5.0,
+    "met_mod": 6.5,
+    "met_high": 8.5
+  },
+  "dance_cardio": {
+    "name": "Dance Cardio",
+    "met_low": 4.0,
+    "met_mod": 6.0,
+    "met_high": 8.0
+  },
+  "zumba": {
+    "name": "Zumba",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "hiphop_dance": {
+    "name": "Hip Hop Dance",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "aerobics_low": {
+    "name": "Aerobics (Low Intensity)",
+    "met_low": 3.5,
+    "met_mod": 5.0,
+    "met_high": 6.8
+  },
+  "aerobics_high": {
+    "name": "Aerobics (High Intensity)",
+    "met_low": 5.0,
+    "met_mod": 7.0,
+    "met_high": 9.0
+  },
+  "yoga_hatha": {
+    "name": "Yoga (Hatha)",
+    "met_low": 2.0,
+    "met_mod": 2.5,
+    "met_high": 3.2
+  },
+  "yoga_vinyasa": {
+    "name": "Yoga (Vinyasa)",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "yoga_power": {
+    "name": "Power Yoga",
+    "met_low": 4.0,
+    "met_mod": 5.5,
+    "met_high": 7.0
+  },
+  "yoga_ashtanga": {
+    "name": "Yoga (Ashtanga)",
+    "met_low": 4.0,
+    "met_mod": 5.5,
+    "met_high": 7.0
+  },
+  "yoga_bikram": {
+    "name": "Bikram Yoga",
+    "met_low": 3.0,
+    "met_mod": 4.0,
+    "met_high": 5.0
+  },
+  "yoga_restore": {
+    "name": "Restorative Yoga",
+    "met_low": 1.8,
+    "met_mod": 2.2,
+    "met_high": 2.8
+  },
+  "yoga_yin": {
+    "name": "Yin Yoga",
+    "met_low": 1.8,
+    "met_mod": 2.2,
+    "met_high": 2.8
+  },
+  "sun_salutation": {
+    "name": "Sun Salutation",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "downward_dog": {
+    "name": "Downward Dog",
+    "met_low": 2.2,
+    "met_mod": 3.0,
+    "met_high": 4.0
+  },
+  "upward_dog": {
+    "name": "Upward Dog",
+    "met_low": 2.0,
+    "met_mod": 3.2,
+    "met_high": 4.2
+  },
+  "cat_cow": {
+    "name": "Cat-Cow",
+    "met_low": 2.0,
+    "met_mod": 3.0,
+    "met_high": 4.0
+  },
+  "cobra_pose": {
+    "name": "Cobra Pose",
+    "met_low": 2.0,
+    "met_mod": 3.0,
+    "met_high": 4.0
+  },
+  "child_pose": {
+    "name": "Child's Pose",
+    "met_low": 1.8,
+    "met_mod": 2.2,
+    "met_high": 2.8
+  },
+  "warrior_pose": {
+    "name": "Warrior Pose",
+    "met_low": 2.2,
+    "met_mod": 3.5,
+    "met_high": 5.0
+  },
+  "triangle_pose": {
+    "name": "Triangle Pose",
+    "met_low": 2.2,
+    "met_mod": 3.2,
+    "met_high": 4.5
+  },
+  "chair_pose": {
+    "name": "Chair Pose",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 5.0
+  },
+  "bridge_pose": {
+    "name": "Bridge Pose",
+    "met_low": 2.5,
+    "met_mod": 3.5,
+    "met_high": 5.0
+  },
+  "boat_pose": {
+    "name": "Boat Pose",
+    "met_low": 2.8,
+    "met_mod": 4.0,
+    "met_high": 5.8
+  },
+  "pigeon_pose": {
+    "name": "Pigeon Pose",
+    "met_low": 2.0,
+    "met_mod": 2.8,
+    "met_high": 3.8
+  },
+  "seated_forward_fold": {
+    "name": "Seated Forward Fold",
+    "met_low": 1.8,
+    "met_mod": 2.5,
+    "met_high": 3.2
+  },
+  "standing_forward_fold": {
+    "name": "Standing Forward Fold",
+    "met_low": 2.0,
+    "met_mod": 2.8,
+    "met_high": 3.8
+  },
+  "tree_pose": {
+    "name": "Tree Pose",
+    "met_low": 2.0,
+    "met_mod": 2.8,
+    "met_high": 3.8
+  },
+  "mountain_pose": {
+    "name": "Mountain Pose",
+    "met_low": 1.8,
+    "met_mod": 2.2,
+    "met_high": 3.0
+  },
+  "side_angle_pose": {
+    "name": "Side Angle Pose",
+    "met_low": 2.2,
+    "met_mod": 3.2,
+    "met_high": 4.2
+  },
+  "pilates_mat": {
+    "name": "Pilates (Mat)",
+    "met_low": 2.8,
+    "met_mod": 3.5,
+    "met_high": 5.0
+  },
+  "pilates_reformer": {
+    "name": "Pilates (Reformer)",
+    "met_low": 3.5,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "pilates_hundred": {
+    "name": "Pilates Hundred",
+    "met_low": 3.0,
+    "met_mod": 4.0,
+    "met_high": 5.8
+  },
+  "pilates_rollup": {
+    "name": "Pilates Roll-Up",
+    "met_low": 2.8,
+    "met_mod": 3.5,
+    "met_high": 4.8
+  },
+  "pilates_scissor": {
+    "name": "Pilates Scissor Kicks",
+    "met_low": 3.2,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "pilates_leg_circle": {
+    "name": "Pilates Leg Circles",
+    "met_low": 2.8,
+    "met_mod": 3.5,
+    "met_high": 4.8
+  },
+  "pilates_swan": {
+    "name": "Pilates Swan",
+    "met_low": 2.0,
+    "met_mod": 3.0,
+    "met_high": 4.0
+  },
+  "mobility_neck_circles": {
+    "name": "Neck Circles",
+    "met_low": 1.8,
+    "met_mod": 2.5,
+    "met_high": 3.2
+  },
+  "mobility_arm_swings": {
+    "name": "Arm Swings",
+    "met_low": 2.0,
+    "met_mod": 3.0,
+    "met_high": 4.2
+  },
+  "mobility_hip_circles": {
+    "name": "Hip Circles",
+    "met_low": 2.0,
+    "met_mod": 3.0,
+    "met_high": 4.2
+  },
+  "mobility_cat_cow": {
+    "name": "Mobility Cat-Cow",
+    "met_low": 2.0,
+    "met_mod": 3.0,
+    "met_high": 4.0
+  },
+  "hamstring_stretch": {
+    "name": "Hamstring Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.2,
+    "met_high": 3.0
+  },
+  "quad_stretch": {
+    "name": "Quad Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.3,
+    "met_high": 3.2
+  },
+  "hip_flexor_stretch": {
+    "name": "Hip Flexor Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.5,
+    "met_high": 3.2
+  },
+  "glute_stretch": {
+    "name": "Glute Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.2,
+    "met_high": 3.0
+  },
+  "chest_stretch": {
+    "name": "Chest Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.2,
+    "met_high": 3.0
+  },
+  "upper_back_stretch": {
+    "name": "Upper Back Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.2,
+    "met_high": 3.0
+  },
+  "lower_back_stretch": {
+    "name": "Lower Back Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.3,
+    "met_high": 3.0
+  },
+  "calf_stretch": {
+    "name": "Calf Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.2,
+    "met_high": 3.0
+  },
+  "ankle_circles": {
+    "name": "Ankle Circles",
+    "met_low": 2.0,
+    "met_mod": 2.8,
+    "met_high": 3.5
+  },
+  "wrist_circles": {
+    "name": "Wrist Circles",
+    "met_low": 1.8,
+    "met_mod": 2.5,
+    "met_high": 3.2
+  },
+  "balance_single_leg": {
+    "name": "Single Leg Balance",
+    "met_low": 2.0,
+    "met_mod": 2.8,
+    "met_high": 3.8
+  },
+  "balance_reach_out": {
+    "name": "Balance Reach Out",
+    "met_low": 2.2,
+    "met_mod": 3.2,
+    "met_high": 4.0
+  },
+  "bird_dog_reach": {
+    "name": "Bird Dog with Reach",
+    "met_low": 2.8,
+    "met_mod": 3.8,
+    "met_high": 5.0
+  },
+  "dead_bug_hold": {
+    "name": "Dead Bug Hold",
+    "met_low": 2.5,
+    "met_mod": 3.2,
+    "met_high": 4.2
+  },
+  "lying_windshield_wipers": {
+    "name": "Windshield Wipers (Lying)",
+    "met_low": 3.0,
+    "met_mod": 4.5,
+    "met_high": 6.0
+  },
+  "standing_oblique_crunch": {
+    "name": "Standing Oblique Crunch",
+    "met_low": 2.8,
+    "met_mod": 4.0,
+    "met_high": 5.5
+  },
+  "seated_twist": {
+    "name": "Seated Twist",
+    "met_low": 1.8,
+    "met_mod": 2.3,
+    "met_high": 3.2
+  },
+  "knee_to_chest_stretch": {
+    "name": "Knee-to-Chest Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.5,
+    "met_high": 3.2
+  },
+  "child_pose_side_bend": {
+    "name": "Child's Pose with Side Bend",
+    "met_low": 1.8,
+    "met_mod": 2.5,
+    "met_high": 3.2
+  },
+  "wall_pec_stretch": {
+    "name": "Wall Pec Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.3,
+    "met_high": 3.0
+  },
+  "thoracic_extension_stretch": {
+    "name": "Thoracic Extension Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.5,
+    "met_high": 3.2
+  },
+  "hip_90_90_stretch": {
+    "name": "90/90 Hip Stretch",
+    "met_low": 1.8,
+    "met_mod": 2.5,
+    "met_high": 3.2
+  }
+}

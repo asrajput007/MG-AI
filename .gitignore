@@ -1,0 +1,34 @@
+__pycache__
+.env
+venv/
+.envcopy
+logs/
+temp_uploads/
+.python-version
+.vscode/
+redis_ca.crt
+
+# Unused/backup files folder
+unused/
+
+# BERT training outputs
+bert_checkpoints/
+*.bin
+*.pt
+
+# Training/test result files
+*_test_results.json
+*_results.json
+test_results*.txt
+# Firebase credentials
+serviceAccountKey.json
+
+# Model cache files
+nutrition_cache_with_cholesterol.pt
+yolov8s.pt
+confirm_intent.bin
+
+# Local development
+*.pyc
+*.log
+.DS_Store

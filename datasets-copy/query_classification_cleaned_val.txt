@@ -1,0 +1,111 @@
+__label__profile_retriever what food restrictions do i have
+__label__meal_plan_adjuster replace fried foods with baked options
+__label__blood_report_query what does low iron show in blood work
+__label__meal_check_in i ate fish and chips for dinner
+__label__grocery_list show me the shopping list for this
+__label__craving_assistant i need a quick bite thats not too heavy
+__label__meal_plan_adjuster change my morning snack
+__label__meal_ingredients how do i make scrambled eggs
+__label__vital_advisor oxygen level is 92
+__label__workout_plan_adjuster remove the running exercises
+__label__panel_query explain the difference between hdl and ldl cholesterol
+__label__disease_advisor what should i eat to lower my blood pressure
+__label__history_retriever what did i eat last monday
+__label__meal_plan_adjuster add more protein to dinner
+__label__meal_plan_generator create a fresh plan for me
+__label__meal_check_in log one bowl of dal and rice
+__label__calorie_calculator how many calories did i just eat
+__label__profile_updater i turned vegan
+__label__profile_updater i am now vegetarian
+__label__goal_updater i want to lose 5kg this month
+__label__weekly_meal_plan_generator can you plan my meals for the week i try to stay away from bread and pasta
+__label__meal_plan_generator suggest breakfast lunch and dinner for me
+__label__special_meal_plan_generator design a dash diet for me
+__label__general_query yes please
+__label__calorie_calculator calculate the total calories for this dish
+__label__general_query how many calories should i eat to lose weight?
+__label__grocery_list export the grocery list
+__label__panel_query what is tsh
+__label__water_step_advisor how many steps have i walked today?
+__label__nutrition_analyzer nutritional value of greek yogurt
+__label__workout_plan_adjuster make the workout shorter
+__label__general_query no please
+__label__session_booking book a session
+__label__grocery_list what groceries do i need for the week
+__label__vital_advisor recorded 135/85 bp this morning
+__label__profile_retriever tell me everything you know about my health
+__label__craving_assistant healthy swap for chocolate cravings
+__label__profile_retriever what dietary restrictions do i have saved?
+__label__history_retriever show my food logs from last week
+__label__calorie_calculator total calories for this meal
+__label__blood_report_query what is my cholesterol from report
+__label__general_query no thanks
+__label__weekly_meal_plan_generator make it a weekly plan
+__label__meal_check_in i had a bowl of oatmeal with blueberries and a coffee for breakfast.
+__label__nutrition_analyzer give me the nutrition information image 1 sandwich 1 sandwich bread 2 slices egg product 1 serving ham 2 slices lettuce 1 leaf tomato 2 slices mustard 1 spread potato chips small handful
+__label__blood_report_query what is my vitamin d level
+__label__goal_updater update my goal to muscle gain
+__label__vital_advisor hba1c is 8.2
+__label__meal_check_in yes
+__label__weekly_meal_plan_generator plan my meals for the week chicken and fish are okay
+__label__meal_check_in i just ate a chicken sandwich
+__label__meal_plan_generator generate a meal plan
+__label__blood_report_analyzer can you re analyze the whole report
+__label__disease_advisor what diet helps with arthritis pain
+__label__meal_plan_generator create a meal plan for me based on my profile but it should be different from the following meal plannnhere is your meal plan based on your preferences and health needsnnbreakfastn banana 1 medium portion weight 29 oz protein 1g carbs 19g fat 0g fiber 2g sodium 1mg iodine 0mcg sugar 10g cholesterol 0mg calories 73kcal include a variety of fruits and vegetables in your diet to increase fiber intake which can help alleviate symptoms of ibs and promote regular bowel movementsnnnn save this new plan to your profile
+__label__panel_query explain the lipid panel results
+__label__disease_advisor what foods to avoid during acidity?
+__label__profile_updater waist size 34 inches
+__label__greeting hello how are you
+__label__profile_updater correct
+__label__workout_plan_adjuster i have knee pain change the leg day
+__label__profile_retriever whats in my profile right now
+__label__water_step_advisor how much water should i drink now
+__label__greeting fine
+__label__profile_updater i am allergic to peanuts now
+__label__panel_query my vitamin d level is low what should i do
+__label__vital_advisor my glucose reading is 145
+__label__meal_plan_generator make a diet plan for thyroid
+__label__profile_updater my height is 510 please update it
+__label__disease_advisor i have a cold what should i drink?
+__label__nutrition_analyzer how much protein in an egg
+__label__weekly_meal_plan_generator give me weekly meal plan
+__label__profile_retriever what is my recorded height?
+__label__craving_assistant i want something sweet instead
+__label__special_meal_plan_generator design a dash diet
+__label__history_retriever what was my plan yesterday
+__label__blood_report_query food for high cholesterol from report
+__label__weekly_meal_plan_generator create a glutenfree meal plan for the week
+__label__meal_plan_adjuster change my dinner
+__label__general_query benefit of drinking green tea
+__label__vital_advisor cholesterol reading 240
+__label__meal_plan_generator yes save the plan
+__label__profile_retriever show me my profile summary
+__label__greeting hi can you help me?
+__label__workout_plan_adjuster i have knee pain change the leg day
+__label__grocery_list make a daily grocery list for me
+__label__nutrition_analyzer compare apple and banana nutrition
+__label__profile_retriever display my saved allergies
+__label__profile_retriever show me my current health summary
+__label__disease_advisor what should i eat to lower my blood pressure
+__label__meal_check_in i ate two bananas
+__label__fitness_plan_generator any fitness tips for me
+__label__profile_updater no its actually 78
+__label__profile_updater change my diet to vegetarian
+__label__meal_ingredients what else goes into this meal
+__label__greeting thank you
+__label__meal_check_in save my morning snack
+__label__vital_advisor triglycerides 300
+__label__profile_updater i am diabetic patient
+__label__weekly_meal_plan_generator provide a 7-day meal plan for a 2,000-calorie diet
+__label__blood_report_query what about my vitamin d report
+__label__profile_updater update my weight to 72kg
+__label__meal_check_in i had a sandwich for lunch
+__label__meal_check_in record my morning snack
+__label__meal_plan_adjuster swap breakfast
+__label__session_booking i want to talk to an expert
+__label__nutrition_analyzer provide the nutri info image 1 sandwich 1 sandwich bread 2 slices egg product 1 layer ham 1 layer lettuce 1 leaf tomato 2 slices mayonnaise 1 spread potato chips small handful
+__label__profile_retriever can you show what im supposed to avoid
+__label__general_query is it better to walk before or after eating
+__label__greeting okay thanks
+__label__craving_assistant i want chocolate give me a swap
