@@ -11,7 +11,7 @@ import base64
 import binascii
 from datetime import datetime, timedelta
 from audio_recorder_streamlit import audio_recorder
-from helpers.meal_plan_component import display_meal_plan, MealPlanRenderer
+from helpers.meal_plan_component import MealPlanRenderer
 from helpers.premium_meal_plan_parser import parse_weekly_plan
 from helpers import premium_ui
 # BACKEND_API_URL = "http://127.0.0.1:8001/process-query"
@@ -896,7 +896,7 @@ else:
     else:
         # Fall back to the original renderer if the text doesn't match the
         # structured "### Day N: ..." format (e.g. older/edited plans).
-        display_meal_plan(weekly_meal_plan, interactive=False, style="simple")
+        MealPlanRenderer.render_meal_plan_simple(weekly_meal_plan)
 
     _legacy_chat_and_save_ui = """
     chat_col, buttons_col = st.columns([3, 1])
