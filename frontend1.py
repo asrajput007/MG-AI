@@ -11,9 +11,21 @@ import base64
 import binascii
 from datetime import datetime, timedelta
 from audio_recorder_streamlit import audio_recorder
-from helpers.meal_plan_component import MealPlanRenderer
-from helpers.premium_meal_plan_parser import parse_weekly_plan
-from helpers import premium_ui
+try:
+    from helpers.meal_plan_component import MealPlanRenderer
+except Exception:
+    MealPlanRenderer = None
+
+try:
+    from helpers.premium_meal_plan_parser import parse_weekly_plan
+except Exception:
+    parse_weekly_plan = None
+
+try:
+    from helpers import premium_ui
+except Exception:
+    premium_ui = None
+
 # BACKEND_API_URL = "http://127.0.0.1:8001/process-query"
 BACKEND_API_URL = "http://127.0.0.1:7000/chat"
 # Generates a meal plan directly from the frontend-collected profile, bypassing DB profile lookup/auth.
@@ -132,8 +144,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-premium_ui.inject_premium_css()
-premium_ui.render_top_nav()
+if premium_ui is not None:
+    premium_ui.inject_premium_css()
+    premium_ui.render_top_nav()
+else:
+    st.set_page_config(page_title="Personalised Meal Plan Generator", layout="wide")
+    st.title("Personalised Meal Plan Generator")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -781,9 +797,13 @@ if not st.session_state.profile_complete:
     render_unified_profile_form()
 
 else:
-    _mg_days_preview = parse_weekly_plan(st.session_state.get("weekly_meal_plan", ""))
-    premium_ui.render_hero(st.session_state.current_constraints, _mg_days_preview)
-    premium_ui.render_profile_chips(st.session_state.current_constraints)
+    _mg_days_preview = parse_weekly_plan(st.session_state.get("weekly_meal_plan", "")) if callable(parse_weekly_plan) else []
+    if premium_ui is not None:
+        premium_ui.render_hero(st.session_state.current_constraints, _mg_days_preview)
+        premium_ui.render_profile_chips(st.session_state.current_constraints)
+    else:
+        st.title("Personalised Meal Plan Generator")
+        st.write("Premium UI is unavailable in this environment.")
 
     with st.expander("✏️ Edit Profile and Regenerate Plan", expanded=False):
         constraints = st.session_state.current_constraints
@@ -882,7 +902,7 @@ else:
 
     if not weekly_meal_plan:
         premium_ui.render_empty_plan_state()
-    elif mg_days:
+    elif mg_days and premium_ui is not None:
         selected_idx = premium_ui.render_day_selector(mg_days)
         selected_day = mg_days[selected_idx]
 
@@ -893,10 +913,21 @@ else:
 
         premium_ui.render_nutrition_intelligence(selected_day)
         premium_ui.render_ai_insight(selected_day, st.session_state.current_constraints)
+    elif mg_days:
+        st.subheader("Weekly Meal Plan")
+        for day in mg_days:
+            st.markdown(f"### Day {day.day_number}: {day.day_name}, {day.date_label}")
+            for meal in day.meals:
+                st.markdown(f"**{meal.name}**")
+                for item in meal.items:
+                    st.write(f"- {item.name}")
     else:
         # Fall back to the original renderer if the text doesn't match the
         # structured "### Day N: ..." format (e.g. older/edited plans).
-        MealPlanRenderer.render_meal_plan_simple(weekly_meal_plan)
+        if MealPlanRenderer is not None:
+            MealPlanRenderer.render_meal_plan_simple(weekly_meal_plan)
+        else:
+            st.text(weekly_meal_plan or "No meal plan available yet.")
 
     _legacy_chat_and_save_ui = """
     chat_col, buttons_col = st.columns([3, 1])
