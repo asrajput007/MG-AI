@@ -26,10 +26,17 @@ try:
 except Exception:
     premium_ui = None
 
-# BACKEND_API_URL = "http://127.0.0.1:8001/process-query"
-BACKEND_API_URL = "http://127.0.0.1:7000/chat"
+# Backend base URL is configurable so the deployed frontend (e.g. Streamlit Cloud)
+# can point at a publicly reachable backend instead of localhost.
+try:
+    _backend_base_url = st.secrets.get("BACKEND_BASE_URL", os.getenv("BACKEND_BASE_URL", "http://127.0.0.1:7000"))
+except Exception:
+    _backend_base_url = os.getenv("BACKEND_BASE_URL", "http://127.0.0.1:7000")
+_backend_base_url = _backend_base_url.rstrip("/")
+
+BACKEND_API_URL = f"{_backend_base_url}/chat"
 # Generates a meal plan directly from the frontend-collected profile, bypassing DB profile lookup/auth.
-MEAL_PLAN_FROM_PROFILE_API_URL = "http://127.0.0.1:7000/generate-meal-plan-from-profile"
+MEAL_PLAN_FROM_PROFILE_API_URL = f"{_backend_base_url}/generate-meal-plan-from-profile"
 
 FITNESS_GOAL_OPTIONS = ["Weight Loss", "Muscle Gain", "Increase Overall Strength", "Improve Cardiovascular Fitness", "Improve Flexibility & Mobility", "Rehabilitation & Injury Prevention", "Improve Posture and Balance", "General Fitness", "Weight Maintenance"]
 FITNESS_LEVEL_OPTIONS = ["Beginner (0–6 months)", "Intermediate (6 months–2 years)", "Advanced (2+ years)"]
