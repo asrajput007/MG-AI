@@ -116,6 +116,8 @@ def inject_premium_css():
         }}
         .mg-meal-type {{ font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: {COLOR_SAGE}; font-weight: 700; }}
         .mg-meal-name {{ font-size: 1.15rem; font-weight: 700; color: {COLOR_TEXT}; margin: 4px 0 10px 0; }}
+        .mg-meal-name-list {{ list-style: none; margin: 4px 0 10px 0; padding: 0; }}
+        .mg-meal-name-list li {{ font-size: 1.15rem; font-weight: 700; color: {COLOR_TEXT}; line-height: 1.5; }}
         .mg-macro-row {{ display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }}
         .mg-macro-badge {{ font-size: 0.78rem; color: {COLOR_TEXT_SECONDARY}; background: {COLOR_BG}; border-radius: 10px; padding: 4px 10px; font-weight: 600; }}
 
@@ -298,8 +300,11 @@ def render_meal_card(meal: Meal, day_number: int, index: int):
     st.markdown(f'<div class="mg-meal-image">{icon}</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="mg-meal-type">{meal.name}</div>', unsafe_allow_html=True)
 
-    names = ", ".join(item.name for item in meal.items) if meal.items else "No items generated"
-    st.markdown(f'<div class="mg-meal-name">{names}</div>', unsafe_allow_html=True)
+    if meal.items:
+        names_html = "".join(f"<li>{item.name}</li>" for item in meal.items)
+        st.markdown(f'<ul class="mg-meal-name-list">{names_html}</ul>', unsafe_allow_html=True)
+    else:
+        st.markdown('<div class="mg-meal-name">No items generated</div>', unsafe_allow_html=True)
 
     st.markdown(
         f"""
@@ -343,7 +348,7 @@ def render_meal_card(meal: Meal, day_number: int, index: int):
 
             if item.ingredients:
                 st.markdown("**Ingredients**")
-                st.markdown(", ".join(item.ingredients))
+                st.markdown("\n".join(f"- {ing}" for ing in item.ingredients))
 
             if item.recipe:
                 st.markdown("**How to prepare**")
