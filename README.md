@@ -1,5 +1,5 @@
 
-# 📚 Friska AI: Unified Health & Wellness Assistant
+# 📚 Zestiva AI: Unified Health & Wellness Assistant
 
 ## 1. Project Overview and Modular Architecture
 
@@ -14,7 +14,7 @@ The core principle is **Agentic Orchestration**, where a central intelligence la
 | **Backend (API Gateway)** | **FastAPI** / Python (`app.py`) | Acts as the **central hub**. Validates incoming requests, manages **JWT authorization** for user identity, performs **pre-processing** (image/OCR analysis), and routes all queries to the core Agent. Handles non-blocking background tasks for logging. |
 | **Agent Core** | Python (`agent_core.py`) | The central intelligence layer (`ToolBasedNutritionAgent`). It maintains **user state** (`current_constraints`), manages **over 25 Tools**, orchestrates the `QueryClassifierTool`, and runs core programmatic logic (e.g., handling conflicts, programmatically scaling meals). |
 | **LLM Services** | Custom Python (`tool_core.py`, `config.py`) | Abstracted layer for **resilient API access** to multiple specialized LLM APIs (Mistral, Azure OpenAI). Implements a **Circuit Breaker** pattern for robust failover and rate limit management. |
-| **Data & Persistence** | `requests` / `DatabasePersistenceTool` | All persistent data (**profiles, plans, history, logs**) is handled via asynchronous **HTTP POST/GET** calls to an external Friska API (`FRISKA_API_TESTING`). Local knowledge bases are loaded from JSON/PT files. |
+| **Data & Persistence** | `requests` / `DatabasePersistenceTool` | All persistent data (**profiles, plans, history, logs**) is handled via asynchronous **HTTP POST/GET** calls to an external Zestiva API (`Zestiva_API_TESTING`). Local knowledge bases are loaded from JSON/PT files. |
 
 ---
 
@@ -56,7 +56,7 @@ The Agent Core functions as a self-aware system that dynamically routes user que
 The Agent's intelligence is executed as a Sequential Flow with Overrides:
 
 * **Request Pre-processing (Multi-modal Input Handling):** Before Agent execution, `app.py` handles multi-modal inputs. If an image URL is present, YOLOv8 runs food item detection, and Azure CV runs OCR on packaging labels. The analysis results (e.g., detected items, extracted nutrition text) are **injected** into the user query text for the Agent to process.
-* **Request & Profile Sync (Data Integrity Check):** User query arrives at `app.py`. The `ProfileRetrieverTool` initiates an asynchronous fetch using the JWT token to sync the absolute latest `current_constraints` dictionary from the external Friska DB. This ensures the Agent always operates on the single source of truth.
+* **Request & Profile Sync (Data Integrity Check):** User query arrives at `app.py`. The `ProfileRetrieverTool` initiates an asynchronous fetch using the JWT token to sync the absolute latest `current_constraints` dictionary from the external Zestiva DB. This ensures the Agent always operates on the single source of truth.
 * **Intent Classification (The Router):** The `QueryClassifierTool` uses a dedicated, low-latency LLM to analyze the query, the chat history, and the previous turn's `profile_summary_json`. It outputs a single, definitive `ToolType` string (e.g., `meal_plan_generator`, `vital_advisor`, or `general_query`).
 * **Conflict Check (Priority Override - Safety First):** Before running the classified tool, the Agent performs a high-priority, LLM-based check (`_check_for_profile_conflict` in `agent_core.py`). It specifically looks for contradictions (e.g., requesting a "chicken" meal when the profile is "Vegetarian"). If a conflict is detected, the flow is **interrupted**, and the Agent asks the user for confirmation to update their profile (`action_type`: `ADD`, `REMOVE`, or `REPLACE`), safeguarding against unintended profile changes.
 * **Specialized Tool Execution:** If no conflict is found, the classified tool runs. This can range from pure programmatic logic (`WaterStepTool`) to a complex, multi-step LLM-based operation (`MealPlanGeneratorTool`).
