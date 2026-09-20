@@ -359,20 +359,6 @@ def render_meal_card(meal: Meal, day_number: int, index: int):
         if image_path:
             break
 
-    if image_path:
-        try:
-            encoded = base64.b64encode(Path(image_path).read_bytes()).decode("utf-8")
-            ext = Path(image_path).suffix.lstrip(".").lower() or "jpeg"
-            mime = "jpeg" if ext == "jpg" else ext
-            st.markdown(
-                f'<div class="mg-meal-image"><img src="data:image/{mime};base64,{encoded}" alt="{meal.name}" /></div>',
-                unsafe_allow_html=True,
-            )
-        except Exception:
-            st.markdown('<div class="mg-meal-image"></div>', unsafe_allow_html=True)
-    else:
-        st.markdown('<div class="mg-meal-image"></div>', unsafe_allow_html=True)
-
     st.markdown(f'<div class="mg-meal-type">{meal.name}</div>', unsafe_allow_html=True)
 
     if meal.items:
@@ -393,7 +379,7 @@ def render_meal_card(meal: Meal, day_number: int, index: int):
         unsafe_allow_html=True,
     )
 
-    with st.expander("View recipe & detailed nutrition"):
+    with st.expander("Detailed nutrition"):
         for item in meal.items:
             text_col, image_col = st.columns([3, 1])
 
@@ -433,10 +419,8 @@ def render_meal_card(meal: Meal, day_number: int, index: int):
                     for step_i, step in enumerate(item.recipe, 1):
                         st.markdown(f"{step_i}. {step}")
 
-                checkin_key = f"mg_checkin_{day_number}_{index}_{item.food_id or item.name}"
-                checked = st.checkbox("Mark as prepared", key=checkin_key)
-                if checked:
-                    st.caption("Saved for this session.")
+                # Mark as prepared from frontend.
+                # Mark as prepared removed from the detailed nutrition dropdown.
 
             with image_col:
                 item_image_path = resolve_food_image(item.food_id, item.name)

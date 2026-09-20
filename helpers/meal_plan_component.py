@@ -173,6 +173,7 @@ class MealPlanRenderer:
         # Add clickable functionality using Streamlit buttons
         st.markdown("---")
         st.markdown("##### 🍽️ Click on a food item to see details:")
+        # Mark as prepared from frontend.
         
         # Create clickable buttons for each food item
         for food_name, metadata in metadata_map.items():
@@ -251,11 +252,11 @@ def handle_food_click(food_id: str, metadata: Optional[FoodItemMetadata] = None)
                 st.markdown("**Ingredients:** *Not available*")
         
         if metadata.recipe:
-            st.markdown("**Recipe:**")
+            st.markdown("**Detailed nutrition:**")
             for i, step in enumerate(metadata.recipe, 1):
                 st.markdown(f"{i}. {step}")
         else:
-            st.markdown("**Recipe:** *Not available*")
+            st.markdown("**Detailed nutrition:** *Not available*")
         
         st.markdown("---")
     else:
