@@ -10,6 +10,9 @@ the rest of the app, and does NOT invent nutrition data - every number shown
 here comes from the already-generated plan or profile.
 """
 
+import base64
+from pathlib import Path
+
 import streamlit as st
 from typing import Dict, List, Optional
 
@@ -28,13 +31,61 @@ COLOR_TEXT_SECONDARY = "#6B6B6B"
 COLOR_TEXT_MUTED = "#999999"
 COLOR_BORDER = "rgba(0,0,0,0.08)"
 
-MEAL_ICONS = {
-    "Breakfast": "🌅",
-    "Morning Snack": "🍵",
-    "Lunch": "🥗",
-    "Evening Snack": "🍎",
-    "Dinner": "🌙",
-}
+FOOD_IMG_DIR = Path(__file__).resolve().parent.parent / "Food_img"
+FOOD_IMG_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp")
+
+_food_name_to_id_index: Optional[Dict[str, str]] = None
+
+
+def _get_food_name_to_id_index() -> Dict[str, str]:
+    """Build (once) a lowercase food-name -> food_id index from the foods database.
+
+    The meal plan text embeds a food_id per item, but that metadata is
+    LLM-generated and sometimes missing. This index lets us recover the
+    food_id (and therefore the matching image) straight from the food name.
+    """
+    global _food_name_to_id_index
+    if _food_name_to_id_index is not None:
+        return _food_name_to_id_index
+
+    index: Dict[str, str] = {}
+    try:
+        from helpers.food_database_cache import get_food_database_cache
+
+        foods_data = get_food_database_cache().get_foods_data() or {}
+        for food in foods_data.get("foods", []):
+            name = (food.get("common_name") or "").strip().lower()
+            fid = food.get("food_id")
+            if name and fid:
+                index[name] = fid
+    except Exception:
+        index = {}
+
+    _food_name_to_id_index = index
+    return index
+
+
+def resolve_food_image(food_id: Optional[str], food_name: Optional[str] = None) -> Optional[str]:
+    """Look up a locally stored food image by food_id (falls back to food name lookup)."""
+    if not FOOD_IMG_DIR.is_dir():
+        return None
+
+    candidates = []
+    if food_id:
+        candidates.append(str(food_id))
+
+    if food_name:
+        looked_up_id = _get_food_name_to_id_index().get(food_name.strip().lower())
+        if looked_up_id:
+            candidates.append(str(looked_up_id))
+        candidates.append(food_name.strip().replace(" ", "_"))
+
+    for candidate in candidates:
+        for ext in FOOD_IMG_EXTENSIONS:
+            path = FOOD_IMG_DIR / f"{candidate}{ext}"
+            if path.is_file():
+                return str(path)
+    return None
 
 
 def inject_premium_css():
@@ -110,14 +161,19 @@ def inject_premium_css():
             padding: 22px; margin-bottom: 18px;
         }}
         .mg-meal-image {{
-            width: 100%; height: 140px; border-radius: 16px; margin-bottom: 14px;
-            display: flex; align-items: center; justify-content: center; font-size: 2.4rem;
+            width: 100%; height: 220px; border-radius: 16px; margin-bottom: 14px; overflow: hidden;
             background: linear-gradient(135deg, rgba(110,139,116,0.14), rgba(201,168,106,0.14));
         }}
-        .mg-meal-type {{ font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: {COLOR_SAGE}; font-weight: 700; }}
+        .mg-meal-image img {{ width: 100%; height: 220px; object-fit: cover; border-radius: 16px; }}
+        .mg-item-image {{
+            width: 100%; height: 160px; border-radius: 12px; overflow: hidden;
+            background: linear-gradient(135deg, rgba(110,139,116,0.14), rgba(201,168,106,0.14));
+        }}
+        .mg-item-image img {{ width: 100%; height: 160px; object-fit: cover; border-radius: 12px; }}
+        .mg-meal-type {{ font-size: 1.5rem; font-weight: 800; color: {COLOR_TEXT}; margin: 2px 0 10px 0; font-family: 'DM Serif Display', Georgia, serif; }}
         .mg-meal-name {{ font-size: 1.15rem; font-weight: 700; color: {COLOR_TEXT}; margin: 4px 0 10px 0; }}
-        .mg-meal-name-list {{ list-style: none; margin: 4px 0 10px 0; padding: 0; }}
-        .mg-meal-name-list li {{ font-size: 1.15rem; font-weight: 700; color: {COLOR_TEXT}; line-height: 1.5; }}
+        .mg-meal-name-list {{ list-style: decimal; margin: 4px 0 10px 0; padding-left: 20px; }}
+        .mg-meal-name-list li {{ font-size: 0.92rem; font-weight: 500; color: {COLOR_TEXT_SECONDARY}; line-height: 1.6; }}
         .mg-macro-row {{ display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }}
         .mg-macro-badge {{ font-size: 0.78rem; color: {COLOR_TEXT_SECONDARY}; background: {COLOR_BG}; border-radius: 10px; padding: 4px 10px; font-weight: 600; }}
 
@@ -295,14 +351,33 @@ def render_daily_overview(day: DayPlan):
 
 
 def render_meal_card(meal: Meal, day_number: int, index: int):
-    icon = MEAL_ICONS.get(meal.name, "🍽️")
     st.markdown('<div class="mg-card">', unsafe_allow_html=True)
-    st.markdown(f'<div class="mg-meal-image">{icon}</div>', unsafe_allow_html=True)
+
+    image_path = None
+    for item in meal.items:
+        image_path = resolve_food_image(item.food_id, item.name)
+        if image_path:
+            break
+
+    if image_path:
+        try:
+            encoded = base64.b64encode(Path(image_path).read_bytes()).decode("utf-8")
+            ext = Path(image_path).suffix.lstrip(".").lower() or "jpeg"
+            mime = "jpeg" if ext == "jpg" else ext
+            st.markdown(
+                f'<div class="mg-meal-image"><img src="data:image/{mime};base64,{encoded}" alt="{meal.name}" /></div>',
+                unsafe_allow_html=True,
+            )
+        except Exception:
+            st.markdown('<div class="mg-meal-image"></div>', unsafe_allow_html=True)
+    else:
+        st.markdown('<div class="mg-meal-image"></div>', unsafe_allow_html=True)
+
     st.markdown(f'<div class="mg-meal-type">{meal.name}</div>', unsafe_allow_html=True)
 
     if meal.items:
         names_html = "".join(f"<li>{item.name}</li>" for item in meal.items)
-        st.markdown(f'<ul class="mg-meal-name-list">{names_html}</ul>', unsafe_allow_html=True)
+        st.markdown(f'<ol class="mg-meal-name-list">{names_html}</ol>', unsafe_allow_html=True)
     else:
         st.markdown('<div class="mg-meal-name">No items generated</div>', unsafe_allow_html=True)
 
@@ -320,45 +395,63 @@ def render_meal_card(meal: Meal, day_number: int, index: int):
 
     with st.expander("View recipe & detailed nutrition"):
         for item in meal.items:
-            st.markdown(f"**{item.name}**")
-            meta_bits = []
-            if item.household_measure:
-                meta_bits.append(item.household_measure)
-            if item.portion_weight:
-                meta_bits.append(item.portion_weight)
-            if meta_bits:
-                st.caption(" · ".join(meta_bits))
+            text_col, image_col = st.columns([3, 1])
 
-            nutrient_rows = [
-                ("Calories", item.nutrients.get("calories"), "kcal"),
-                ("Protein", item.nutrients.get("protein_g"), "g"),
-                ("Carbohydrates", item.nutrients.get("carbs_g"), "g"),
-                ("Fat", item.nutrients.get("fat_g"), "g"),
-                ("Fiber", item.nutrients.get("fiber_g"), "g"),
-                ("Sodium", item.nutrients.get("sodium_mg"), "mg"),
-                ("Sugar", item.nutrients.get("sugar_g"), "g"),
-                ("Cholesterol", item.nutrients.get("cholesterol_mg"), "mg"),
-                ("Iodine", item.nutrients.get("iodine_mcg"), "mcg"),
-            ]
-            table_md = "| Nutrient | Amount |\n|---|---|\n"
-            for label, value, unit in nutrient_rows:
-                if value is not None:
-                    table_md += f"| {label} | {value:g} {unit} |\n"
-            st.markdown(table_md)
+            with text_col:
+                st.markdown(f"**{item.name}**")
+                meta_bits = []
+                if item.household_measure:
+                    meta_bits.append(item.household_measure)
+                if item.portion_weight:
+                    meta_bits.append(item.portion_weight)
+                if meta_bits:
+                    st.caption(" · ".join(meta_bits))
 
-            if item.ingredients:
-                st.markdown("**Ingredients**")
-                st.markdown("\n".join(f"- {ing}" for ing in item.ingredients))
+                nutrient_rows = [
+                    ("Calories", item.nutrients.get("calories"), "kcal"),
+                    ("Protein", item.nutrients.get("protein_g"), "g"),
+                    ("Carbohydrates", item.nutrients.get("carbs_g"), "g"),
+                    ("Fat", item.nutrients.get("fat_g"), "g"),
+                    ("Fiber", item.nutrients.get("fiber_g"), "g"),
+                    ("Sodium", item.nutrients.get("sodium_mg"), "mg"),
+                    ("Sugar", item.nutrients.get("sugar_g"), "g"),
+                    ("Cholesterol", item.nutrients.get("cholesterol_mg"), "mg"),
+                    ("Iodine", item.nutrients.get("iodine_mcg"), "mcg"),
+                ]
+                table_md = "| Nutrient | Amount |\n|---|---|\n"
+                for label, value, unit in nutrient_rows:
+                    if value is not None:
+                        table_md += f"| {label} | {value:g} {unit} |\n"
+                st.markdown(table_md)
 
-            if item.recipe:
-                st.markdown("**How to prepare**")
-                for step_i, step in enumerate(item.recipe, 1):
-                    st.markdown(f"{step_i}. {step}")
+                if item.ingredients:
+                    st.markdown("**Ingredients**")
+                    st.markdown("\n".join(f"- {ing}" for ing in item.ingredients))
 
-            checkin_key = f"mg_checkin_{day_number}_{index}_{item.food_id or item.name}"
-            checked = st.checkbox("Mark as prepared", key=checkin_key)
-            if checked:
-                st.caption("Saved for this session.")
+                if item.recipe:
+                    st.markdown("**How to prepare**")
+                    for step_i, step in enumerate(item.recipe, 1):
+                        st.markdown(f"{step_i}. {step}")
+
+                checkin_key = f"mg_checkin_{day_number}_{index}_{item.food_id or item.name}"
+                checked = st.checkbox("Mark as prepared", key=checkin_key)
+                if checked:
+                    st.caption("Saved for this session.")
+
+            with image_col:
+                item_image_path = resolve_food_image(item.food_id, item.name)
+                if item_image_path:
+                    try:
+                        encoded = base64.b64encode(Path(item_image_path).read_bytes()).decode("utf-8")
+                        ext = Path(item_image_path).suffix.lstrip(".").lower() or "jpeg"
+                        mime = "jpeg" if ext == "jpg" else ext
+                        st.markdown(
+                            f'<div class="mg-item-image"><img src="data:image/{mime};base64,{encoded}" alt="{item.name}" /></div>',
+                            unsafe_allow_html=True,
+                        )
+                    except Exception:
+                        pass
+
             st.markdown("---")
 
     st.markdown('</div>', unsafe_allow_html=True)

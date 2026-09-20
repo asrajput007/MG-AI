@@ -1691,26 +1691,12 @@ class ToolBasedNutritionAgent:
         
         logger.info(f" True-up ACTIVE: Gap analysis - {calorie_gap:+.1f} kcal gap + {total_deficit:.0f} kcal deficit from clamping")
         logger.info(f"   Current: {current_total:.1f} kcal → Target: {target_tdee} kcal")
-        
-        
-        if total_deficit > 0:
-            logger.info(f"\n CULINARY INTEGRITY: {total_deficit:.0f} kcal deficit detected from portion capping")
-            logger.info(f"    Caloric deficit accepted to preserve AI culinary combinations (no redistribution)")
-            logger.info(f"   Deficit source: MAX_PORTION_OZ (10oz cap) enforced on flexible items")
-            
-            plan_data = self._recalculate_plan_json(plan_data)
-            current_total = plan_data.get("total_nutrients", {}).get("Calories", 0)
-            final_gap = target_tdee - current_total
-            
-            logger.info(f" Final plan totals: {current_total:.1f} kcal (gap: {final_gap:+.1f} kcal)")
-            logger.info(f"   Gap accepted within tolerance to maintain culinary authenticity")
-            
-            return plan_data
-        
-        logger.info(f" CULINARY INTEGRITY: Accepting {calorie_gap:+.1f} kcal gap to preserve meal combinations")
-        return plan_data
+
+        return self._optimize_calorie_gap_redistribution(
+            plan_data, clamped_food_names, total_deficit, target_tdee, user_constraints
+        )
     
-    def _get_optimizer_targets(self, plan_data, clamped_food_names, total_deficit, target_tdee, user_constraints): 
+    def _optimize_calorie_gap_redistribution(self, plan_data, clamped_food_names, total_deficit, target_tdee, user_constraints): 
         DO_NOT_SCALE = ['dressing', 'almond', 'chia', 'flax', 'hemp', 'greens', 'lettuce', 
                         'tomato', 'carrot', 'cucumber', 'melon', 'grape', 'smoothie', 'oats', 
                         'broccoli', 'asparagus']
@@ -1723,548 +1709,551 @@ class ToolBasedNutritionAgent:
                 if food_name in clamped_food_names:
                     continue
                     
-                    food_name_lower = food_name.lower()
-                    
-                    if any(kw in food_name_lower for kw in DO_NOT_SCALE):
-                        logger.debug(f"    GARNISH LOCK: {food_name} - multiplier locked at 1.0x (DO_NOT_SCALE list)")
-                        continue
-                    
-                    food_cals = food.get("nutrients", {}).get("Calories", 0)
-                    if food_cals < 50:
-                        logger.debug(f"    LOW-CAL LOCK: {food_name} ({food_cals:.1f} kcal) - multiplier locked at 1.0x")
-                        continue
-                    
-                    is_zero_cal_liquid = any(
-                        liquid_term in food_name_lower 
-                        for liquid_term in ['tea', 'water', 'coffee', 'black coffee', 'green tea', 'herbal tea']
-                    )
-                    if is_zero_cal_liquid:
-                        continue
-                    
-                    is_low_calorie_vegetable = any(
-                        veg in food_name_lower for veg in [
-                            'kale', 'spinach', 'lettuce', 'salad', 'cabbage', 'chard',
-                            'arugula', 'watercress', 'celery', 'cucumber', 'zucchini',
-                            'broccoli', 'cauliflower', 'asparagus'
-                        ]
-                    )
-                    
-                    is_legume_or_bean = any(
-                        legume in food_name_lower for legume in [
-                            'edamame', 'lentil', 'dal', 'bean', 'chickpea', 'legume',
-                            'peas', 'soybean', 'black gram', 'urad', 'moong', 'masoor',
-                            'chana', 'kidney bean', 'pinto bean', 'black bean'
-                        ]
-                    )
-                    
-                    nutrients = food.get("nutrients", {})
-                    portion_weight_oz = nutrients.get("Portion Weight", 0)
-                    food_cals = nutrients.get("Calories", 0)
-                    
-                    if portion_weight_oz > 0:
-                        weight_grams = portion_weight_oz * 28.35
-                        calories_per_100g = (food_cals / weight_grams) * 100
-                        if calories_per_100g < 50:
-                            logger.debug(f"    EXCLUDED from Cap-and-Spill: {food_name} ({calories_per_100g:.1f} kcal/100g - too low density)")
-                            continue
-                    
-                    if is_low_calorie_vegetable:
-                        logger.debug(f"    EXCLUDED from Cap-and-Spill: {food_name} (low-calorie vegetable)")
-                        continue
-                    
-                    if is_legume_or_bean:
-                        logger.debug(f"    EXCLUDED from Cap-and-Spill: {food_name} (legume/bean - clamped separately)")
-                        continue
-                    
-                    is_dense = self._is_calorie_dense_food(food_name)
-                    if food_cals > 20: 
-                        priority = 1 if is_dense else 2  
-                        dense_food_candidates.append({
-                            'meal': meal_name,
-                            'idx': idx,
-                            'food': food,
-                            'calories': food_cals,
-                            'priority': priority,
-                            'is_dense': is_dense
-                        })
-            
-            dense_food_candidates.sort(key=lambda x: (x['priority'], -x['calories']))
-            
-            if dense_food_candidates:
-                sensible_limits = self._get_sensible_portion_limits()
-                remaining_deficit = total_deficit
-                frozen_food_indices = set()  
-                MAX_ITERATIONS = 10  
-                iteration = 0
-                
-                logger.info(f"Starting Cap-and-Spill redistribution: {remaining_deficit:.0f} kcal to distribute")
-                
-                while remaining_deficit > 10 and iteration < MAX_ITERATIONS:
-                    iteration += 1
-                    unfrozen_foods = [
-                        f for idx, f in enumerate(dense_food_candidates) 
-                        if idx not in frozen_food_indices
+                food_name_lower = food_name.lower()
+
+                if any(kw in food_name_lower for kw in DO_NOT_SCALE):
+                    logger.debug(f"    GARNISH LOCK: {food_name} - multiplier locked at 1.0x (DO_NOT_SCALE list)")
+                    continue
+
+                food_cals = food.get("nutrients", {}).get("Calories", 0)
+                if food_cals < 50:
+                    logger.debug(f"    LOW-CAL LOCK: {food_name} ({food_cals:.1f} kcal) - multiplier locked at 1.0x")
+                    continue
+
+                is_zero_cal_liquid = any(
+                    liquid_term in food_name_lower 
+                    for liquid_term in ['tea', 'water', 'coffee', 'black coffee', 'green tea', 'herbal tea']
+                )
+                if is_zero_cal_liquid:
+                    continue
+
+                is_low_calorie_vegetable = any(
+                    veg in food_name_lower for veg in [
+                        'kale', 'spinach', 'lettuce', 'salad', 'cabbage', 'chard',
+                        'arugula', 'watercress', 'celery', 'cucumber', 'zucchini',
+                        'broccoli', 'cauliflower', 'asparagus'
                     ]
-                    
-                    if not unfrozen_foods:
-                        logger.warning(f"All foods frozen at ceiling. Accepting {remaining_deficit:.0f} kcal deficit.")
-                        break
-                    
-                    num_foods_to_boost = min(3, len(unfrozen_foods))
-                    selected_foods = unfrozen_foods[:num_foods_to_boost]
-                    total_selected_cals = sum(f['calories'] for f in selected_foods)
-                    spill_from_this_round = 0.0 
-                    logger.info(f"   Iteration {iteration}: Distributing {remaining_deficit:.0f} kcal to {num_foods_to_boost} foods")
-                    
-                    for food_info in selected_foods:
-                        boost_ratio = food_info['calories'] / total_selected_cals
-                        calories_to_add = remaining_deficit * boost_ratio
-                        old_cals = food_info['calories']
-                        new_cals = old_cals + calories_to_add
-                        desired_adjustment_ratio = new_cals / old_cals
-                        food_item = food_info['food']
-                        current_qty, current_unit = self._extract_portion_from_name(food_item['name'])
-                        
-                        if current_qty and current_unit:
-                            desired_qty = current_qty * desired_adjustment_ratio
-                            
-                            max_limit = sensible_limits.get(current_unit.lower())
-                            
-                            is_legume_or_bean_item = any(
-                                legume in food_item['name'].lower() for legume in [
-                                    'edamame', 'lentil', 'dal', 'bean', 'chickpea', 'legume',
-                                    'peas', 'soybean', 'black gram', 'urad', 'moong', 'masoor',
-                                    'chana', 'kidney bean', 'pinto bean', 'black bean'
-                                ]
-                            )
-                            
-                            if is_legume_or_bean_item and current_unit.lower() in ['cup', 'cups'] and desired_qty > 1.0:
-                                clamped_ratio = 1.0 / current_qty
+                )
+
+                is_legume_or_bean = any(
+                    legume in food_name_lower for legume in [
+                        'edamame', 'lentil', 'dal', 'bean', 'chickpea', 'legume',
+                        'peas', 'soybean', 'black gram', 'urad', 'moong', 'masoor',
+                        'chana', 'kidney bean', 'pinto bean', 'black bean'
+                    ]
+                )
+
+                nutrients = food.get("nutrients", {})
+                portion_weight_oz = nutrients.get("Portion Weight", 0)
+                food_cals = nutrients.get("Calories", 0)
+
+                if portion_weight_oz > 0:
+                    weight_grams = portion_weight_oz * 28.35
+                    calories_per_100g = (food_cals / weight_grams) * 100
+                    if calories_per_100g < 50:
+                        logger.debug(f"    EXCLUDED from Cap-and-Spill: {food_name} ({calories_per_100g:.1f} kcal/100g - too low density)")
+                        continue
+
+                if is_low_calorie_vegetable:
+                    logger.debug(f"    EXCLUDED from Cap-and-Spill: {food_name} (low-calorie vegetable)")
+                    continue
+
+                if is_legume_or_bean:
+                    logger.debug(f"    EXCLUDED from Cap-and-Spill: {food_name} (legume/bean - clamped separately)")
+                    continue
+
+                is_dense = self._is_calorie_dense_food(food_name)
+                if food_cals > 20: 
+                    priority = 1 if is_dense else 2  
+                    dense_food_candidates.append({
+                        'meal': meal_name,
+                        'idx': idx,
+                        'food': food,
+                        'calories': food_cals,
+                        'priority': priority,
+                        'is_dense': is_dense
+                    })
+            
+        dense_food_candidates.sort(key=lambda x: (x['priority'], -x['calories']))
+
+        current_total = plan_data.get("total_nutrients", {}).get("Calories", 0)
+        calorie_gap = target_tdee - current_total
+
+        if dense_food_candidates:
+            sensible_limits = self._get_sensible_portion_limits()
+            remaining_deficit = total_deficit
+            frozen_food_indices = set()  
+            MAX_ITERATIONS = 10  
+            iteration = 0
+
+            logger.info(f"Starting Cap-and-Spill redistribution: {remaining_deficit:.0f} kcal to distribute")
+
+            while remaining_deficit > 10 and iteration < MAX_ITERATIONS:
+                iteration += 1
+                unfrozen_foods = [
+                    f for idx, f in enumerate(dense_food_candidates) 
+                    if idx not in frozen_food_indices
+                ]
+
+                if not unfrozen_foods:
+                    logger.warning(f"All foods frozen at ceiling. Accepting {remaining_deficit:.0f} kcal deficit.")
+                    break
+
+                num_foods_to_boost = min(3, len(unfrozen_foods))
+                selected_foods = unfrozen_foods[:num_foods_to_boost]
+                total_selected_cals = sum(f['calories'] for f in selected_foods)
+                spill_from_this_round = 0.0 
+                logger.info(f"   Iteration {iteration}: Distributing {remaining_deficit:.0f} kcal to {num_foods_to_boost} foods")
+
+                for food_info in selected_foods:
+                    boost_ratio = food_info['calories'] / total_selected_cals
+                    calories_to_add = remaining_deficit * boost_ratio
+                    old_cals = food_info['calories']
+                    new_cals = old_cals + calories_to_add
+                    desired_adjustment_ratio = new_cals / old_cals
+                    food_item = food_info['food']
+                    current_qty, current_unit = self._extract_portion_from_name(food_item['name'])
+
+                    if current_qty and current_unit:
+                        desired_qty = current_qty * desired_adjustment_ratio
+
+                        max_limit = sensible_limits.get(current_unit.lower())
+
+                        is_legume_or_bean_item = any(
+                            legume in food_item['name'].lower() for legume in [
+                                'edamame', 'lentil', 'dal', 'bean', 'chickpea', 'legume',
+                                'peas', 'soybean', 'black gram', 'urad', 'moong', 'masoor',
+                                'chana', 'kidney bean', 'pinto bean', 'black bean'
+                            ]
+                        )
+
+                        if is_legume_or_bean_item and current_unit.lower() in ['cup', 'cups'] and desired_qty > 1.0:
+                            clamped_ratio = 1.0 / current_qty
+                            actual_adjustment_ratio = clamped_ratio
+                            clamped_cals = old_cals * actual_adjustment_ratio
+                            absorbed_calories = clamped_cals - old_cals
+                            spilled_calories = calories_to_add - absorbed_calories
+                            food_idx = dense_food_candidates.index(food_info)
+                            frozen_food_indices.add(food_idx)
+                            logger.warning(f" LEGUME CLAMP: {food_item['name']}")
+                            logger.warning(f"Desired: {desired_qty:.1f} {current_unit} → Clamped: 1.0 cup (GI safety limit)")
+                            logger.warning(f"Absorbed: {absorbed_calories:.0f} kcal | Spilled: {spilled_calories:.0f} kcal")
+                            spill_from_this_round += spilled_calories
+                        elif max_limit and desired_qty > max_limit:
+                            clamped_ratio = max_limit / current_qty
+                            actual_adjustment_ratio = clamped_ratio
+                            clamped_cals = old_cals * actual_adjustment_ratio
+                            absorbed_calories = clamped_cals - old_cals
+                            spilled_calories = calories_to_add - absorbed_calories
+                            food_idx = dense_food_candidates.index(food_info)
+                            frozen_food_indices.add(food_idx)
+                            logger.warning(f"CLAMPED: {food_item['name']}")
+                            logger.warning(f"Desired: {desired_qty:.1f} {current_unit} → Clamped: {max_limit} {current_unit}")
+                            logger.warning(f"Absorbed: {absorbed_calories:.0f} kcal | Spilled: {spilled_calories:.0f} kcal")
+
+                            spill_from_this_round += spilled_calories
+                        else:
+                            actual_adjustment_ratio = desired_adjustment_ratio
+                    else:
+                        food_name_lower = food_item['name'].lower()
+                        is_vegetable = any(veg in food_name_lower for veg in ['kale', 'spinach', 'lettuce', 'chard', 'greens', 'cabbage'])
+                        if is_vegetable:
+                            current_weight_oz = food_item.get("nutrients", {}).get("Portion Weight", 0)
+                            desired_weight_oz = current_weight_oz * desired_adjustment_ratio
+                            max_weight_oz = 250 / 28.35  
+                            if desired_weight_oz > max_weight_oz:
+                                clamped_ratio = max_weight_oz / current_weight_oz
                                 actual_adjustment_ratio = clamped_ratio
                                 clamped_cals = old_cals * actual_adjustment_ratio
                                 absorbed_calories = clamped_cals - old_cals
                                 spilled_calories = calories_to_add - absorbed_calories
                                 food_idx = dense_food_candidates.index(food_info)
                                 frozen_food_indices.add(food_idx)
-                                logger.warning(f" LEGUME CLAMP: {food_item['name']}")
-                                logger.warning(f"Desired: {desired_qty:.1f} {current_unit} → Clamped: 1.0 cup (GI safety limit)")
+                                logger.warning(f"WEIGHT CLAMPED: {food_item['name']}")
+                                logger.warning(f"Desired: {desired_weight_oz:.1f} oz → Clamped: {max_weight_oz:.1f} oz (~250g)")
                                 logger.warning(f"Absorbed: {absorbed_calories:.0f} kcal | Spilled: {spilled_calories:.0f} kcal")
-                                spill_from_this_round += spilled_calories
-                            elif max_limit and desired_qty > max_limit:
-                                clamped_ratio = max_limit / current_qty
-                                actual_adjustment_ratio = clamped_ratio
-                                clamped_cals = old_cals * actual_adjustment_ratio
-                                absorbed_calories = clamped_cals - old_cals
-                                spilled_calories = calories_to_add - absorbed_calories
-                                food_idx = dense_food_candidates.index(food_info)
-                                frozen_food_indices.add(food_idx)
-                                logger.warning(f"CLAMPED: {food_item['name']}")
-                                logger.warning(f"Desired: {desired_qty:.1f} {current_unit} → Clamped: {max_limit} {current_unit}")
-                                logger.warning(f"Absorbed: {absorbed_calories:.0f} kcal | Spilled: {spilled_calories:.0f} kcal")
-                                
+
                                 spill_from_this_round += spilled_calories
                             else:
                                 actual_adjustment_ratio = desired_adjustment_ratio
                         else:
-                            food_name_lower = food_item['name'].lower()
-                            is_vegetable = any(veg in food_name_lower for veg in ['kale', 'spinach', 'lettuce', 'chard', 'greens', 'cabbage'])
-                            if is_vegetable:
-                                current_weight_oz = food_item.get("nutrients", {}).get("Portion Weight", 0)
-                                desired_weight_oz = current_weight_oz * desired_adjustment_ratio
-                                max_weight_oz = 250 / 28.35  
-                                if desired_weight_oz > max_weight_oz:
-                                    clamped_ratio = max_weight_oz / current_weight_oz
-                                    actual_adjustment_ratio = clamped_ratio
-                                    clamped_cals = old_cals * actual_adjustment_ratio
-                                    absorbed_calories = clamped_cals - old_cals
-                                    spilled_calories = calories_to_add - absorbed_calories
-                                    food_idx = dense_food_candidates.index(food_info)
-                                    frozen_food_indices.add(food_idx)
-                                    logger.warning(f"WEIGHT CLAMPED: {food_item['name']}")
-                                    logger.warning(f"Desired: {desired_weight_oz:.1f} oz → Clamped: {max_weight_oz:.1f} oz (~250g)")
-                                    logger.warning(f"Absorbed: {absorbed_calories:.0f} kcal | Spilled: {spilled_calories:.0f} kcal")
-                                    
-                                    spill_from_this_round += spilled_calories
-                                else:
-                                    actual_adjustment_ratio = desired_adjustment_ratio
-                            else:
-                                actual_adjustment_ratio = desired_adjustment_ratio
-                        food_item['name'] = self._adjust_serving_size_in_name(food_item['name'], actual_adjustment_ratio)
-                        for nutrient, value in food_item.get("nutrients", {}).items():
-                            if isinstance(value, (int, float)):
-                                food_item["nutrients"][nutrient] = value * actual_adjustment_ratio
-                        food_info['calories'] = food_item.get("nutrients", {}).get("Calories", old_cals)
-                        dense_marker = "" if food_info['is_dense'] else ""
-                        actual_added = food_info['calories'] - old_cals
-                        logger.info(f"   {dense_marker} {food_item['name']}: +{actual_added:.0f} kcal ({old_cals:.0f} → {food_info['calories']:.0f})")
-                    remaining_deficit = spill_from_this_round
-                    if spill_from_this_round < 10:
-                        logger.info(f"Deficit fully absorbed (remaining: {spill_from_this_round:.0f} kcal)")
-                        break
-                
-                if iteration >= MAX_ITERATIONS:
-                    logger.warning(f"Reached max iterations ({MAX_ITERATIONS}). Accepting {remaining_deficit:.0f} kcal gap.")
-                plan_data = self._recalculate_plan_json(plan_data)
-                current_total = plan_data.get("total_nutrients", {}).get("Calories", 0)
-                calorie_gap = target_tdee - current_total
-                logger.info(f"After Cap-and-Spill redistribution: {current_total:.1f} kcal (gap: {calorie_gap:+.1f} kcal)")
-            else:
-                logger.warning(f"No suitable calorie-dense foods found for deficit redistribution")
-                if abs(calorie_gap) > 50:
-                    logger.info(f"⚡ UNIVERSAL MULTIPLIER: Applying proportional scaling to all protein/fat items to close {calorie_gap:+.1f} kcal gap")
-                    
-                    meal_plan = plan_data.get("meal_plan", {})
-                    
-                    HARD_PROTEIN_CAP = 130.0  
-                    
-                    current_protein_g = 0.0
+                            actual_adjustment_ratio = desired_adjustment_ratio
+                    food_item['name'] = self._adjust_serving_size_in_name(food_item['name'], actual_adjustment_ratio)
+                    for nutrient, value in food_item.get("nutrients", {}).items():
+                        if isinstance(value, (int, float)):
+                            food_item["nutrients"][nutrient] = value * actual_adjustment_ratio
+                    food_info['calories'] = food_item.get("nutrients", {}).get("Calories", old_cals)
+                    dense_marker = "" if food_info['is_dense'] else ""
+                    actual_added = food_info['calories'] - old_cals
+                    logger.info(f"   {dense_marker} {food_item['name']}: +{actual_added:.0f} kcal ({old_cals:.0f} → {food_info['calories']:.0f})")
+                remaining_deficit = spill_from_this_round
+                if spill_from_this_round < 10:
+                    logger.info(f"Deficit fully absorbed (remaining: {spill_from_this_round:.0f} kcal)")
+                    break
+
+            if iteration >= MAX_ITERATIONS:
+                logger.warning(f"Reached max iterations ({MAX_ITERATIONS}). Accepting {remaining_deficit:.0f} kcal gap.")
+            plan_data = self._recalculate_plan_json(plan_data)
+            current_total = plan_data.get("total_nutrients", {}).get("Calories", 0)
+            calorie_gap = target_tdee - current_total
+            logger.info(f"After Cap-and-Spill redistribution: {current_total:.1f} kcal (gap: {calorie_gap:+.1f} kcal)")
+        else:
+            logger.warning(f"No suitable calorie-dense foods found for deficit redistribution")
+            if abs(calorie_gap) > 50:
+                logger.info(f"⚡ UNIVERSAL MULTIPLIER: Applying proportional scaling to all protein/fat items to close {calorie_gap:+.1f} kcal gap")
+
+                meal_plan = plan_data.get("meal_plan", {})
+
+                HARD_PROTEIN_CAP = 130.0  
+
+                current_protein_g = 0.0
+                for meal_name, foods in meal_plan.items():
+                    for food in foods:
+                        current_protein_g += food.get("nutrients", {}).get("Protein", 0)
+
+                protein_locked_foods = []
+                protein_cap_triggered = False
+
+                if current_protein_g > HARD_PROTEIN_CAP:
+                    protein_cap_triggered = True
+                    logger.warning(f" HARD PROTEIN CAP TRIGGERED: {current_protein_g:.1f}g > {HARD_PROTEIN_CAP}g")
+                    logger.warning(f"    LOCKING all protein-dominant foods at multiplier 1.0x")
+                    logger.warning(f"   ⚡ SHIFTING 100% of calorie deficit to Failsafe Fat Dump")
+
                     for meal_name, foods in meal_plan.items():
                         for food in foods:
-                            current_protein_g += food.get("nutrients", {}).get("Protein", 0)
-                    
-                    protein_locked_foods = []
-                    protein_cap_triggered = False
-                    
-                    if current_protein_g > HARD_PROTEIN_CAP:
-                        protein_cap_triggered = True
-                        logger.warning(f" HARD PROTEIN CAP TRIGGERED: {current_protein_g:.1f}g > {HARD_PROTEIN_CAP}g")
-                        logger.warning(f"    LOCKING all protein-dominant foods at multiplier 1.0x")
-                        logger.warning(f"   ⚡ SHIFTING 100% of calorie deficit to Failsafe Fat Dump")
-                        
-                        for meal_name, foods in meal_plan.items():
-                            for food in foods:
-                                protein_g = food.get("nutrients", {}).get("Protein", 0)
-                                fat_g = food.get("nutrients", {}).get("Fat", 0)
-                                carbs_g = food.get("nutrients", {}).get("Carbohydrates", 0)
-                                
-                                if protein_g > fat_g and protein_g > carbs_g:
-                                    food['locked'] = True
-                                    food['protein_locked'] = True  
-                                    protein_locked_foods.append(food['name'])
-                                    logger.debug(f" PROTEIN LOCK: '{food['name']}' (P:{protein_g:.1f}g > F:{fat_g:.1f}g, C:{carbs_g:.1f}g)")
-                        
-                        logger.info(f"    Locked {len(protein_locked_foods)} protein-dominant foods")
-                        logger.info(f"    Sample locked: {', '.join(protein_locked_foods[:3])}")
-                    else:
-                        logger.info(f"✓ Daily protein check: {current_protein_g:.1f}g / {HARD_PROTEIN_CAP}g ({current_protein_g/HARD_PROTEIN_CAP*100:.0f}%) - No lock needed")
-                    
-                    DO_NOT_SCALE = ['spinach', 'salad', 'fruit', 'nut', 'seed', 'oil', 'berry', 'apple', 
-                                   'dressing', 'almond', 'chia', 'flax', 'hemp', 'greens', 'lettuce', 
-                                   'tomato', 'carrot', 'cucumber', 'melon', 'grape', 'smoothie', 'oats', 
-                                   'broccoli', 'asparagus']
-                    
-                    COMPLEX_CARB_KEYWORDS = [
-                        'rice', 'quinoa', 'oats', 'oatmeal', 'barley', 'buckwheat', 'millet', 
-                        'farro', 'bulgur', 'couscous', 'pasta', 'noodle', 'bread', 'roti', 
-                        'chapati', 'tortilla', 'potato', 'sweet potato', 'yam', 'plantain',
-                        'lentil', 'dal', 'bean', 'chickpea', 'legume', 'peas'
-                    ]
-                    
-                    FIBROUS_VEGGIE_KEYWORDS = [
-                        'broccoli', 'cauliflower', 'cabbage', 'kale', 'spinach', 'chard', 
-                        'collard', 'lettuce', 'arugula', 'watercress', 'bok choy', 'brussels', 
-                        'asparagus', 'green beans', 'zucchini', 'cucumber', 'eggplant', 
-                        'bell pepper', 'tomato', 'carrot', 'celery', 'mushroom', 'squash'
-                    ]
-                    
-                    protein_fat_items = []
-                    low_cal_vegetables = [] 
-                    blocked_carbs_veggies = [] 
-                    
-                    for meal_name, foods in meal_plan.items():
-                        for idx, food in enumerate(foods):
-                            if food['name'] not in clamped_food_names:
-                                food_name_lower = food['name'].lower()
-                                
-                                if food.get('locked', False):
-                                    low_cal_vegetables.append((meal_name, idx, food, 0))
-                                    logger.debug(f"DAILY PROTEIN LOCK: '{food['name']}' - multiplier locked at 1.0x (protein-dominant)")
-                                    continue
-                                
-                                is_complex_carb = any(kw in food_name_lower for kw in COMPLEX_CARB_KEYWORDS)
-                                if is_complex_carb:
-                                    blocked_carbs_veggies.append(food['name'])
-                                    logger.debug(f" CARB BLOCK: '{food['name']}' - EXCLUDED from true-up (complex carb)")
-                                    continue
-                                
-                                is_fibrous_veggie = any(kw in food_name_lower for kw in FIBROUS_VEGGIE_KEYWORDS)
-                                if is_fibrous_veggie:
-                                    blocked_carbs_veggies.append(food['name'])
-                                    logger.debug(f" VEGGIE BLOCK: '{food['name']}' - EXCLUDED from true-up (fibrous veggie)")
-                                    continue
-                                
-                                if any(kw in food_name_lower for kw in DO_NOT_SCALE):
-                                    low_cal_vegetables.append((meal_name, idx, food, 0))
-                                    logger.debug(f" GARNISH LOCK: '{food['name']}' - multiplier locked at 1.0x (DO_NOT_SCALE list)")
-                                    continue
-                                
-                                total_calories = food.get("nutrients", {}).get("Calories", 0)
-                                if total_calories < 50:
-                                    low_cal_vegetables.append((meal_name, idx, food, 0))
-                                    logger.debug(f" LOW-CAL LOCK: '{food['name']}' ({total_calories:.1f} kcal) - multiplier locked at 1.0x")
-                                    continue
-                                
-                                calories_per_100g = 0
-                                portion_weight = food.get("nutrients", {}).get("Portion Weight", 100)
-                                if portion_weight > 0:
-                                    calories_per_100g = (total_calories / portion_weight) * 100
-                                
+                            protein_g = food.get("nutrients", {}).get("Protein", 0)
+                            fat_g = food.get("nutrients", {}).get("Fat", 0)
+                            carbs_g = food.get("nutrients", {}).get("Carbohydrates", 0)
 
-                                if calories_per_100g < 50:
-                                    low_cal_vegetables.append((meal_name, idx, food, calories_per_100g))
-                                    logger.debug(f"VEGETABLE LOCK: '{food['name']}' ({calories_per_100g:.1f} cal/100g) - multiplier locked at 1.0x")
-                                    continue
-                                
-                                protein_g = food.get("nutrients", {}).get("Protein", 0)
-                                fat_g = food.get("nutrients", {}).get("Fat", 0)
-                                if protein_g > 5 or fat_g > 3: 
-                                    protein_fat_items.append((meal_name, idx, food))
-                    
-                    if blocked_carbs_veggies:
-                        logger.info(f" TRUE-UP CARB/VEGGIE BLOCK: Excluded {len(blocked_carbs_veggies)} complex carbs and fibrous veggies from scaling")
-                        logger.info(f"   Sample blocked: {', '.join(blocked_carbs_veggies[:5])}")
-                    
-                    if protein_fat_items:
-                        required_multiplier = 1 + (calorie_gap / current_total)
-                        safe_multiplier = min(2.5, max(0.75, required_multiplier)) 
-                        
-                        if required_multiplier > 2.5:
-                            logger.warning(f" MULTIPLIER CAP REACHED: Required {required_multiplier:.2f}x, clamped to 2.5x")
-                            logger.warning(f"   Remaining deficit will be shifted to pure fats (olive oil, butter, avocado, nuts)")
-                        
-                        logger.info(f"Applying {safe_multiplier:.3f}x multiplier to {len(protein_fat_items)} protein/fat items")
-                        logger.info(f"   Locked {len(low_cal_vegetables)} low-calorie vegetables at 1.0x (no scaling)")
-                        
-                        for meal_name, idx, food in protein_fat_items:
-                            quantity, unit = self._extract_portion_from_name(food['name'])
-                            item_multiplier = safe_multiplier  
-                            
-                            if quantity and unit:
-                                unit_lower = unit.lower()
-                                scaled_qty = quantity * safe_multiplier
-                                max_qty = None
-                                
-                                if unit_lower in ['cup', 'cups']:
-                                    max_qty = 2.5
-                                elif unit_lower in ['tbsp', 'tablespoon', 'tablespoons']:
-                                    max_qty = 3.0
-                                elif unit_lower in ['oz', 'ozs', 'ounce', 'ounces']:
-                                    max_qty = 10.0
-                                
-                                if max_qty and scaled_qty > max_qty:
-                                    max_allowed_multiplier = max_qty / quantity
-                                    item_multiplier = min(safe_multiplier, max_allowed_multiplier)
-                                    logger.warning(f"FIX #4: Universal multiplier capped for '{food['name']}'")
-                                    logger.warning(f"   Would be: {scaled_qty:.2f} {unit} → Capped at: {max_qty} {unit}")
-                                    logger.warning(f"   Multiplier: {safe_multiplier:.2f}x → {item_multiplier:.2f}x")
-                            
-                            food['name'] = self._adjust_serving_size_in_name(food['name'], item_multiplier)
-                            
-                            for nutrient, value in food.get("nutrients", {}).items():
-                                if isinstance(value, (int, float)):
-                                    food["nutrients"][nutrient] = value * item_multiplier
-                            
-                            nutrients = food.get("nutrients", {})
-                            calories = nutrients.get("Calories", 0)
-                            protein = nutrients.get("Protein", 0)
-                            carbs = nutrients.get("Carbohydrates", 0)
-                            fat = nutrients.get("Fat", 0)
-                            
-                            calculated_calories = (protein * 4) + (carbs * 4) + (fat * 9)
-                            calorie_error = abs(calories - calculated_calories)
-                            calorie_error_pct = (calorie_error / calories * 100) if calories > 0 else 0
-                            
-                            if calorie_error_pct > 20:
-                                logger.error(f" UNIVERSAL MULTIPLIER VIOLATION: '{food['name']}'")
-                                logger.error(f"   Reported: {calories:.0f} kcal | Physics: {calculated_calories:.0f} kcal | Error: {calorie_error_pct:.1f}%")
-                                food["nutrients"]["Calories"] = calculated_calories
-                                logger.warning(f"    CORRECTED: Overriding to {calculated_calories:.0f} kcal")
-                        
-                        plan_data = self._recalculate_plan_json(plan_data)
-                        current_total = plan_data.get("total_nutrients", {}).get("Calories", 0)
-                        calorie_gap = target_tdee - current_total
-                        logger.info(f"After universal multiplier: {current_total:.1f} kcal (remaining gap: {calorie_gap:+.1f} kcal)")
-                        
-                        should_inject_fats = (protein_cap_triggered and calorie_gap > 50) or (calorie_gap > 100 and safe_multiplier >= 2.5)
-                        
-                        if should_inject_fats:
-                            reason = "PROTEIN CAP" if protein_cap_triggered else "MULTIPLIER CEILING"
-                            logger.warning(f"⚡ FAILSAFE CALORIE DUMP ACTIVATED ({reason})")
-                            logger.warning(f"   Remaining calorie gap: {calorie_gap:.0f} kcal")
-                            logger.warning(f"   Injecting healthy fats to reach target TDEE")
-                            
-                            fat_options = [
-                                {"name": "Extra Virgin Olive Oil", "cals_per_tbsp": 119, "fat_per_tbsp": 13.5, "carbs": 0.0, "fiber": 0.0},
-                                {"name": "Sliced Avocado", "cals_per_half": 160, "fat_per_half": 15.0, "carbs": 8.5, "fiber": 6.7},
-                                {"name": "Raw Almonds", "cals_per_oz": 164, "fat_per_oz": 14.2, "carbs": 6.1, "fiber": 3.5},
-                                {"name": "Chia Seeds", "cals_per_tbsp": 60, "fat_per_tbsp": 3.7, "carbs": 5.0, "fiber": 4.1}
-                            ]
-                            
-                            def is_fat_safe(fat_name: str) -> bool:
-                                fat_lower = fat_name.lower()
-                                
-                                allergies = user_constraints.get('allergies', [])
-                                for allergy in allergies:
-                                    allergy_lower = str(allergy).lower()
-                                    if any(keyword in fat_lower for keyword in ['nut', 'almond', 'tree nut']) and any(kw in allergy_lower for kw in ['nut', 'almond', 'tree nut']):
-                                        logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by allergy: {allergy}")
-                                        return False
-                                    if 'avocado' in fat_lower and 'avocado' in allergy_lower:
-                                        logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by allergy: {allergy}")
-                                        return False
-                                    if 'seed' in fat_lower and 'seed' in allergy_lower:
-                                        logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by allergy: {allergy}")
-                                        return False
-                                
-                                symptom_foods = user_constraints.get('symptom_aggravating_foods', [])
-                                for symptom_food in symptom_foods:
-                                    symptom_lower = str(symptom_food).lower()
-                                    if any(keyword in symptom_lower for keyword in fat_lower.split()):
-                                        logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by symptom food: {symptom_food}")
-                                        return False
-                                
-                                restrictions = user_constraints.get('dietary_restrictions', [])
-                                for restriction in restrictions:
-                                    restriction_lower = str(restriction).lower()
-                                    if 'nut' in restriction_lower and any(kw in fat_lower for kw in ['nut', 'almond']):
-                                        logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by restriction: {restriction}")
-                                        return False
-                                    if 'fat' in restriction_lower and 'low-fat' in restriction_lower:
-                                        logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by Low-Fat restriction")
-                                        return False
-                                
-                                dietary_pref = user_constraints.get('dietary_preference', '')
-                                if isinstance(dietary_pref, list):
-                                    dietary_pref = ', '.join(dietary_pref)
-                                
-                                return True
-                            
-                            safe_fat_options = [fat for fat in fat_options if is_fat_safe(fat['name'])]
-                            
-                            if not safe_fat_options:
-                                logger.error(f"    CRITICAL: All fat options blocked by user restrictions!")
-                                logger.error(f"   Allergies: {user_constraints.get('allergies', [])}")
-                                logger.error(f"   Symptom foods: {user_constraints.get('symptom_aggravating_foods', [])}")
-                                logger.error(f"   Cannot inject fats - accepting calorie gap of {calorie_gap:.0f} kcal")
+                            if protein_g > fat_g and protein_g > carbs_g:
+                                food['locked'] = True
+                                food['protein_locked'] = True  
+                                protein_locked_foods.append(food['name'])
+                                logger.debug(f" PROTEIN LOCK: '{food['name']}' (P:{protein_g:.1f}g > F:{fat_g:.1f}g, C:{carbs_g:.1f}g)")
+
+                    logger.info(f"    Locked {len(protein_locked_foods)} protein-dominant foods")
+                    logger.info(f"    Sample locked: {', '.join(protein_locked_foods[:3])}")
+                else:
+                    logger.info(f"✓ Daily protein check: {current_protein_g:.1f}g / {HARD_PROTEIN_CAP}g ({current_protein_g/HARD_PROTEIN_CAP*100:.0f}%) - No lock needed")
+
+                DO_NOT_SCALE = ['spinach', 'salad', 'fruit', 'nut', 'seed', 'oil', 'berry', 'apple', 
+                               'dressing', 'almond', 'chia', 'flax', 'hemp', 'greens', 'lettuce', 
+                               'tomato', 'carrot', 'cucumber', 'melon', 'grape', 'smoothie', 'oats', 
+                               'broccoli', 'asparagus']
+
+                COMPLEX_CARB_KEYWORDS = [
+                    'rice', 'quinoa', 'oats', 'oatmeal', 'barley', 'buckwheat', 'millet', 
+                    'farro', 'bulgur', 'couscous', 'pasta', 'noodle', 'bread', 'roti', 
+                    'chapati', 'tortilla', 'potato', 'sweet potato', 'yam', 'plantain',
+                    'lentil', 'dal', 'bean', 'chickpea', 'legume', 'peas'
+                ]
+
+                FIBROUS_VEGGIE_KEYWORDS = [
+                    'broccoli', 'cauliflower', 'cabbage', 'kale', 'spinach', 'chard', 
+                    'collard', 'lettuce', 'arugula', 'watercress', 'bok choy', 'brussels', 
+                    'asparagus', 'green beans', 'zucchini', 'cucumber', 'eggplant', 
+                    'bell pepper', 'tomato', 'carrot', 'celery', 'mushroom', 'squash'
+                ]
+
+                protein_fat_items = []
+                low_cal_vegetables = [] 
+                blocked_carbs_veggies = [] 
+
+                for meal_name, foods in meal_plan.items():
+                    for idx, food in enumerate(foods):
+                        if food['name'] not in clamped_food_names:
+                            food_name_lower = food['name'].lower()
+
+                            if food.get('locked', False):
+                                low_cal_vegetables.append((meal_name, idx, food, 0))
+                                logger.debug(f"DAILY PROTEIN LOCK: '{food['name']}' - multiplier locked at 1.0x (protein-dominant)")
+                                continue
+
+                            is_complex_carb = any(kw in food_name_lower for kw in COMPLEX_CARB_KEYWORDS)
+                            if is_complex_carb:
+                                blocked_carbs_veggies.append(food['name'])
+                                logger.debug(f" CARB BLOCK: '{food['name']}' - EXCLUDED from true-up (complex carb)")
+                                continue
+
+                            is_fibrous_veggie = any(kw in food_name_lower for kw in FIBROUS_VEGGIE_KEYWORDS)
+                            if is_fibrous_veggie:
+                                blocked_carbs_veggies.append(food['name'])
+                                logger.debug(f" VEGGIE BLOCK: '{food['name']}' - EXCLUDED from true-up (fibrous veggie)")
+                                continue
+
+                            if any(kw in food_name_lower for kw in DO_NOT_SCALE):
+                                low_cal_vegetables.append((meal_name, idx, food, 0))
+                                logger.debug(f" GARNISH LOCK: '{food['name']}' - multiplier locked at 1.0x (DO_NOT_SCALE list)")
+                                continue
+
+                            total_calories = food.get("nutrients", {}).get("Calories", 0)
+                            if total_calories < 50:
+                                low_cal_vegetables.append((meal_name, idx, food, 0))
+                                logger.debug(f" LOW-CAL LOCK: '{food['name']}' ({total_calories:.1f} kcal) - multiplier locked at 1.0x")
+                                continue
+
+                            calories_per_100g = 0
+                            portion_weight = food.get("nutrients", {}).get("Portion Weight", 100)
+                            if portion_weight > 0:
+                                calories_per_100g = (total_calories / portion_weight) * 100
+
+
+                            if calories_per_100g < 50:
+                                low_cal_vegetables.append((meal_name, idx, food, calories_per_100g))
+                                logger.debug(f"VEGETABLE LOCK: '{food['name']}' ({calories_per_100g:.1f} cal/100g) - multiplier locked at 1.0x")
+                                continue
+
+                            protein_g = food.get("nutrients", {}).get("Protein", 0)
+                            fat_g = food.get("nutrients", {}).get("Fat", 0)
+                            if protein_g > 5 or fat_g > 3: 
+                                protein_fat_items.append((meal_name, idx, food))
+
+                if blocked_carbs_veggies:
+                    logger.info(f" TRUE-UP CARB/VEGGIE BLOCK: Excluded {len(blocked_carbs_veggies)} complex carbs and fibrous veggies from scaling")
+                    logger.info(f"   Sample blocked: {', '.join(blocked_carbs_veggies[:5])}")
+
+                if protein_fat_items:
+                    required_multiplier = 1 + (calorie_gap / current_total)
+                    safe_multiplier = min(2.5, max(0.75, required_multiplier)) 
+
+                    if required_multiplier > 2.5:
+                        logger.warning(f" MULTIPLIER CAP REACHED: Required {required_multiplier:.2f}x, clamped to 2.5x")
+                        logger.warning(f"   Remaining deficit will be shifted to pure fats (olive oil, butter, avocado, nuts)")
+
+                    logger.info(f"Applying {safe_multiplier:.3f}x multiplier to {len(protein_fat_items)} protein/fat items")
+                    logger.info(f"   Locked {len(low_cal_vegetables)} low-calorie vegetables at 1.0x (no scaling)")
+
+                    for meal_name, idx, food in protein_fat_items:
+                        quantity, unit = self._extract_portion_from_name(food['name'])
+                        item_multiplier = safe_multiplier  
+
+                        if quantity and unit:
+                            unit_lower = unit.lower()
+                            scaled_qty = quantity * safe_multiplier
+                            max_qty = None
+
+                            if unit_lower in ['cup', 'cups']:
+                                max_qty = 2.5
+                            elif unit_lower in ['tbsp', 'tablespoon', 'tablespoons']:
+                                max_qty = 3.0
+                            elif unit_lower in ['oz', 'ozs', 'ounce', 'ounces']:
+                                max_qty = 10.0
+
+                            if max_qty and scaled_qty > max_qty:
+                                max_allowed_multiplier = max_qty / quantity
+                                item_multiplier = min(safe_multiplier, max_allowed_multiplier)
+                                logger.warning(f"FIX #4: Universal multiplier capped for '{food['name']}'")
+                                logger.warning(f"   Would be: {scaled_qty:.2f} {unit} → Capped at: {max_qty} {unit}")
+                                logger.warning(f"   Multiplier: {safe_multiplier:.2f}x → {item_multiplier:.2f}x")
+
+                        food['name'] = self._adjust_serving_size_in_name(food['name'], item_multiplier)
+
+                        for nutrient, value in food.get("nutrients", {}).items():
+                            if isinstance(value, (int, float)):
+                                food["nutrients"][nutrient] = value * item_multiplier
+
+                        nutrients = food.get("nutrients", {})
+                        calories = nutrients.get("Calories", 0)
+                        protein = nutrients.get("Protein", 0)
+                        carbs = nutrients.get("Carbohydrates", 0)
+                        fat = nutrients.get("Fat", 0)
+
+                        calculated_calories = (protein * 4) + (carbs * 4) + (fat * 9)
+                        calorie_error = abs(calories - calculated_calories)
+                        calorie_error_pct = (calorie_error / calories * 100) if calories > 0 else 0
+
+                        if calorie_error_pct > 20:
+                            logger.error(f" UNIVERSAL MULTIPLIER VIOLATION: '{food['name']}'")
+                            logger.error(f"   Reported: {calories:.0f} kcal | Physics: {calculated_calories:.0f} kcal | Error: {calorie_error_pct:.1f}%")
+                            food["nutrients"]["Calories"] = calculated_calories
+                            logger.warning(f"    CORRECTED: Overriding to {calculated_calories:.0f} kcal")
+
+                    plan_data = self._recalculate_plan_json(plan_data)
+                    current_total = plan_data.get("total_nutrients", {}).get("Calories", 0)
+                    calorie_gap = target_tdee - current_total
+                    logger.info(f"After universal multiplier: {current_total:.1f} kcal (remaining gap: {calorie_gap:+.1f} kcal)")
+
+                    should_inject_fats = (protein_cap_triggered and calorie_gap > 50) or (calorie_gap > 100 and safe_multiplier >= 2.5)
+
+                    if should_inject_fats:
+                        reason = "PROTEIN CAP" if protein_cap_triggered else "MULTIPLIER CEILING"
+                        logger.warning(f"⚡ FAILSAFE CALORIE DUMP ACTIVATED ({reason})")
+                        logger.warning(f"   Remaining calorie gap: {calorie_gap:.0f} kcal")
+                        logger.warning(f"   Injecting healthy fats to reach target TDEE")
+
+                        fat_options = [
+                            {"name": "Extra Virgin Olive Oil", "cals_per_tbsp": 119, "fat_per_tbsp": 13.5, "carbs": 0.0, "fiber": 0.0},
+                            {"name": "Sliced Avocado", "cals_per_half": 160, "fat_per_half": 15.0, "carbs": 8.5, "fiber": 6.7},
+                            {"name": "Raw Almonds", "cals_per_oz": 164, "fat_per_oz": 14.2, "carbs": 6.1, "fiber": 3.5},
+                            {"name": "Chia Seeds", "cals_per_tbsp": 60, "fat_per_tbsp": 3.7, "carbs": 5.0, "fiber": 4.1}
+                        ]
+
+                        def is_fat_safe(fat_name: str) -> bool:
+                            fat_lower = fat_name.lower()
+
+                            allergies = user_constraints.get('allergies', [])
+                            for allergy in allergies:
+                                allergy_lower = str(allergy).lower()
+                                if any(keyword in fat_lower for keyword in ['nut', 'almond', 'tree nut']) and any(kw in allergy_lower for kw in ['nut', 'almond', 'tree nut']):
+                                    logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by allergy: {allergy}")
+                                    return False
+                                if 'avocado' in fat_lower and 'avocado' in allergy_lower:
+                                    logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by allergy: {allergy}")
+                                    return False
+                                if 'seed' in fat_lower and 'seed' in allergy_lower:
+                                    logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by allergy: {allergy}")
+                                    return False
+
+                            symptom_foods = user_constraints.get('symptom_aggravating_foods', [])
+                            for symptom_food in symptom_foods:
+                                symptom_lower = str(symptom_food).lower()
+                                if any(keyword in symptom_lower for keyword in fat_lower.split()):
+                                    logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by symptom food: {symptom_food}")
+                                    return False
+
+                            restrictions = user_constraints.get('dietary_restrictions', [])
+                            for restriction in restrictions:
+                                restriction_lower = str(restriction).lower()
+                                if 'nut' in restriction_lower and any(kw in fat_lower for kw in ['nut', 'almond']):
+                                    logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by restriction: {restriction}")
+                                    return False
+                                if 'fat' in restriction_lower and 'low-fat' in restriction_lower:
+                                    logger.warning(f"    SAFETY BLOCK: {fat_name} blocked by Low-Fat restriction")
+                                    return False
+
+                            dietary_pref = user_constraints.get('dietary_preference', '')
+                            if isinstance(dietary_pref, list):
+                                dietary_pref = ', '.join(dietary_pref)
+
+                            return True
+
+                        safe_fat_options = [fat for fat in fat_options if is_fat_safe(fat['name'])]
+
+                        if not safe_fat_options:
+                            logger.error(f"    CRITICAL: All fat options blocked by user restrictions!")
+                            logger.error(f"   Allergies: {user_constraints.get('allergies', [])}")
+                            logger.error(f"   Symptom foods: {user_constraints.get('symptom_aggravating_foods', [])}")
+                            logger.error(f"   Cannot inject fats - accepting calorie gap of {calorie_gap:.0f} kcal")
+                        else:
+                            logger.info(f"    {len(safe_fat_options)}/{len(fat_options)} fat options are safe for user")
+                            fat_options = safe_fat_options  
+
+                            olive_oil_already_used = False
+                            meal_plan = plan_data.get("meal_plan", {})
+
+                            for meal_name, foods in meal_plan.items():
+                                for food in foods:
+                                    if "Olive Oil" in food.get("name", ""):
+                                        olive_oil_already_used = True
+                                        break
+                                if olive_oil_already_used:
+                                    break
+
+                            if calorie_gap > 300:
+                                chosen_fat = fat_options[1] if len(fat_options) > 1 else fat_options[0]  
+                                units_needed = calorie_gap / chosen_fat.get("cals_per_half", chosen_fat.get("cals_per_tbsp", 100))
+                                unit_name = "half" if "cals_per_half" in chosen_fat else "tbsp"
+                                fat_per_unit = chosen_fat.get("fat_per_half", chosen_fat.get("fat_per_tbsp"))
+                                carbs_per_unit = chosen_fat.get("carbs", 0.0)
+                                fiber_per_unit = chosen_fat.get("fiber", 0.0)
+                                portion_oz = units_needed * (2.5 if unit_name == "half" else 0.47)
+                                actual_cals = units_needed * chosen_fat.get("cals_per_half", chosen_fat.get("cals_per_tbsp", 100))
+                            elif calorie_gap > 150:
+                                chosen_fat = fat_options[2] if len(fat_options) > 2 else fat_options[0]  
+                                units_needed = calorie_gap / chosen_fat.get("cals_per_oz", chosen_fat.get("cals_per_tbsp", 100))
+                                unit_name = "oz" if "cals_per_oz" in chosen_fat else "tbsp"
+                                fat_per_unit = chosen_fat.get("fat_per_oz", chosen_fat.get("fat_per_tbsp"))
+                                carbs_per_unit = chosen_fat.get("carbs", 0.0)
+                                fiber_per_unit = chosen_fat.get("fiber", 0.0)
+                                portion_oz = units_needed if unit_name == "oz" else units_needed * 0.47
+                                actual_cals = units_needed * chosen_fat.get("cals_per_oz", chosen_fat.get("cals_per_tbsp", 100))
                             else:
-                                logger.info(f"    {len(safe_fat_options)}/{len(fat_options)} fat options are safe for user")
-                                fat_options = safe_fat_options  
-                                
-                                olive_oil_already_used = False
-                                meal_plan = plan_data.get("meal_plan", {})
-                                
+                                if not olive_oil_already_used and len(fat_options) > 0 and "Olive Oil" in fat_options[0]['name']:
+                                    chosen_fat = fat_options[0]  
+                                    units_needed = calorie_gap / chosen_fat.get("cals_per_tbsp", 100)
+                                    unit_name = "tbsp"
+                                    fat_per_unit = chosen_fat.get("fat_per_tbsp")
+                                    carbs_per_unit = chosen_fat.get("carbs", 0.0)
+                                    fiber_per_unit = chosen_fat.get("fiber", 0.0)
+                                    portion_oz = units_needed * 0.47  
+                                    actual_cals = units_needed * chosen_fat.get("cals_per_tbsp", 100)
+                                else:
+                                    logger.info(f"    Olive oil unavailable, using alternative fat")
+                                    chosen_fat = fat_options[-1] if fat_options else {"name": "Safe Fat", "cals_per_tbsp": 60, "fat_per_tbsp": 5.0, "carbs": 0.0, "fiber": 0.0}
+                                    units_needed = calorie_gap / chosen_fat.get("cals_per_tbsp", 60)
+                                    unit_name = "tbsp"
+                                    fat_per_unit = chosen_fat.get("fat_per_tbsp", 5.0)
+                                    carbs_per_unit = chosen_fat.get("carbs", 0.0)
+                                    fiber_per_unit = chosen_fat.get("fiber", 0.0)
+                                    portion_oz = units_needed * 0.35  
+                                    actual_cals = units_needed * chosen_fat.get("cals_per_tbsp", 60)
+
+                            target_meal = None
+
+                            if "Olive Oil" in chosen_fat["name"] and not olive_oil_already_used:
                                 for meal_name, foods in meal_plan.items():
                                     for food in foods:
-                                        if "Olive Oil" in food.get("name", ""):
-                                            olive_oil_already_used = True
+                                        food_name = food.get("name", "").lower()
+                                        if any(keyword in food_name for keyword in ["salad", "greens", "lettuce", "spinach", "arugula", "mixed greens"]):
+                                            target_meal = meal_name
+                                            logger.info(f"   🥗 Found salad in {meal_name}, adding olive oil as dressing")
                                             break
-                                    if olive_oil_already_used:
+                                    if target_meal:
                                         break
-                                
-                                if calorie_gap > 300:
-                                    chosen_fat = fat_options[1] if len(fat_options) > 1 else fat_options[0]  
-                                    units_needed = calorie_gap / chosen_fat.get("cals_per_half", chosen_fat.get("cals_per_tbsp", 100))
-                                    unit_name = "half" if "cals_per_half" in chosen_fat else "tbsp"
-                                    fat_per_unit = chosen_fat.get("fat_per_half", chosen_fat.get("fat_per_tbsp"))
-                                    carbs_per_unit = chosen_fat.get("carbs", 0.0)
-                                    fiber_per_unit = chosen_fat.get("fiber", 0.0)
-                                    portion_oz = units_needed * (2.5 if unit_name == "half" else 0.47)
-                                    actual_cals = units_needed * chosen_fat.get("cals_per_half", chosen_fat.get("cals_per_tbsp", 100))
-                                elif calorie_gap > 150:
-                                    chosen_fat = fat_options[2] if len(fat_options) > 2 else fat_options[0]  
-                                    units_needed = calorie_gap / chosen_fat.get("cals_per_oz", chosen_fat.get("cals_per_tbsp", 100))
-                                    unit_name = "oz" if "cals_per_oz" in chosen_fat else "tbsp"
-                                    fat_per_unit = chosen_fat.get("fat_per_oz", chosen_fat.get("fat_per_tbsp"))
-                                    carbs_per_unit = chosen_fat.get("carbs", 0.0)
-                                    fiber_per_unit = chosen_fat.get("fiber", 0.0)
-                                    portion_oz = units_needed if unit_name == "oz" else units_needed * 0.47
-                                    actual_cals = units_needed * chosen_fat.get("cals_per_oz", chosen_fat.get("cals_per_tbsp", 100))
-                                else:
-                                    if not olive_oil_already_used and len(fat_options) > 0 and "Olive Oil" in fat_options[0]['name']:
-                                        chosen_fat = fat_options[0]  
-                                        units_needed = calorie_gap / chosen_fat.get("cals_per_tbsp", 100)
-                                        unit_name = "tbsp"
-                                        fat_per_unit = chosen_fat.get("fat_per_tbsp")
-                                        carbs_per_unit = chosen_fat.get("carbs", 0.0)
-                                        fiber_per_unit = chosen_fat.get("fiber", 0.0)
-                                        portion_oz = units_needed * 0.47  
-                                        actual_cals = units_needed * chosen_fat.get("cals_per_tbsp", 100)
-                                    else:
-                                        logger.info(f"    Olive oil unavailable, using alternative fat")
-                                        chosen_fat = fat_options[-1] if fat_options else {"name": "Safe Fat", "cals_per_tbsp": 60, "fat_per_tbsp": 5.0, "carbs": 0.0, "fiber": 0.0}
+
+                                if not target_meal:
+                                    logger.info(f"    No salad found in meal plan, using alternative fat")
+                                    if len(fat_options) > 1:
+                                        chosen_fat = fat_options[-1]
                                         units_needed = calorie_gap / chosen_fat.get("cals_per_tbsp", 60)
                                         unit_name = "tbsp"
                                         fat_per_unit = chosen_fat.get("fat_per_tbsp", 5.0)
                                         carbs_per_unit = chosen_fat.get("carbs", 0.0)
                                         fiber_per_unit = chosen_fat.get("fiber", 0.0)
-                                        portion_oz = units_needed * 0.35  
+                                        portion_oz = units_needed * 0.35
                                         actual_cals = units_needed * chosen_fat.get("cals_per_tbsp", 60)
-                                
-                                target_meal = None
-                                
-                                if "Olive Oil" in chosen_fat["name"] and not olive_oil_already_used:
-                                    for meal_name, foods in meal_plan.items():
-                                        for food in foods:
-                                            food_name = food.get("name", "").lower()
-                                            if any(keyword in food_name for keyword in ["salad", "greens", "lettuce", "spinach", "arugula", "mixed greens"]):
-                                                target_meal = meal_name
-                                                logger.info(f"   🥗 Found salad in {meal_name}, adding olive oil as dressing")
-                                                break
-                                        if target_meal:
-                                            break
-                                    
-                                    if not target_meal:
-                                        logger.info(f"    No salad found in meal plan, using alternative fat")
-                                        if len(fat_options) > 1:
-                                            chosen_fat = fat_options[-1]
-                                            units_needed = calorie_gap / chosen_fat.get("cals_per_tbsp", 60)
-                                            unit_name = "tbsp"
-                                            fat_per_unit = chosen_fat.get("fat_per_tbsp", 5.0)
-                                            carbs_per_unit = chosen_fat.get("carbs", 0.0)
-                                            fiber_per_unit = chosen_fat.get("fiber", 0.0)
-                                            portion_oz = units_needed * 0.35
-                                            actual_cals = units_needed * chosen_fat.get("cals_per_tbsp", 60)
-                                        largest_meal_cals = 0
-                                        for meal_name, foods in meal_plan.items():
-                                            meal_cals = sum(food.get("nutrients", {}).get("Calories", 0) for food in foods)
-                                            if meal_cals > largest_meal_cals:
-                                                largest_meal_cals = meal_cals
-                                                target_meal = meal_name
-                                else:
                                     largest_meal_cals = 0
                                     for meal_name, foods in meal_plan.items():
                                         meal_cals = sum(food.get("nutrients", {}).get("Calories", 0) for food in foods)
                                         if meal_cals > largest_meal_cals:
                                             largest_meal_cals = meal_cals
                                             target_meal = meal_name
-                                
-                                if target_meal:
-                                    fat_display_name = f"{chosen_fat['name']} (Dressing)" if "Olive Oil" in chosen_fat["name"] else chosen_fat['name']
-                                    logger.info(f"   ➜ FAT INJECTION into {target_meal}: {units_needed:.2f} {unit_name} {fat_display_name} ({actual_cals:.0f} kcal)")
-                                    
-                                    fat_dump_item = {
-                                        "name": f"{fat_display_name} ({units_needed:.2f} {unit_name})",
-                                        "nutrients": {
-                                            "Portion Weight": round(portion_oz * 28.35, 1), 
-                                            "Calories": int(actual_cals),
-                                            "Protein": 0.0 if "Oil" in chosen_fat["name"] else round(units_needed * 2.0, 1),
-                                            "Carbohydrates": round(units_needed * carbs_per_unit, 1),
-                                            "Fat": round(units_needed * fat_per_unit, 1),
-                                            "Fiber": round(units_needed * fiber_per_unit, 1),
-                                            "Sodium": 0.0,
-                                            "Sugar": 0.0,
-                                            "Cholesterol": 0.0,
-                                            "Iodine": 0.0
-                                        }
+                            else:
+                                largest_meal_cals = 0
+                                for meal_name, foods in meal_plan.items():
+                                    meal_cals = sum(food.get("nutrients", {}).get("Calories", 0) for food in foods)
+                                    if meal_cals > largest_meal_cals:
+                                        largest_meal_cals = meal_cals
+                                        target_meal = meal_name
+
+                            if target_meal:
+                                fat_display_name = f"{chosen_fat['name']} (Dressing)" if "Olive Oil" in chosen_fat["name"] else chosen_fat['name']
+                                logger.info(f"   ➜ FAT INJECTION into {target_meal}: {units_needed:.2f} {unit_name} {fat_display_name} ({actual_cals:.0f} kcal)")
+
+                                fat_dump_item = {
+                                    "name": f"{fat_display_name} ({units_needed:.2f} {unit_name})",
+                                    "nutrients": {
+                                        "Portion Weight": round(portion_oz * 28.35, 1), 
+                                        "Calories": int(actual_cals),
+                                        "Protein": 0.0 if "Oil" in chosen_fat["name"] else round(units_needed * 2.0, 1),
+                                        "Carbohydrates": round(units_needed * carbs_per_unit, 1),
+                                        "Fat": round(units_needed * fat_per_unit, 1),
+                                        "Fiber": round(units_needed * fiber_per_unit, 1),
+                                        "Sodium": 0.0,
+                                        "Sugar": 0.0,
+                                        "Cholesterol": 0.0,
+                                        "Iodine": 0.0
                                     }
-                                    
-                                    meal_plan[target_meal].append(fat_dump_item)
-                                    plan_data = self._recalculate_plan_json(plan_data)
-                                    current_total = plan_data.get("total_nutrients", {}).get("Calories", 0)
-                                    calorie_gap = target_tdee - current_total
-                                    logger.info(f"    Fat dump complete: Total now {current_total:.1f} kcal (gap: {calorie_gap:+.1f} kcal)")
-                                else:
-                                    logger.warning(f"    No suitable meal found for fat injection")
+                                }
+
+                                meal_plan[target_meal].append(fat_dump_item)
+                                plan_data = self._recalculate_plan_json(plan_data)
+                                current_total = plan_data.get("total_nutrients", {}).get("Calories", 0)
+                                calorie_gap = target_tdee - current_total
+                                logger.info(f"    Fat dump complete: Total now {current_total:.1f} kcal (gap: {calorie_gap:+.1f} kcal)")
+                            else:
+                                logger.warning(f"    No suitable meal found for fat injection")
         
         if abs(calorie_gap) <= 25.0:
             logger.info(f"True-up complete: Plan within acceptable tolerance ({current_total:.1f} kcal, target: {target_tdee} kcal, gap: {calorie_gap:+.1f} kcal)")

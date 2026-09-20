@@ -366,8 +366,9 @@ def render_unified_profile_form():
             nut_cuisine = st.multiselect("Preferred Cuisine", options=CUISINE_OPTIONS, key="nut_cuisine")
             nut_food_allergies = st.multiselect("Food Allergies", options=FOOD_ALLERGIES_OPTIONS, key="nut_allergies")
 
-        st.markdown("##### Upload Blood Report (Optional)")
-        nut_uploaded_blood_report = st.file_uploader("Upload a blood report (PDF, JPG, JPEG, PNG, DOCX, CSV, TXT)", type=["pdf", "jpg", "jpeg", "png", "docx", "csv", "txt"], key="nut_uploader")
+        # st.markdown("##### Upload Blood Report (Optional)")
+        # nut_uploaded_blood_report = st.file_uploader("Upload a blood report (PDF, JPG, JPEG, PNG, DOCX, CSV, TXT)", type=["pdf", "jpg", "jpeg", "png", "docx", "csv", "txt"], key="nut_uploader")
+        nut_uploaded_blood_report = None
 
         st.markdown("##### Vital Signs (Optional, numeric values only)")
         
@@ -812,66 +813,67 @@ else:
         st.title("Personalised Meal Plan Generator")
         st.write("Premium UI is unavailable in this environment.")
 
-    with st.expander("✏️ Edit Profile and Regenerate Plan", expanded=False):
-        constraints = st.session_state.current_constraints
-        existing_diet = constraints.get("dietary_preference", [])
-        if isinstance(existing_diet, str):
-            existing_diet = [existing_diet]
-
-        with st.form("edit_meal_plan_profile_form"):
-            edit_col1, edit_col2 = st.columns(2)
-            with edit_col1:
-                edit_name = st.text_input("First Name", value=constraints.get("name", ""), key="edit_plan_name")
-                edit_age = st.number_input("Age", min_value=18, max_value=100, value=int(constraints.get("age", 30)), key="edit_plan_age")
-                edit_weight = st.number_input("Weight (kg)", min_value=30.0, max_value=300.0, value=float(constraints.get("weight_kg", 75.0)), key="edit_plan_weight")
-                edit_gender = st.selectbox("Gender", ["Male", "Female"], index=0 if constraints.get("gender", "Male") == "Male" else 1, key="edit_plan_gender")
-                edit_activity = st.selectbox("Activity Level", ["Sedentary", "Lightly active", "Moderately active", "Very active", "Extra active"], index=2, key="edit_plan_activity")
-            with edit_col2:
-                edit_diet = st.multiselect("Dietary Preference", DIETARY_PREFERENCE_OPTIONS, default=[x for x in existing_diet if x in DIETARY_PREFERENCE_OPTIONS], key="edit_plan_diet")
-                edit_restrictions = st.multiselect("Dietary Restrictions", DIETARY_RESTRICTION_OPTIONS, default=[x for x in constraints.get("restrictions", []) if x in DIETARY_RESTRICTION_OPTIONS], key="edit_plan_restrictions")
-                edit_conditions = st.multiselect("Medical Conditions", MEDICAL_CONDITIONS_NUTRITION_OPTIONS, default=[x for x in constraints.get("medical_conditions", []) if x in MEDICAL_CONDITIONS_NUTRITION_OPTIONS], key="edit_plan_conditions")
-                edit_allergies = st.multiselect("Food Allergies", FOOD_ALLERGIES_OPTIONS, default=[x for x in constraints.get("allergies", []) if x in FOOD_ALLERGIES_OPTIONS], key="edit_plan_allergies")
-                edit_cuisine = st.multiselect("Preferred Cuisine", CUISINE_OPTIONS, default=[x for x in constraints.get("cuisine", []) if x in CUISINE_OPTIONS], key="edit_plan_cuisine")
-                edit_digestive = st.multiselect("Digestive Issues", DIGESTIVE_ISSUES_OPTIONS, default=[x for x in constraints.get("digestive_issues", []) if x in DIGESTIVE_ISSUES_OPTIONS], key="edit_plan_digestive")
-                edit_symptoms = st.multiselect("Symptom-Aggravating Foods", SYMPTOM_AGGRAVATING_FOODS_OPTIONS, default=[x for x in constraints.get("symptom_aggravating_foods", []) if x in SYMPTOM_AGGRAVATING_FOODS_OPTIONS], key="edit_plan_symptoms")
-
-            edit_profile_submitted = st.form_submit_button("Save Profile and Regenerate 7-Day Plan", type="primary", use_container_width=True)
-
-        if edit_profile_submitted:
-            updated_profile = {
-                **constraints,
-                "name": edit_name,
-                "age": edit_age,
-                "weight_kg": edit_weight,
-                "gender": edit_gender,
-                "activity_level": edit_activity.lower(),
-                "dietary_preference": edit_diet,
-                "restrictions": edit_restrictions,
-                "medical_conditions": edit_conditions,
-                "allergies": edit_allergies,
-                "cuisine": edit_cuisine,
-                "digestive_issues": edit_digestive,
-                "symptom_aggravating_foods": edit_symptoms,
-            }
-            edit_start_date = datetime.now().date()
-            edit_end_date = edit_start_date + timedelta(days=6)
-            with st.spinner("Regenerating your meal plan from the updated profile..."):
-                edit_response = call_meal_plan_api(
-                    profile=updated_profile,
-                    query="Generate a complete 7-day meal plan based on my updated profile.",
-                    token=st.session_state.auth_token,
-                    force_tool_type="weekly_meal_plan_generator",
-                    start_date=edit_start_date.isoformat(),
-                    end_date=edit_end_date.isoformat()
-                )
-            if edit_response and isinstance(edit_response.get("data"), dict):
-                edit_data = edit_response["data"]
-                st.session_state.current_constraints = edit_data.get("updated_constraints", updated_profile)
-                st.session_state.weekly_meal_plan = edit_data.get("answer", "")
-                st.session_state.last_agent_context = edit_data.get("updated_last_agent_context", st.session_state.last_agent_context)
-                st.rerun()
-            else:
-                st.error("The updated seven-day meal plan could not be generated.")
+    # Edit Profile and Regenerate Plan UI disabled per request.
+    # with st.expander("✏️ Edit Profile and Regenerate Plan", expanded=False):
+    #     constraints = st.session_state.current_constraints
+    #     existing_diet = constraints.get("dietary_preference", [])
+    #     if isinstance(existing_diet, str):
+    #         existing_diet = [existing_diet]
+    #
+    #     with st.form("edit_meal_plan_profile_form"):
+    #         edit_col1, edit_col2 = st.columns(2)
+    #         with edit_col1:
+    #             edit_name = st.text_input("First Name", value=constraints.get("name", ""), key="edit_plan_name")
+    #             edit_age = st.number_input("Age", min_value=18, max_value=100, value=int(constraints.get("age", 30)), key="edit_plan_age")
+    #             edit_weight = st.number_input("Weight (kg)", min_value=30.0, max_value=300.0, value=float(constraints.get("weight_kg", 75.0)), key="edit_plan_weight")
+    #             edit_gender = st.selectbox("Gender", ["Male", "Female"], index=0 if constraints.get("gender", "Male") == "Male" else 1, key="edit_plan_gender")
+    #             edit_activity = st.selectbox("Activity Level", ["Sedentary", "Lightly active", "Moderately active", "Very active", "Extra active"], index=2, key="edit_plan_activity")
+    #         with edit_col2:
+    #             edit_diet = st.multiselect("Dietary Preference", DIETARY_PREFERENCE_OPTIONS, default=[x for x in existing_diet if x in DIETARY_PREFERENCE_OPTIONS], key="edit_plan_diet")
+    #             edit_restrictions = st.multiselect("Dietary Restrictions", DIETARY_RESTRICTION_OPTIONS, default=[x for x in constraints.get("restrictions", []) if x in DIETARY_RESTRICTION_OPTIONS], key="edit_plan_restrictions")
+    #             edit_conditions = st.multiselect("Medical Conditions", MEDICAL_CONDITIONS_NUTRITION_OPTIONS, default=[x for x in constraints.get("medical_conditions", []) if x in MEDICAL_CONDITIONS_NUTRITION_OPTIONS], key="edit_plan_conditions")
+    #             edit_allergies = st.multiselect("Food Allergies", FOOD_ALLERGIES_OPTIONS, default=[x for x in constraints.get("allergies", []) if x in FOOD_ALLERGIES_OPTIONS], key="edit_plan_allergies")
+    #             edit_cuisine = st.multiselect("Preferred Cuisine", CUISINE_OPTIONS, default=[x for x in constraints.get("cuisine", []) if x in CUISINE_OPTIONS], key="edit_plan_cuisine")
+    #             edit_digestive = st.multiselect("Digestive Issues", DIGESTIVE_ISSUES_OPTIONS, default=[x for x in constraints.get("digestive_issues", []) if x in DIGESTIVE_ISSUES_OPTIONS], key="edit_plan_digestive")
+    #             edit_symptoms = st.multiselect("Symptom-Aggravating Foods", SYMPTOM_AGGRAVATING_FOODS_OPTIONS, default=[x for x in constraints.get("symptom_aggravating_foods", []) if x in SYMPTOM_AGGRAVATING_FOODS_OPTIONS], key="edit_plan_symptoms")
+    #
+    #         edit_profile_submitted = st.form_submit_button("Save Profile and Regenerate 7-Day Plan", type="primary", use_container_width=True)
+    #
+    #     if edit_profile_submitted:
+    #         updated_profile = {
+    #             **constraints,
+    #             "name": edit_name,
+    #             "age": edit_age,
+    #             "weight_kg": edit_weight,
+    #             "gender": edit_gender,
+    #             "activity_level": edit_activity.lower(),
+    #             "dietary_preference": edit_diet,
+    #             "restrictions": edit_restrictions,
+    #             "medical_conditions": edit_conditions,
+    #             "allergies": edit_allergies,
+    #             "cuisine": edit_cuisine,
+    #             "digestive_issues": edit_digestive,
+    #             "symptom_aggravating_foods": edit_symptoms,
+    #         }
+    #         edit_start_date = datetime.now().date()
+    #         edit_end_date = edit_start_date + timedelta(days=6)
+    #         with st.spinner("Regenerating your meal plan from the updated profile..."):
+    #             edit_response = call_meal_plan_api(
+    #                 profile=updated_profile,
+    #                 query="Generate a complete 7-day meal plan based on my updated profile.",
+    #                 token=st.session_state.auth_token,
+    #                 force_tool_type="weekly_meal_plan_generator",
+    #                 start_date=edit_start_date.isoformat(),
+    #                 end_date=edit_end_date.isoformat()
+    #             )
+    #         if edit_response and isinstance(edit_response.get("data"), dict):
+    #             edit_data = edit_response["data"]
+    #             st.session_state.current_constraints = edit_data.get("updated_constraints", updated_profile)
+    #             st.session_state.weekly_meal_plan = edit_data.get("answer", "")
+    #             st.session_state.last_agent_context = edit_data.get("updated_last_agent_context", st.session_state.last_agent_context)
+    #             st.rerun()
+    #         else:
+    #             st.error("The updated seven-day meal plan could not be generated.")
 
     weekly_start_date = datetime.now().date()
     weekly_end_date = weekly_start_date + timedelta(days=6)

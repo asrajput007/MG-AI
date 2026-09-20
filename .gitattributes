@@ -8,3 +8,4 @@ datasets/Foods_nested_USA_side_dishes.json filter=lfs diff=lfs merge=lfs -text
 datasets/Foods_nested_USA_main_dishes.json filter=lfs diff=lfs merge=lfs -text
 D:/Friska[[:space:]]Dev/Chat/HFWL[[:space:]]CCM[[:space:]]CHAT/NouriqAi-Friska-CCM/datasets/foods[[:space:]]1.json filter=lfs diff=lfs merge=lfs -text
 *.safetensors filter=lfs diff=lfs merge=lfs -text
+Food_img/*.png filter=lfs diff=lfs merge=lfs -text
